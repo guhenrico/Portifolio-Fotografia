@@ -20,34 +20,34 @@ function AboutPage() {
   return (
     <main className="min-h-screen bg-background text-foreground flex flex-col">
       <Header />
-      <section className="mx-auto w-full max-w-[1100px] px-5 md:px-12 pt-24 pb-12 md:pt-32 md:pb-20 flex-1">
+      <section className="mx-auto w-full max-w-[1200px] px-5 md:px-12 pt-24 pb-12 md:pt-32 md:pb-20 flex-1">
         <Reveal>
           <p className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] md:tracking-lux text-muted-foreground">
             Sobre · № 003
           </p>
         </Reveal>
-        <Reveal delay={80}>
-          <h1 className="mt-4 font-serif text-[2.25rem] sm:text-5xl md:text-[clamp(2.25rem,4.5vw,4.5rem)] leading-[1.04] md:leading-[1.0] tracking-[-0.02em] max-w-[18ch]">
-            O olhar <em className="italic text-muted-foreground">por trás</em> da lente.
-          </h1>
-        </Reveal>
 
-        <div className="mt-10 md:mt-16 grid grid-cols-12 gap-8 md:gap-12 items-center">
+        <div className="mt-8 md:mt-12 grid grid-cols-12 gap-8 md:gap-14 items-stretch">
           <Reveal className="col-span-12 md:col-span-5" delay={100}>
-            <figure className="overflow-hidden">
+            <figure className="overflow-hidden h-full">
               <img
                 src={aboutPortrait}
                 alt="Gustavo Henrico"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
               />
             </figure>
           </Reveal>
 
-          <div className="col-span-12 md:col-span-7">
-            <Reveal delay={150}>
-              <div className="space-y-5 text-[14px] md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
+          <div className="col-span-12 md:col-span-7 flex flex-col justify-between min-h-full">
+            <Reveal delay={120}>
+              <h1 className="font-serif text-[2.25rem] sm:text-5xl md:text-[clamp(2.25rem,4vw,4rem)] leading-[1.04] md:leading-[1.0] tracking-[-0.02em] max-w-[18ch]">
+                O olhar <em className="italic text-muted-foreground">por trás</em> da lente.
+              </h1>
+            </Reveal>
+            <Reveal delay={180}>
+              <div className="mt-8 md:mt-0 space-y-5 text-[14px] md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
                 <p>
                   Olá, sou Gustavo Henrico. Sou fotógrafo e gosto de registrar o que vejo por aí.
                 </p>
