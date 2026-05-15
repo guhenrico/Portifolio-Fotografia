@@ -69,7 +69,6 @@ function ContactPage() {
                   <ul className="mt-3 space-y-1 text-sm">
                     <li><a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:opacity-60">Instagram</a></li>
                     <li><a href="https://vsco.co" target="_blank" rel="noreferrer" className="hover:opacity-60">VSCO</a></li>
-                    <li><a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:opacity-60">LinkedIn</a></li>
                   </ul>
                 </div>
               </div>
