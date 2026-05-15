@@ -8,7 +8,7 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-6 md:px-12">
         <Link to="/" className="font-serif text-xl tracking-tight text-foreground">
-          Elena Marchetti
+          Henrico Photography
           <span className="ml-2 text-[10px] uppercase tracking-lux text-muted-foreground">
             Photography
           </span>
