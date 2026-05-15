@@ -27,7 +27,7 @@ function AboutPage() {
           </p>
         </Reveal>
 
-        <div className="mt-8 md:mt-12 grid grid-cols-12 gap-8 md:gap-14 items-stretch">
+        <div className="mt-8 md:mt-12 grid grid-cols-12 gap-8 md:gap-14 items-start">
           <Reveal className="col-span-12 md:col-span-5" delay={100}>
             <figure className="overflow-hidden h-full">
               <img
