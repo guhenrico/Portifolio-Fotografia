@@ -12,7 +12,7 @@ export function Footer() {
               to="/contact"
               className="mt-6 inline-flex items-center gap-3 border-b border-foreground pb-1 text-sm text-foreground transition-opacity hover:opacity-60"
             >
-              hello@elenamarchetti.com
+              gustavo.henrico01@gmail.com
               <span aria-hidden>→</span>
             </Link>
           </div>
@@ -29,7 +29,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-2 border-t border-border/60 pt-6 text-[11px] md:mt-16 md:text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} Elena Marchetti. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Henrico. Todos os direitos reservados.</p>
           <p className="tracking-lux-sm uppercase">Index № 001 — Edição Permanente</p>
         </div>
       </div>

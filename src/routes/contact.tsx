@@ -34,36 +34,21 @@ function ContactPage() {
               </h1>
             </Reveal>
 
-            <Reveal delay={150}>
-              <p className="mt-6 max-w-xl text-[14px] md:mt-10 md:text-[15px] leading-relaxed text-foreground/80">
-                Aceito comissões editoriais, comerciais e projetos de longa duração.
-                Para exposições e impressões em edição limitada, entre em contato com o estúdio.
-              </p>
-            </Reveal>
-
             <Reveal delay={300}>
               <div className="mt-10 flex flex-col gap-4 md:mt-16">
                 <a
-                  href="mailto:hello@elenamarchetti.com"
+                  href="mailto:gustavo.henrico01@gmail.com"
                   className="group inline-flex w-full items-center justify-between gap-4 border border-foreground px-6 py-4 text-xs uppercase tracking-lux-sm text-foreground transition-colors hover:bg-foreground hover:text-background md:w-fit md:justify-start md:px-8 md:py-5 md:text-sm"
                 >
                   Vamos conversar
                   <span className="transition-transform group-hover:translate-x-1" aria-hidden>→</span>
                 </a>
-                <p className="text-sm text-muted-foreground">hello@elenamarchetti.com</p>
+                <p className="text-sm text-muted-foreground">gustavo.henrico01@gmail.com</p>
               </div>
             </Reveal>
 
             <Reveal delay={450}>
-              <div className="mt-16 grid grid-cols-1 gap-8 border-t border-border/60 pt-8 md:mt-24 md:gap-10 md:pt-10 md:grid-cols-3">
-                <div>
-                  <p className="text-[11px] uppercase tracking-lux text-muted-foreground">Estúdio</p>
-                  <p className="mt-3 text-sm text-foreground/90">Via della Spiga 12<br />20121 Milano, Itália</p>
-                </div>
-                <div>
-                  <p className="text-[11px] uppercase tracking-lux text-muted-foreground">Representação</p>
-                  <p className="mt-3 text-sm text-foreground/90">Webber Represents<br />London · Paris · NY</p>
-                </div>
+              <div className="mt-16 grid grid-cols-1 gap-8 border-t border-border/60 pt-8 md:mt-24 md:gap-10 md:pt-10 md:grid-cols-1">
                 <div>
                   <p className="text-[11px] uppercase tracking-lux text-muted-foreground">Social</p>
                   <ul className="mt-3 space-y-1 text-sm">

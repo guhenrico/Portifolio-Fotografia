@@ -6,6 +6,8 @@ import cachorro from "@/assets/portfolio/cachorro.jpg";
 import gato1 from "@/assets/portfolio/gato-1.jpg";
 import gato2 from "@/assets/portfolio/gato-2.jpg";
 import pato from "@/assets/portfolio/pato.jpg";
+import cavalo from "@/assets/portfolio/cavalo.jpg";
+import passaro from "@/assets/portfolio/passaro.jpg";
 import allana from "@/assets/portfolio/allana.jpg";
 import annaVenezia from "@/assets/portfolio/anna-venezia.jpg";
 import beatrizVenezia from "@/assets/portfolio/beatriz-venezia.jpg";
@@ -18,12 +20,13 @@ export interface Photo {
   category: Category;
   src: string;
   orientation: "portrait" | "landscape" | "square";
+  flag?: string;
 }
 
 export const photos: Photo[] = [
-  { id: "allana", title: "Allana, golden hour", category: "Retratos", src: allana, orientation: "portrait" },
-  { id: "anna-venezia", title: "Anna em Venezia", category: "Retratos", src: annaVenezia, orientation: "portrait" },
-  { id: "beatriz-venezia", title: "Beatriz, ponte de Veneza", category: "Retratos", src: beatrizVenezia, orientation: "portrait" },
+  { id: "allana", title: "Allana, golden hour", category: "Retratos", src: allana, orientation: "portrait", flag: "🇧🇷" },
+  { id: "anna-venezia", title: "Anna em Venezia", category: "Retratos", src: annaVenezia, orientation: "portrait", flag: "🇮🇹" },
+  { id: "beatriz-venezia", title: "Beatriz, ponte de Veneza", category: "Retratos", src: beatrizVenezia, orientation: "portrait", flag: "🇮🇹" },
   { id: "lago-1", title: "Lago di Como", category: "Paisagens", src: lagoDiComo1, orientation: "portrait" },
   { id: "lago-2", title: "Lago di Como", category: "Paisagens", src: lagoDiComo2, orientation: "portrait" },
   { id: "venezia-1", title: "Venezia", category: "Paisagens", src: venezia1, orientation: "portrait" },
@@ -32,4 +35,6 @@ export const photos: Photo[] = [
   { id: "gato-1", title: "Gato", category: "Animais", src: gato1, orientation: "portrait" },
   { id: "gato-2", title: "Gato", category: "Animais", src: gato2, orientation: "portrait" },
   { id: "pato", title: "Pato", category: "Animais", src: pato, orientation: "portrait" },
+  { id: "cavalo", title: "Cavalo", category: "Animais", src: cavalo, orientation: "portrait" },
+  { id: "passaro", title: "Pássaro", category: "Animais", src: passaro, orientation: "portrait" },
 ];
