@@ -16,9 +16,12 @@ export function Header() {
         <Link
           to="/"
           onClick={() => setOpen(false)}
-          className="font-serif text-lg tracking-tight text-foreground md:text-xl"
+          className="flex items-baseline gap-2 text-foreground"
         >
-          Henrico
+          <span className="font-serif text-lg tracking-tight md:text-xl">Henrico</span>
+          <span className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground/80 font-light">
+            photography
+          </span>
         </Link>
 
         {/* Desktop nav */}
