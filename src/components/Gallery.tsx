@@ -14,12 +14,12 @@ export function Gallery() {
   );
 
   return (
-    <section className="mx-auto max-w-[1600px] px-6 md:px-12">
-      <div className="mb-12 flex flex-wrap items-center justify-between gap-6 border-b border-border/60 pb-6">
-        <p className="text-[11px] uppercase tracking-lux text-muted-foreground">
+    <section className="mx-auto max-w-[1600px] px-5 md:px-12">
+      <div className="mb-8 flex flex-wrap items-center justify-between gap-3 border-b border-border/60 pb-4 md:mb-12 md:gap-6 md:pb-6">
+        <p className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] md:tracking-lux text-muted-foreground">
           Index № 001 / Selected Works
         </p>
-        <div className="flex flex-wrap gap-x-6 gap-y-2">
+        <div className="flex flex-wrap gap-x-4 gap-y-2 md:gap-x-6">
           {FILTERS.map((f) => {
             const isActive = filter === f;
             return (
@@ -42,7 +42,7 @@ export function Gallery() {
         </div>
       </div>
 
-      <div className="grid grid-cols-12 gap-x-6 gap-y-16 md:gap-x-10 md:gap-y-28">
+      <div className="grid grid-cols-12 gap-x-4 gap-y-10 md:gap-x-10 md:gap-y-28">
         {list.map((p, i) => {
           const layout = layoutFor(i, p.orientation);
           return (

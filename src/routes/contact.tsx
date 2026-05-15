@@ -19,33 +19,33 @@ function ContactPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Header />
-      <section className="mx-auto max-w-[1600px] px-6 md:px-12 pt-40 pb-32 md:pt-56">
-        <div className="grid grid-cols-12 gap-6">
+      <section className="mx-auto max-w-[1600px] px-5 md:px-12 pt-28 pb-20 md:pt-56 md:pb-32">
+        <div className="grid grid-cols-12 gap-4 md:gap-6">
           <Reveal className="col-span-12 md:col-span-2">
-            <p className="text-[11px] uppercase tracking-lux text-muted-foreground">
-              Contato<br />№ 002
+            <p className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] md:tracking-lux text-muted-foreground">
+              Contato · № 002
             </p>
           </Reveal>
 
           <div className="col-span-12 md:col-span-8 md:col-start-3">
             <Reveal>
-              <h1 className="font-serif text-[clamp(2.5rem,6vw,6rem)] leading-[0.98] tracking-[-0.02em]">
+              <h1 className="font-serif text-[2.25rem] sm:text-5xl md:text-[clamp(2.5rem,6vw,6rem)] leading-[1.02] md:leading-[0.98] tracking-[-0.02em]">
                 Vamos conversar sobre o que ainda <em className="italic text-muted-foreground">não foi feito</em>.
               </h1>
             </Reveal>
 
             <Reveal delay={150}>
-              <p className="mt-10 max-w-xl text-[15px] leading-relaxed text-foreground/80">
+              <p className="mt-6 max-w-xl text-[14px] md:mt-10 md:text-[15px] leading-relaxed text-foreground/80">
                 Aceito comissões editoriais, comerciais e projetos de longa duração.
                 Para exposições e impressões em edição limitada, entre em contato com o estúdio.
               </p>
             </Reveal>
 
             <Reveal delay={300}>
-              <div className="mt-16 flex flex-col gap-4">
+              <div className="mt-10 flex flex-col gap-4 md:mt-16">
                 <a
                   href="mailto:hello@elenamarchetti.com"
-                  className="group inline-flex w-fit items-center gap-4 border border-foreground px-8 py-5 text-sm uppercase tracking-lux-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
+                  className="group inline-flex w-full items-center justify-between gap-4 border border-foreground px-6 py-4 text-xs uppercase tracking-lux-sm text-foreground transition-colors hover:bg-foreground hover:text-background md:w-fit md:justify-start md:px-8 md:py-5 md:text-sm"
                 >
                   Vamos conversar
                   <span className="transition-transform group-hover:translate-x-1" aria-hidden>→</span>
@@ -55,7 +55,7 @@ function ContactPage() {
             </Reveal>
 
             <Reveal delay={450}>
-              <div className="mt-24 grid grid-cols-1 gap-10 border-t border-border/60 pt-10 md:grid-cols-3">
+              <div className="mt-16 grid grid-cols-1 gap-8 border-t border-border/60 pt-8 md:mt-24 md:gap-10 md:pt-10 md:grid-cols-3">
                 <div>
                   <p className="text-[11px] uppercase tracking-lux text-muted-foreground">Estúdio</p>
                   <p className="mt-3 text-sm text-foreground/90">Via della Spiga 12<br />20121 Milano, Itália</p>
