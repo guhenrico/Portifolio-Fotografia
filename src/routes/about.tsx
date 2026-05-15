@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import aboutPortrait from "@/assets/portfolio/about-portrait.jpeg";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -33,8 +34,23 @@ function AboutPage() {
                 O olhar <em className="italic text-muted-foreground">por trás</em> da lente.
               </h1>
             </Reveal>
+          </div>
+
+          <Reveal className="col-span-12 md:col-span-5 md:col-start-1 mt-8 md:mt-16" delay={100}>
+            <figure className="overflow-hidden">
+              <img
+                src={aboutPortrait}
+                alt="Gustavo Henrico"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-auto object-cover"
+              />
+            </figure>
+          </Reveal>
+
+          <div className="col-span-12 md:col-span-6 md:col-start-7 mt-2 md:mt-16">
             <Reveal delay={150}>
-              <div className="mt-8 space-y-5 text-[14px] md:mt-12 md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
+              <div className="space-y-5 text-[14px] md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
                 <p>
                   Olá, sou Gustavo Henrico. Sou fotógrafo e gosto de registrar o que vejo por aí.
                 </p>
