@@ -2,101 +2,47 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
-import aboutPortrait from "@/assets/portfolio/about-portrait.jpeg";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "Sobre — Elena Marchetti" },
-      { name: "description", content: "Visão artística, prêmios e clientes de Elena Marchetti." },
-      { property: "og:title", content: "Sobre — Elena Marchetti" },
-      { property: "og:description", content: "Fotógrafa baseada em Milão, entre o editorial e o documental." },
+      { title: "Sobre — Henrico" },
+      { name: "description", content: "O olhar por trás da lente — Gustavo Henrico, fotógrafo." },
+      { property: "og:title", content: "Sobre — Henrico" },
+      { property: "og:description", content: "Fotógrafo baseado no interior de SP." },
     ],
   }),
 });
 
-const clients = [
-  "Vogue Italia", "Wallpaper*", "Apartamento", "The Gentlewoman",
-  "Hermès", "Aesop", "Jil Sander", "Kinfolk",
-  "Loewe", "Zara Atelier", "Le Monde M", "032c",
-];
-
-const press = [
-  { year: "2024", title: "Sony World Photography — Shortlist, Portrait" },
-  { year: "2023", title: "British Journal of Photography — Ones to Watch" },
-  { year: "2022", title: "Hyères Festival — Finalist" },
-  { year: "2021", title: "Foam Talent — Selected" },
-];
-
 function AboutPage() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-background text-foreground flex flex-col">
       <Header />
-      <section className="mx-auto max-w-[1600px] px-5 md:px-12 pt-28 pb-20 md:pt-48 md:pb-32">
+      <section className="mx-auto w-full max-w-[1100px] px-5 md:px-12 pt-28 pb-20 md:pt-48 md:pb-32 flex-1">
         <div className="grid grid-cols-12 gap-8 md:gap-12">
-          <Reveal className="col-span-12 md:col-span-5">
-            <div className="img-hover overflow-hidden bg-muted">
-              <img
-                src={aboutPortrait}
-                alt="Retrato do fotógrafo em uma gôndola, Venezia"
-                className="block aspect-[4/5] w-full object-cover"
-              />
-            </div>
-            <p className="mt-3 text-[11px] uppercase tracking-lux text-muted-foreground">
-              Sul canale, Venezia
+          <Reveal className="col-span-12 md:col-span-3">
+            <p className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] md:tracking-lux text-muted-foreground">
+              Sobre · № 003
             </p>
           </Reveal>
 
-          <div className="col-span-12 md:col-span-6 md:col-start-7">
+          <div className="col-span-12 md:col-span-9">
             <Reveal>
-              <p className="text-[11px] uppercase tracking-lux text-muted-foreground">Sobre</p>
-              <h1 className="mt-4 font-serif text-[2.25rem] sm:text-5xl md:text-6xl leading-[1.05]">
-                Trabalho com a quietude entre dois cliques.
+              <h1 className="font-serif text-[2.25rem] sm:text-5xl md:text-[clamp(2.5rem,5.5vw,5.5rem)] leading-[1.04] md:leading-[1.0] tracking-[-0.02em]">
+                O olhar <em className="italic text-muted-foreground">por trás</em> da lente.
               </h1>
             </Reveal>
             <Reveal delay={150}>
-              <div className="mt-8 space-y-5 text-[14px] md:mt-10 md:space-y-6 md:text-[15px] leading-relaxed text-foreground/80">
+              <div className="mt-8 space-y-5 text-[14px] md:mt-12 md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
                 <p>
-                  Nascida em Bolonha (1991) e formada pelo Istituto Europeo di Design,
-                  trabalho na fronteira entre editorial de moda, retrato e arquitetura.
-                  Minhas imagens partem de uma observação demorada — busco a textura
-                  exata de uma luz que está quase desaparecendo.
+                  Olá, sou Gustavo Henrico. Sou fotógrafo e gosto de registrar o que vejo por aí.
                 </p>
                 <p>
-                  Nos últimos dez anos colaborei com publicações e marcas que tratam o
-                  objeto fotográfico como matéria primeira: papel, grão, tempo. Mantenho
-                  estúdio em Milão e trabalho em projetos pessoais entre o Mediterrâneo
-                  e o Norte da Europa.
+                  Através do meu olhar, busco capturar a calma e o detalhe. Com base no interior
+                  de SP, crio imagens que valorizam o silêncio, a textura das coisas e a luz que
+                  envolve cada cena. Meu trabalho é feito para ser sentido, não apenas visto.
                 </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={300}>
-              <div className="mt-12 grid grid-cols-1 gap-10 md:mt-16 md:gap-12 md:grid-cols-2">
-                <div>
-                  <p className="text-[11px] uppercase tracking-lux text-muted-foreground">
-                    Prêmios & Imprensa
-                  </p>
-                  <ul className="mt-5 space-y-3 text-sm">
-                    {press.map((p) => (
-                      <li key={p.title} className="flex gap-4 border-b border-border/60 pb-3">
-                        <span className="font-serif italic text-muted-foreground w-12">{p.year}</span>
-                        <span className="text-foreground/90">{p.title}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <p className="text-[11px] uppercase tracking-lux text-muted-foreground">
-                    Clientes selecionados
-                  </p>
-                  <ul className="mt-5 space-y-2 text-sm text-foreground/90">
-                    {clients.map((c) => (
-                      <li key={c}>{c}</li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </Reveal>
           </div>

@@ -69,9 +69,19 @@ export function Gallery() {
                 />
               </button>
               <figcaption className="mt-4 flex items-baseline justify-between gap-4 text-xs text-muted-foreground">
-                <span className="font-serif text-sm italic text-foreground">
+                <span className="font-serif text-sm italic text-foreground inline-flex items-center gap-2">
                   {p.title}
-                  {p.flag && <span className="ml-2 not-italic">{p.flag}</span>}
+                  {p.country && (
+                    <img
+                      src={`https://flagcdn.com/20x15/${p.country.code}.png`}
+                      srcSet={`https://flagcdn.com/40x30/${p.country.code}.png 2x`}
+                      width={20}
+                      height={15}
+                      alt={p.country.label}
+                      className="not-italic inline-block rounded-[1px] shadow-sm"
+                      loading="lazy"
+                    />
+                  )}
                 </span>
                 <span className="tracking-lux-sm uppercase">
                   {String(i + 1).padStart(2, "0")} · {p.category}

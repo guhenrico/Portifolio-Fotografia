@@ -47,17 +47,6 @@ function ContactPage() {
               </div>
             </Reveal>
 
-            <Reveal delay={450}>
-              <div className="mt-16 grid grid-cols-1 gap-8 border-t border-border/60 pt-8 md:mt-24 md:gap-10 md:pt-10 md:grid-cols-1">
-                <div>
-                  <p className="text-[11px] uppercase tracking-lux text-muted-foreground">Social</p>
-                  <ul className="mt-3 space-y-1 text-sm">
-                    <li><a href="https://www.instagram.com/guhenricoo/" target="_blank" rel="noreferrer" className="hover:opacity-60">Instagram</a></li>
-                    <li><a href="https://vs.co/8oy8zgk9" target="_blank" rel="noreferrer" className="hover:opacity-60">VSCO</a></li>
-                  </ul>
-                </div>
-              </div>
-            </Reveal>
           </div>
         </div>
       </section>
