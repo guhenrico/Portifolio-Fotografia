@@ -9,6 +9,7 @@ import pato from "@/assets/portfolio/pato.jpg";
 import cavalo from "@/assets/portfolio/cavalo.jpg";
 import passaro from "@/assets/portfolio/passaro.jpg";
 import allana from "@/assets/portfolio/allana.jpg";
+import allana2 from "@/assets/portfolio/allana-2.jpg";
 import annaVenezia from "@/assets/portfolio/anna-venezia.jpg";
 import beatrizVenezia from "@/assets/portfolio/beatriz-venezia.jpg";
 
@@ -28,6 +29,7 @@ const IT = { code: "it", label: "Itália" };
 
 export const photos: Photo[] = [
   { id: "allana", title: "Allana, golden hour", category: "Retratos", src: allana, orientation: "portrait", country: BR },
+  { id: "allana-2", title: "Allana, luz de fim de tarde", category: "Retratos", src: allana2, orientation: "portrait", country: BR },
   { id: "anna-venezia", title: "Anna em Venezia", category: "Retratos", src: annaVenezia, orientation: "portrait", country: IT },
   { id: "beatriz-venezia", title: "Beatriz, ponte de Veneza", category: "Retratos", src: beatrizVenezia, orientation: "portrait", country: IT },
   { id: "lago-1", title: "Lago di Como", category: "Paisagens", src: lagoDiComo1, orientation: "portrait" },
