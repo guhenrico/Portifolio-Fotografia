@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import aboutPortrait from "@/assets/portfolio/about-portrait.jpeg";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -37,13 +38,13 @@ function AboutPage() {
           <Reveal className="col-span-12 md:col-span-5">
             <div className="img-hover overflow-hidden bg-muted">
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80&sat=-100"
-                alt="Retrato de Elena Marchetti"
-                className="block aspect-[4/5] w-full object-cover grayscale"
+                src={aboutPortrait}
+                alt="Retrato do fotógrafo em uma gôndola, Venezia"
+                className="block aspect-[4/5] w-full object-cover"
               />
             </div>
             <p className="mt-3 text-[11px] uppercase tracking-lux text-muted-foreground">
-              Auto-retrato, Studio Milano, 2024
+              Sul canale, Venezia
             </p>
           </Reveal>
 
