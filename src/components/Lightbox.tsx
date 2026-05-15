@@ -38,14 +38,8 @@ export function Lightbox({ photo, onClose }: { photo: Photo | null; onClose: () 
           className="max-h-[78vh] w-auto object-contain"
         />
         <div className="flex w-full items-end justify-between gap-6 text-xs">
-          <div>
-            <p className="font-serif text-lg text-foreground">{photo.title}</p>
-            <p className="mt-1 text-muted-foreground">{photo.location} · {photo.year}</p>
-          </div>
-          <div className="text-right text-muted-foreground tracking-lux-sm uppercase">
-            <p>{photo.category}</p>
-            <p className="mt-1 normal-case tracking-normal">{photo.camera}</p>
-          </div>
+          <p className="font-serif text-lg text-foreground">{photo.title}</p>
+          <p className="text-muted-foreground tracking-lux-sm uppercase">{photo.category}</p>
         </div>
       </div>
     </div>
