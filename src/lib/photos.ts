@@ -6,6 +6,9 @@ import cachorro from "@/assets/portfolio/cachorro.jpg";
 import gato1 from "@/assets/portfolio/gato-1.jpg";
 import gato2 from "@/assets/portfolio/gato-2.jpg";
 import pato from "@/assets/portfolio/pato.jpg";
+import allana from "@/assets/portfolio/allana.jpg";
+import annaVenezia from "@/assets/portfolio/anna-venezia.jpg";
+import beatrizVenezia from "@/assets/portfolio/beatriz-venezia.jpg";
 
 export type Category = "Retratos" | "Paisagens" | "Animais";
 
@@ -18,6 +21,9 @@ export interface Photo {
 }
 
 export const photos: Photo[] = [
+  { id: "allana", title: "Allana, golden hour", category: "Retratos", src: allana, orientation: "portrait" },
+  { id: "anna-venezia", title: "Anna em Venezia", category: "Retratos", src: annaVenezia, orientation: "portrait" },
+  { id: "beatriz-venezia", title: "Beatriz, ponte de Veneza", category: "Retratos", src: beatrizVenezia, orientation: "portrait" },
   { id: "lago-1", title: "Lago di Como", category: "Paisagens", src: lagoDiComo1, orientation: "portrait" },
   { id: "lago-2", title: "Lago di Como", category: "Paisagens", src: lagoDiComo2, orientation: "portrait" },
   { id: "venezia-1", title: "Venezia", category: "Paisagens", src: venezia1, orientation: "portrait" },

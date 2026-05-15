@@ -17,7 +17,7 @@ export function Gallery() {
     <section className="mx-auto max-w-[1600px] px-5 md:px-12">
       <div className="mb-8 flex flex-wrap items-center justify-between gap-3 border-b border-border/60 pb-4 md:mb-12 md:gap-6 md:pb-6">
         <p className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] md:tracking-lux text-muted-foreground">
-          Index № 001 / Selected Works
+          Henrico / Pics
         </p>
         <div className="flex flex-wrap gap-x-4 gap-y-2 md:gap-x-6">
           {FILTERS.map((f) => {
