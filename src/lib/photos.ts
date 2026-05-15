@@ -29,7 +29,7 @@ const IT = { code: "it", label: "Itália" };
 
 export const photos: Photo[] = [
   { id: "allana", title: "Allana, golden hour", category: "Retratos", src: allana, orientation: "portrait", country: BR },
-  { id: "allana-2", title: "Allana, luz de fim de tarde", category: "Retratos", src: allana2, orientation: "portrait", country: BR },
+  { id: "allana-2", title: "Allana, golden hour", category: "Retratos", src: allana2, orientation: "portrait", country: BR },
   { id: "anna-venezia", title: "Anna em Venezia", category: "Retratos", src: annaVenezia, orientation: "portrait", country: IT },
   { id: "beatriz-venezia", title: "Beatriz, ponte de Veneza", category: "Retratos", src: beatrizVenezia, orientation: "portrait", country: IT },
   { id: "lago-1", title: "Lago di Como", category: "Paisagens", src: lagoDiComo1, orientation: "portrait" },
