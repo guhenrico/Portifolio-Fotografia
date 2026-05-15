@@ -107,9 +107,13 @@
   .tracking-lux-sm { letter-spacing: 0.22em; }
 
   .reveal {
+    opacity: 1;
+    transform: none;
+    transition: opacity 900ms cubic-bezier(0.22, 1, 0.36, 1), transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.is-hidden {
     opacity: 0;
     transform: translateY(16px);
-    transition: opacity 900ms cubic-bezier(0.22, 1, 0.36, 1), transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
   }
   .reveal.is-visible {
     opacity: 1;
