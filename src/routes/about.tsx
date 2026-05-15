@@ -40,14 +40,14 @@ function AboutPage() {
             </figure>
           </Reveal>
 
-          <div className="col-span-12 md:col-span-7 flex flex-col justify-between min-h-full">
+          <div className="col-span-12 md:col-span-7 flex flex-col gap-6 md:gap-8">
             <Reveal delay={120}>
               <h1 className="font-serif text-[2.25rem] sm:text-5xl md:text-[clamp(2.25rem,4vw,4rem)] leading-[1.04] md:leading-[1.0] tracking-[-0.02em] max-w-[18ch]">
                 O olhar <em className="italic text-muted-foreground">por trás</em> da lente.
               </h1>
             </Reveal>
             <Reveal delay={180}>
-              <div className="mt-8 md:mt-0 space-y-5 text-[14px] md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
+              <div className="space-y-5 text-[14px] md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
                 <p>
                   Olá, sou Gustavo Henrico. Sou fotógrafo e gosto de registrar o que vejo por aí.
                 </p>
