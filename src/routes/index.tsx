@@ -22,19 +22,20 @@ function Index() {
         <div className="grid grid-cols-12 gap-6">
           <Reveal className="col-span-12 md:col-span-2">
             <p className="text-[11px] uppercase tracking-lux text-muted-foreground">
-              MMXXIV<br />Volume 01
+              HENRICO<br />Collection 01
             </p>
           </Reveal>
           <Reveal className="col-span-12 md:col-span-9 md:col-start-3" delay={120}>
             <h1 className="font-serif text-[clamp(2.75rem,7vw,7rem)] leading-[0.95] tracking-[-0.02em]">
               Imagens que respiram <em className="italic text-muted-foreground">silêncio</em> — composições
-              entre luz, pele e arquitetura.
+              entre olhar, luz e memória.
             </h1>
           </Reveal>
           <Reveal className="col-span-12 md:col-span-4 md:col-start-9 mt-12" delay={240}>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Elena Marchetti é uma fotógrafa baseada em Milão, trabalhando entre editorial de
-              moda, retrato e paisagem para revistas como Vogue Italia, Wallpaper* e Apartamento.
+              Através de seu olhar, Henrico busca capturar a calma e o detalhe. Com base no interior
+              de SP, ele cria imagens que valorizam o silêncio, a textura das coisas e a luz que
+              envolve cada cena. Um trabalho feito para ser sentido, não apenas visto.
             </p>
           </Reveal>
         </div>
