@@ -20,16 +20,19 @@ function AboutPage() {
   return (
     <main className="min-h-screen bg-background text-foreground flex flex-col">
       <Header />
-      <section className="mx-auto w-full max-w-[1200px] px-5 md:px-12 pt-24 pb-12 md:pt-32 md:pb-20 flex-1">
+      <section className="relative mx-auto w-full max-w-[1200px] px-5 md:px-12 pt-24 pb-12 md:pt-32 md:pb-20 flex-1">
         <Reveal>
-          <p className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] md:tracking-lux text-muted-foreground">
-            Sobre · № 003
-          </p>
+          <div className="flex items-center gap-3">
+            <p className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] md:tracking-lux text-muted-foreground">
+              Sobre · № 003
+            </p>
+            <span className="h-px flex-1 max-w-[160px] bg-border" />
+          </div>
         </Reveal>
 
         <div className="mt-8 md:mt-12 grid grid-cols-12 gap-8 md:gap-14 items-start">
           <Reveal className="col-span-12 md:col-span-5" delay={100}>
-            <figure className="overflow-hidden h-full">
+            <figure className="img-hover relative overflow-hidden grain">
               <img
                 src={aboutPortrait}
                 alt="Gustavo Henrico"
@@ -37,7 +40,13 @@ function AboutPage() {
                 decoding="async"
                 className="w-full h-full object-cover"
               />
+              {/* decorative dotted ring */}
+              <span className="ring-dotted absolute -bottom-6 -right-6 h-24 w-24 rounded-full hidden md:block" aria-hidden />
             </figure>
+            <figcaption className="mt-4 flex items-center justify-between text-[10px] uppercase tracking-lux-sm text-muted-foreground">
+              <span>Retrato</span>
+              <span>São Paulo · SP</span>
+            </figcaption>
           </Reveal>
 
           <div className="col-span-12 md:col-span-7 flex flex-col gap-6 md:gap-8">
@@ -57,6 +66,28 @@ function AboutPage() {
                   envolve cada cena. Meu trabalho é feito para ser sentido, não apenas visto.
                 </p>
               </div>
+            </Reveal>
+
+            {/* Mini-bio meta */}
+            <Reveal delay={240}>
+              <dl className="mt-2 grid grid-cols-2 gap-y-4 gap-x-8 border-t border-border/60 pt-6 max-w-[58ch]">
+                <div>
+                  <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Base</dt>
+                  <dd className="mt-1 font-serif text-lg">Interior de SP</dd>
+                </div>
+                <div>
+                  <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Foco</dt>
+                  <dd className="mt-1 font-serif text-lg italic">Retrato · Paisagem</dd>
+                </div>
+                <div>
+                  <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Desde</dt>
+                  <dd className="mt-1 font-serif text-lg">MMXXII</dd>
+                </div>
+                <div>
+                  <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Disponível</dt>
+                  <dd className="mt-1 font-serif text-lg italic">Comissões abertas</dd>
+                </div>
+              </dl>
             </Reveal>
           </div>
         </div>
