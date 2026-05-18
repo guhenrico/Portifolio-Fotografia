@@ -62,31 +62,11 @@ export function Gallery() {
                 </button>
               );
             })}
-
-            {/* View toggle */}
-            <div className="ml-1 inline-flex items-center border border-border/70">
-              {(["editorial", "index"] as ViewMode[]).map((v) => (
-                <button
-                  key={v}
-                  onClick={() => setView(v)}
-                  aria-pressed={view === v}
-                  className={`px-2.5 py-1 text-[10px] uppercase tracking-lux-sm transition-colors ${
-                    view === v ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {v === "editorial" ? "Mosaico" : "Índice"}
-                </button>
-              ))}
-            </div>
           </div>
         </div>
       </div>
 
-      {view === "editorial" ? (
-        <EditorialGrid list={list} onOpen={setActive} />
-      ) : (
-        <IndexView list={list} onOpen={setActive} />
-      )}
+      <EditorialGrid list={list} onOpen={setActive} />
 
       <Lightbox photo={active} onClose={() => setActive(null)} />
     </section>
