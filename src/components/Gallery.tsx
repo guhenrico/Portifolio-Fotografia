@@ -1,13 +1,11 @@
-import { useMemo, useRef, useState, type MouseEvent } from "react";
+import { useMemo, useState } from "react";
 import { photos, type Category, type Photo } from "@/lib/photos";
 import { Lightbox } from "./Lightbox";
 
 const FILTERS: ("Todos" | Category)[] = ["Todos", "Retratos", "Paisagens", "Animais"];
-type ViewMode = "editorial" | "index";
 
 export function Gallery() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>("Todos");
-  const [view, setView] = useState<ViewMode>("editorial");
   const [active, setActive] = useState<Photo | null>(null);
 
   const counts = useMemo(() => {
