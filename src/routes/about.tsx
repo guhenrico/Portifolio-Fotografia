@@ -1,7 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import { Marquee } from "@/components/Marquee";
 import aboutPortrait from "@/assets/portfolio/about-portrait.jpeg";
 
 export const Route = createFileRoute("/about")({
