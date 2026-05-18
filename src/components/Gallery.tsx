@@ -1,13 +1,11 @@
-import { useMemo, useRef, useState, type MouseEvent } from "react";
+import { useMemo, useState } from "react";
 import { photos, type Category, type Photo } from "@/lib/photos";
 import { Lightbox } from "./Lightbox";
 
 const FILTERS: ("Todos" | Category)[] = ["Todos", "Retratos", "Paisagens", "Animais"];
-type ViewMode = "editorial" | "index";
 
 export function Gallery() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>("Todos");
-  const [view, setView] = useState<ViewMode>("editorial");
   const [active, setActive] = useState<Photo | null>(null);
 
   const counts = useMemo(() => {
@@ -64,31 +62,11 @@ export function Gallery() {
                 </button>
               );
             })}
-
-            {/* View toggle */}
-            <div className="ml-1 inline-flex items-center border border-border/70">
-              {(["editorial", "index"] as ViewMode[]).map((v) => (
-                <button
-                  key={v}
-                  onClick={() => setView(v)}
-                  aria-pressed={view === v}
-                  className={`px-2.5 py-1 text-[10px] uppercase tracking-lux-sm transition-colors ${
-                    view === v ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {v === "editorial" ? "Mosaico" : "Índice"}
-                </button>
-              ))}
-            </div>
           </div>
         </div>
       </div>
 
-      {view === "editorial" ? (
-        <EditorialGrid list={list} onOpen={setActive} />
-      ) : (
-        <IndexView list={list} onOpen={setActive} />
-      )}
+      <EditorialGrid list={list} onOpen={setActive} />
 
       <Lightbox photo={active} onClose={() => setActive(null)} />
     </section>
@@ -166,97 +144,6 @@ function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (p: Photo) => 
           </figure>
         );
       })}
-    </div>
-  );
-}
-
-/* ---------------- Index (list with floating preview) ---------------- */
-
-function IndexView({ list, onOpen }: { list: Photo[]; onOpen: (p: Photo) => void }) {
-  const [hover, setHover] = useState<Photo | null>(null);
-  const [pos, setPos] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
-  const wrapRef = useRef<HTMLDivElement>(null);
-
-  const handleMove = (e: MouseEvent<HTMLDivElement>) => {
-    const rect = wrapRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
-
-  return (
-    <div ref={wrapRef} onMouseMove={handleMove} className="relative">
-      <ul className="divide-y divide-border/60 border-y border-border/60">
-        {list.map((p, i) => {
-          const idx = String(i + 1).padStart(2, "0");
-          const isHover = hover?.id === p.id;
-          return (
-            <li key={p.id}>
-              <button
-                onClick={() => onOpen(p)}
-                onMouseEnter={() => setHover(p)}
-                onMouseLeave={() => setHover((h) => (h?.id === p.id ? null : h))}
-                className="group grid w-full grid-cols-12 items-baseline gap-4 px-1 py-5 md:py-7 text-left transition-colors"
-              >
-                <span className="col-span-2 md:col-span-1 text-[11px] uppercase tracking-lux-sm text-muted-foreground tabular-nums">
-                  № {idx}
-                </span>
-                <span
-                  className={`col-span-7 md:col-span-7 font-serif text-2xl md:text-4xl italic transition-all duration-500 ${
-                    isHover ? "translate-x-2 text-foreground" : "text-foreground/85"
-                  }`}
-                >
-                  {p.title}
-                </span>
-                <span className="col-span-2 md:col-span-3 text-[11px] uppercase tracking-lux-sm text-muted-foreground">
-                  {p.category}
-                </span>
-                <span className="col-span-1 flex items-center justify-end text-foreground">
-                  {p.country && (
-                    <img
-                      src={`https://flagcdn.com/20x15/${p.country.code}.png`}
-                      srcSet={`https://flagcdn.com/40x30/${p.country.code}.png 2x`}
-                      width={20}
-                      height={15}
-                      alt={p.country.label}
-                      className="inline-block rounded-[1px] shadow-sm opacity-80 transition-opacity group-hover:opacity-100"
-                      loading="lazy"
-                    />
-                  )}
-                </span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-
-      {/* Floating preview that follows the cursor */}
-      <div
-        aria-hidden
-        className={`pointer-events-none absolute z-20 hidden md:block transition-opacity duration-300 ${
-          hover ? "opacity-100" : "opacity-0"
-        }`}
-        style={{
-          left: pos.x,
-          top: pos.y,
-          transform: "translate(24px, -50%)",
-        }}
-      >
-        {hover && (
-          <div className="w-[280px] overflow-hidden bg-muted shadow-2xl">
-            <img
-              src={hover.src}
-              alt=""
-              className={`block w-full object-cover ${
-                hover.orientation === "portrait"
-                  ? "aspect-[4/5]"
-                  : hover.orientation === "landscape"
-                  ? "aspect-[3/2]"
-                  : "aspect-square"
-              }`}
-            />
-          </div>
-        )}
-      </div>
     </div>
   );
 }

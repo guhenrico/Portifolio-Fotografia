@@ -32,19 +32,35 @@ function AboutPage() {
 
         <div className="mt-8 md:mt-12 grid grid-cols-12 gap-8 md:gap-14 items-start">
           <Reveal className="col-span-12 md:col-span-5" delay={100}>
-            <figure className="img-hover relative overflow-hidden grain">
-              <img
-                src={aboutPortrait}
-                alt="Gustavo Henrico"
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover"
-              />
-              {/* decorative dotted ring */}
-              <span className="ring-dotted absolute -bottom-6 -right-6 h-24 w-24 rounded-full hidden md:block" aria-hidden />
-            </figure>
-            <figcaption className="mt-4 flex items-center justify-between text-[10px] uppercase tracking-lux-sm text-muted-foreground">
-              <span>Retrato</span>
+            <div className="relative">
+              {/* Layered offset frame */}
+              <span aria-hidden className="pointer-events-none absolute -left-3 -top-3 md:-left-5 md:-top-5 h-full w-full border border-foreground/70" />
+              <span aria-hidden className="ring-dotted absolute -right-4 -bottom-4 md:-right-6 md:-bottom-6 h-24 w-24 rounded-full drift hidden md:block" />
+              {/* Vertical caption */}
+              <span aria-hidden className="hidden md:block absolute -left-10 top-0 [writing-mode:vertical-rl] rotate-180 text-[10px] uppercase tracking-lux text-muted-foreground">
+                Gustavo Henrico · MMXXVI
+              </span>
+              <figure className="img-hover relative overflow-hidden grain group">
+                <img
+                  src={aboutPortrait}
+                  alt="Gustavo Henrico"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover grayscale transition-[filter,transform] duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:grayscale-0"
+                />
+                <span className="pointer-events-none absolute left-3 top-3 z-10 bg-background/85 px-2 py-1 text-[10px] uppercase tracking-lux-sm backdrop-blur-sm">
+                  № 003 · Retrato
+                </span>
+                <span className="pointer-events-none absolute inset-x-0 bottom-0 z-10 translate-y-full bg-gradient-to-t from-foreground/85 via-foreground/55 to-transparent px-4 pb-3 pt-12 text-background transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0">
+                  <span className="flex items-baseline justify-between gap-3">
+                    <span className="font-serif text-base italic">Gustavo Henrico</span>
+                    <span className="text-[10px] uppercase tracking-lux-sm opacity-80">SP · BR</span>
+                  </span>
+                </span>
+              </figure>
+            </div>
+            <figcaption className="mt-6 md:mt-8 flex items-center justify-between text-[10px] uppercase tracking-lux-sm text-muted-foreground">
+              <span>Auto-retrato</span>
               <span>São Paulo · SP</span>
             </figcaption>
           </Reveal>
