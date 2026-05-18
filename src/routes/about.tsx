@@ -1,7 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import { Marquee } from "@/components/Marquee";
 import aboutPortrait from "@/assets/portfolio/about-portrait.jpeg";
 
 export const Route = createFileRoute("/about")({
@@ -74,7 +75,7 @@ function AboutPage() {
             </Reveal>
             <Reveal delay={180}>
               <div className="space-y-5 text-[14px] md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
-                <p>
+                <p className="drop-cap">
                   Olá, sou Gustavo Henrico. Sou fotógrafo e gosto de registrar o que vejo por aí.
                 </p>
                 <p>
@@ -106,9 +107,58 @@ function AboutPage() {
                 </div>
               </dl>
             </Reveal>
+
+            <Reveal delay={300}>
+              <div className="mt-2 flex flex-wrap items-center gap-x-6 gap-y-3 text-[11px] uppercase tracking-lux-sm">
+                <span className="inline-flex items-center gap-2 text-muted-foreground">
+                  <span className="pulse-dot" aria-hidden /> Disponível para 2026
+                </span>
+                <Link
+                  to="/contact"
+                  className="word-swap font-serif text-base italic normal-case tracking-normal text-foreground"
+                >
+                  <span className="swap-out">vamos conversar →</span>
+                  <span className="swap-in">marcar uma sessão →</span>
+                </Link>
+              </div>
+            </Reveal>
           </div>
         </div>
+
+        {/* Pull quote */}
+        <Reveal delay={200}>
+          <figure className="mt-20 md:mt-28 border-t border-border/60 pt-10 md:pt-16">
+            <blockquote className="font-serif italic text-3xl md:text-[clamp(2rem,4.2vw,3.75rem)] leading-[1.1] tracking-[-0.01em] max-w-[22ch] mx-auto text-center">
+              “Fotografar é <span className="text-muted-foreground">esperar</span> a luz dizer
+              o que as palavras não alcançam.”
+            </blockquote>
+            <figcaption className="mt-6 text-center text-[10px] uppercase tracking-lux-sm text-muted-foreground">
+              — caderno de campo, MMXXV
+            </figcaption>
+          </figure>
+        </Reveal>
       </section>
+
+      {/* Process marquee */}
+      <div className="border-y border-border/60 py-5 md:py-7">
+        <Marquee className="font-serif italic text-foreground/80 text-2xl md:text-4xl" slow>
+          <span className="inline-flex items-center gap-12 pr-12">
+            <span>retratos autorais</span><span>·</span>
+            <span>ensaios editoriais</span><span>·</span>
+            <span>paisagens</span><span>·</span>
+            <span>colaborações</span><span>·</span>
+            <span>direção de imagem</span><span>·</span>
+          </span>
+          <span className="inline-flex items-center gap-12 pr-12">
+            <span>retratos autorais</span><span>·</span>
+            <span>ensaios editoriais</span><span>·</span>
+            <span>paisagens</span><span>·</span>
+            <span>colaborações</span><span>·</span>
+            <span>direção de imagem</span><span>·</span>
+          </span>
+        </Marquee>
+      </div>
+
       <Footer />
     </main>
   );

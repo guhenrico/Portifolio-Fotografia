@@ -37,6 +37,11 @@ function ContactPage() {
 
           <div className="col-span-12 md:col-span-9 md:col-start-3">
             <Reveal>
+              <span className="inline-flex items-center gap-2 text-[10px] uppercase tracking-lux-sm text-muted-foreground mb-6">
+                <span className="pulse-dot" aria-hidden /> Aceitando comissões · 2026
+              </span>
+            </Reveal>
+            <Reveal>
               <h1 className="font-serif text-[2.25rem] sm:text-5xl md:text-[clamp(2.5rem,6vw,6rem)] leading-[1.02] md:leading-[0.98] tracking-[-0.02em]">
                 Vamos conversar sobre o que ainda{" "}
                 <em className="italic text-muted-foreground">não foi feito</em>.
@@ -56,7 +61,10 @@ function ContactPage() {
                   href="mailto:gustavo.henrico01@gmail.com"
                   className="cta-fill group inline-flex w-full items-center justify-between gap-4 border border-foreground px-6 py-4 text-xs uppercase tracking-lux-sm text-foreground transition-colors md:w-fit md:justify-start md:gap-12 md:px-10 md:py-6 md:text-sm"
                 >
-                  <span>Vamos conversar</span>
+                  <span className="word-swap">
+                    <span className="swap-out">Vamos conversar</span>
+                    <span className="swap-in">Enviar e-mail</span>
+                  </span>
                   <span className="transition-transform duration-500 group-hover:translate-x-2" aria-hidden>→</span>
                 </a>
                 <a
@@ -65,6 +73,30 @@ function ContactPage() {
                 >
                   gustavo.henrico01@gmail.com
                 </a>
+              </div>
+            </Reveal>
+
+            {/* Quick link cards */}
+            <Reveal delay={380}>
+              <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-[720px]">
+                {[
+                  { label: "Instagram", value: "@henrico", href: "https://instagram.com", meta: "diário" },
+                  { label: "Atelier", value: "Interior · SP", href: "#", meta: "com hora marcada" },
+                  { label: "Resposta", value: "em até 48h", href: "mailto:gustavo.henrico01@gmail.com", meta: "seg — sex" },
+                ].map((c) => (
+                  <a
+                    key={c.label}
+                    href={c.href}
+                    className="tilt-card group block border border-border/70 p-5 bg-background"
+                  >
+                    <div className="flex items-center justify-between text-[10px] uppercase tracking-lux-sm text-muted-foreground">
+                      <span>{c.label}</span>
+                      <span aria-hidden className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    </div>
+                    <p className="mt-6 font-serif text-xl italic">{c.value}</p>
+                    <p className="mt-1 text-[11px] text-muted-foreground">{c.meta}</p>
+                  </a>
+                ))}
               </div>
             </Reveal>
 
