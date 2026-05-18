@@ -30,23 +30,24 @@ function AboutPage() {
           </div>
         </Reveal>
 
-        <div className="mt-8 md:mt-12 grid grid-cols-12 gap-8 md:gap-14 items-start">
-          <Reveal className="col-span-12 md:col-span-5" delay={100}>
+        <div className="mt-10 md:mt-16 grid grid-cols-12 gap-10 md:gap-16 items-start">
+          <Reveal className="col-span-12 md:col-span-5 md:pl-8" delay={100}>
             <div className="relative">
               {/* Layered offset frame */}
               <span aria-hidden className="pointer-events-none absolute -left-3 -top-3 md:-left-5 md:-top-5 h-full w-full border border-foreground/70" />
-              <span aria-hidden className="ring-dotted absolute -right-4 -bottom-4 md:-right-6 md:-bottom-6 h-24 w-24 rounded-full drift hidden md:block" />
-              {/* Vertical caption */}
-              <span aria-hidden className="hidden md:block absolute -left-10 top-0 [writing-mode:vertical-rl] rotate-180 text-[10px] uppercase tracking-lux text-muted-foreground">
-                Gustavo Henrico · MMXXVI
+              {/* Floating dotted ring */}
+              <span aria-hidden className="ring-dotted absolute -right-5 -bottom-5 md:-right-7 md:-bottom-7 h-24 w-24 rounded-full drift hidden md:block" />
+              {/* Vertical caption — sits outside the frame on the left */}
+              <span aria-hidden className="hidden md:block absolute -left-14 bottom-0 [writing-mode:vertical-rl] rotate-180 text-[10px] uppercase tracking-lux text-muted-foreground whitespace-nowrap">
+                Gustavo Henrico — MMXXVI
               </span>
-              <figure className="img-hover relative overflow-hidden grain group">
+              <figure className="img-hover relative overflow-hidden grain group aspect-[4/5] bg-muted">
                 <img
                   src={aboutPortrait}
                   alt="Gustavo Henrico"
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
-                  className="w-full h-full object-cover grayscale transition-[filter,transform] duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:grayscale-0"
+                  className="absolute inset-0 w-full h-full object-cover grayscale transition-[filter,transform] duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:grayscale-0 group-hover:scale-[1.02]"
                 />
                 <span className="pointer-events-none absolute left-3 top-3 z-10 bg-background/85 px-2 py-1 text-[10px] uppercase tracking-lux-sm backdrop-blur-sm">
                   № 003 · Retrato
