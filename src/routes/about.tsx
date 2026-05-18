@@ -75,7 +75,7 @@ function AboutPage() {
             </Reveal>
             <Reveal delay={180}>
               <div className="space-y-5 text-[14px] md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
-                <p>
+                <p className="drop-cap">
                   Olá, sou Gustavo Henrico. Sou fotógrafo e gosto de registrar o que vejo por aí.
                 </p>
                 <p>
