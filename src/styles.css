@@ -274,4 +274,10 @@
     transform: translateY(-4px) rotate(-0.4deg);
     border-color: var(--foreground);
   }
+
+  /* Heading underline draw-in */
+  @keyframes underline {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
 }
