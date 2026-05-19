@@ -92,7 +92,13 @@ function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (p: Photo) => 
                 src={p.src}
                 alt={p.title}
                 loading="lazy"
-                className="block h-auto w-full object-contain transition duration-700"
+                className={`block w-full object-cover transition duration-700 group-hover:grayscale-0 ${
+                  p.orientation === "portrait"
+                    ? "aspect-[4/5]"
+                    : p.orientation === "landscape"
+                    ? "aspect-[3/2]"
+                    : "aspect-square"
+                }`}
               />
               {/* Index badge */}
               <span className="pointer-events-none absolute left-3 top-3 z-10 inline-flex items-center gap-1.5 bg-background/80 px-2 py-1 text-[10px] uppercase tracking-lux-sm text-foreground backdrop-blur-sm opacity-0 transition-opacity duration-500 group-hover:opacity-100">
