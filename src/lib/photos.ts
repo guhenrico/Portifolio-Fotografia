@@ -37,7 +37,7 @@ export const photos: Photo[] = [
   { id: "allana-2", title: "Allana, golden hour", category: "Retratos", src: allana2, orientation: "portrait", country: BR },
   { id: "anna-venezia", title: "Anna em Venezia", category: "Retratos", src: annaVenezia, orientation: "portrait", country: IT },
   { id: "beatriz-venezia", title: "Beatriz, ponte de Veneza", category: "Retratos", src: beatrizVenezia, orientation: "portrait", country: IT },
-  { id: "st-moritz", title: "St. Moritz", category: "Retratos", src: stMoritz, orientation: "portrait", country: CH },
+  { id: "st-moritz", title: "Beatriz, St. Moritz", category: "Retratos", src: stMoritz, orientation: "portrait", country: CH },
   { id: "varenna", title: "Varenna, Lago di Como", category: "Retratos", src: varenna, orientation: "portrait", country: IT },
   { id: "lago-1", title: "Lago di Como", category: "Paisagens", src: lagoDiComo1, orientation: "portrait", country: IT },
   { id: "lago-2", title: "Lago di Como", category: "Paisagens", src: lagoDiComo2, orientation: "portrait", country: IT },
