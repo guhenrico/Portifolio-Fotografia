@@ -64,10 +64,6 @@ function AboutPage() {
                 </span>
               </figure>
             </div>
-            <figcaption className="mt-5 md:mt-8 flex items-center justify-between text-[10px] uppercase tracking-lux-sm text-muted-foreground">
-              <span>Auto-retrato</span>
-              <span>São Paulo · SP</span>
-            </figcaption>
           </Reveal>
 
           <div className="col-span-12 md:col-span-7 flex flex-col gap-6 md:gap-8 min-w-0">
