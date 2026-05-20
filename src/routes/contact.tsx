@@ -45,7 +45,7 @@ function ContactPage() {
 
             <Reveal delay={200}>
               <p className="mt-6 max-w-[52ch] text-[14px] md:text-base text-muted-foreground leading-relaxed">
-                Ensaios autorais, retratos, colaborações editoriais e projetos comerciais.
+                Ensaios autorais, retratos e projetos comerciais.
                 Conte-me sua ideia — a melhor parte começa antes da câmera.
               </p>
             </Reveal>
