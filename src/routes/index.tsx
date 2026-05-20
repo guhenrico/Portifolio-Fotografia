@@ -85,6 +85,17 @@ function Index() {
               de SP, ele cria imagens que valorizam o silêncio, a textura das coisas e a luz que
               envolve cada cena. Um trabalho feito para ser sentido, não apenas visto.
             </p>
+            <a
+              href="#works"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("works")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="group mt-8 inline-flex items-center gap-3 border-b border-foreground/40 pb-1.5 text-[11px] uppercase tracking-lux text-foreground transition-colors hover:border-foreground"
+            >
+              Ver trabalhos
+              <span className="drift inline-block transition-transform duration-500 group-hover:translate-y-1" aria-hidden>↓</span>
+            </a>
           </Reveal>
         </div>
 

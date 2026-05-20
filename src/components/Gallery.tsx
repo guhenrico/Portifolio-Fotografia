@@ -6,7 +6,7 @@ const FILTERS: ("Todos" | Category)[] = ["Todos", "Retratos", "Paisagens", "Anim
 
 export function Gallery() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>("Todos");
-  const [active, setActive] = useState<Photo | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const counts = useMemo(() => {
     const map: Record<string, number> = { Todos: photos.length };
@@ -20,7 +20,7 @@ export function Gallery() {
   );
 
   return (
-    <section className="mx-auto max-w-[1600px] px-5 md:px-12">
+    <section id="works" className="mx-auto max-w-[1600px] px-5 md:px-12 scroll-mt-24">
       {/* Header — editorial control bar */}
       <div className="mb-10 border-b border-border/60 pb-5 md:mb-16 md:pb-7">
         <div className="flex flex-wrap items-end justify-between gap-y-5 gap-x-8">
@@ -37,26 +37,23 @@ export function Gallery() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-3 md:gap-x-7">
+          <div className="flex flex-wrap items-center gap-2 md:gap-3">
             {FILTERS.map((f) => {
               const isActive = filter === f;
               return (
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
-                  className={`group inline-flex items-baseline gap-1.5 text-[11px] uppercase tracking-lux transition-colors ${
-                    isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                  className={`group inline-flex items-baseline gap-1.5 border px-3.5 py-2 text-[11px] uppercase tracking-lux transition-all duration-300 md:px-4 md:py-2.5 ${
+                    isActive
+                      ? "border-foreground bg-foreground text-background"
+                      : "border-border/70 text-muted-foreground hover:border-foreground hover:text-foreground"
                   }`}
                 >
-                  <span className="relative">
-                    {f}
-                    <span
-                      className={`absolute -bottom-1 left-0 h-px bg-foreground transition-[width] duration-500 ${
-                        isActive ? "w-full" : "w-0 group-hover:w-full"
-                      }`}
-                    />
-                  </span>
-                  <sup className="text-[9px] tracking-normal text-muted-foreground/70 tabular-nums">
+                  <span>{f}</span>
+                  <sup className={`text-[9px] tracking-normal tabular-nums ${
+                    isActive ? "text-background/70" : "text-muted-foreground/70"
+                  }`}>
                     {String(counts[f] ?? 0).padStart(2, "0")}
                   </sup>
                 </button>
@@ -66,16 +63,21 @@ export function Gallery() {
         </div>
       </div>
 
-      <EditorialGrid list={list} onOpen={setActive} />
+      <EditorialGrid list={list} onOpen={(i) => setActiveIndex(i)} />
 
-      <Lightbox photo={active} onClose={() => setActive(null)} />
+      <Lightbox
+        photos={list}
+        index={activeIndex}
+        onClose={() => setActiveIndex(null)}
+        onNavigate={(i) => setActiveIndex(i)}
+      />
     </section>
   );
 }
 
 /* ---------------- Editorial (mosaic) ---------------- */
 
-function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (p: Photo) => void }) {
+function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (i: number) => void }) {
   return (
     <div className="grid grid-cols-12 gap-x-4 gap-y-10 md:gap-x-10 md:gap-y-28">
       {list.map((p, i) => {
@@ -84,13 +86,13 @@ function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (p: Photo) => 
         return (
           <figure key={p.id} className={`group ${layout.col} ${layout.offset} ${layout.mt}`}>
             <button
-              onClick={() => onOpen(p)}
+              onClick={() => onOpen(i)}
               className="img-hover relative block w-full overflow-hidden bg-muted"
               aria-label={`Abrir ${p.title}`}
             >
               <img
                 src={p.src}
-                alt={p.title}
+                alt={p.alt}
                 loading="lazy"
                 className={`block w-full object-cover transition duration-700 group-hover:grayscale-0 ${
                   p.orientation === "portrait"
