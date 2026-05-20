@@ -37,11 +37,6 @@ function ContactPage() {
 
           <div className="col-span-12 md:col-span-9 md:col-start-3">
             <Reveal>
-              <span className="inline-flex items-center gap-2 text-[10px] uppercase tracking-lux-sm text-muted-foreground mb-6">
-                <span className="pulse-dot" aria-hidden /> Aceitando comissões · 2026
-              </span>
-            </Reveal>
-            <Reveal>
               <h1 className="font-serif text-[2.25rem] sm:text-5xl md:text-[clamp(2.5rem,6vw,6rem)] leading-[1.02] md:leading-[0.98] tracking-[-0.02em]">
                 Vamos conversar sobre o que ainda{" "}
                 <em className="italic text-muted-foreground">não foi feito</em>.
