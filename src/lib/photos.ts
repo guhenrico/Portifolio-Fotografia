@@ -25,6 +25,7 @@ export interface Photo {
   src: string;
   orientation: "portrait" | "landscape" | "square";
   country?: { code: string; label: string };
+  alt: string;
 }
 
 const BR = { code: "br", label: "Brasil" };
@@ -33,21 +34,21 @@ const NL = { code: "nl", label: "Holanda" };
 const CH = { code: "ch", label: "Suíça" };
 
 export const photos: Photo[] = [
-  { id: "allana", title: "Allana, golden hour", category: "Retratos", src: allana, orientation: "portrait", country: BR },
-  { id: "allana-2", title: "Allana, golden hour", category: "Retratos", src: allana2, orientation: "portrait", country: BR },
-  { id: "anna-venezia", title: "Anna em Venezia", category: "Retratos", src: annaVenezia, orientation: "portrait", country: IT },
-  { id: "beatriz-venezia", title: "Beatriz, ponte de Veneza", category: "Retratos", src: beatrizVenezia, orientation: "portrait", country: IT },
-  { id: "st-moritz", title: "Beatriz, St. Moritz", category: "Retratos", src: stMoritz, orientation: "portrait", country: CH },
-  { id: "varenna", title: "Varenna, Lago di Como", category: "Retratos", src: varenna, orientation: "portrait", country: IT },
-  { id: "lago-1", title: "Lago di Como", category: "Paisagens", src: lagoDiComo1, orientation: "portrait", country: IT },
-  { id: "lago-2", title: "Lago di Como", category: "Paisagens", src: lagoDiComo2, orientation: "portrait", country: IT },
-  { id: "venezia-1", title: "Venezia", category: "Paisagens", src: venezia1, orientation: "portrait", country: IT },
-  { id: "venezia-2", title: "Venezia", category: "Paisagens", src: venezia2, orientation: "portrait", country: IT },
-  { id: "amsterdam", title: "Amsterdam", category: "Paisagens", src: amsterdam, orientation: "portrait", country: NL },
-  { id: "cachorro", title: "Cachorro", category: "Animais", src: cachorro, orientation: "portrait" },
-  { id: "gato-1", title: "Gato", category: "Animais", src: gato1, orientation: "portrait" },
-  { id: "gato-2", title: "Gato", category: "Animais", src: gato2, orientation: "portrait" },
-  { id: "pato", title: "Pato", category: "Animais", src: pato, orientation: "portrait" },
-  { id: "cavalo", title: "Cavalo", category: "Animais", src: cavalo, orientation: "portrait" },
-  { id: "passaro", title: "Pássaro", category: "Animais", src: passaro, orientation: "portrait" },
+  { id: "allana", title: "Allana, golden hour", category: "Retratos", src: allana, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
+  { id: "allana-2", title: "Allana, golden hour", category: "Retratos", src: allana2, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
+  { id: "anna-venezia", title: "Anna em Venezia", category: "Retratos", src: annaVenezia, orientation: "portrait", country: IT, alt: "Anna em Venezia, ponte ao fundo" },
+  { id: "beatriz-venezia", title: "Beatriz, ponte de Veneza", category: "Retratos", src: beatrizVenezia, orientation: "portrait", country: IT, alt: "Beatriz na ponte de Veneza, Itália" },
+  { id: "st-moritz", title: "Beatriz, St. Moritz", category: "Retratos", src: stMoritz, orientation: "portrait", country: CH, alt: "Beatriz em St. Moritz, neve ao fundo, Suíça" },
+  { id: "varenna", title: "Varenna, Lago di Como", category: "Retratos", src: varenna, orientation: "portrait", country: IT, alt: "Varenna à beira do Lago di Como, Itália" },
+  { id: "lago-1", title: "Lago di Como", category: "Paisagens", src: lagoDiComo1, orientation: "portrait", country: IT, alt: "Vista do Lago di Como ao entardecer, Itália" },
+  { id: "lago-2", title: "Lago di Como", category: "Paisagens", src: lagoDiComo2, orientation: "portrait", country: IT, alt: "Vista do Lago di Como ao entardecer, Itália" },
+  { id: "venezia-1", title: "Venezia", category: "Paisagens", src: venezia1, orientation: "portrait", country: IT, alt: "Canal de Venezia com barcos, Itália" },
+  { id: "venezia-2", title: "Venezia", category: "Paisagens", src: venezia2, orientation: "portrait", country: IT, alt: "Canal de Venezia com barcos, Itália" },
+  { id: "amsterdam", title: "Amsterdam", category: "Paisagens", src: amsterdam, orientation: "portrait", country: NL, alt: "Vista aérea de Amsterdam com canais, Holanda" },
+  { id: "cachorro", title: "Labrador, luz de tarde", category: "Animais", src: cachorro, orientation: "portrait", alt: "Labrador em luz de tarde" },
+  { id: "gato-1", title: "Gato, janela de manhã", category: "Animais", src: gato1, orientation: "portrait", alt: "Gato observando pela janela de manhã" },
+  { id: "gato-2", title: "Gato, sombra e reflexo", category: "Animais", src: gato2, orientation: "portrait", alt: "Gato em sombra e reflexo" },
+  { id: "pato", title: "Pato, beira d'água", category: "Animais", src: pato, orientation: "portrait", alt: "Pato à beira d'água" },
+  { id: "cavalo", title: "Cavalo, campo aberto", category: "Animais", src: cavalo, orientation: "portrait", alt: "Cavalo em campo aberto" },
+  { id: "passaro", title: "Pássaro, galho seco", category: "Animais", src: passaro, orientation: "portrait", alt: "Pássaro pousado em galho seco" },
 ];
