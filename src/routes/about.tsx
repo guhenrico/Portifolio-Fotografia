@@ -141,17 +141,6 @@ function AboutPage() {
               </div>
             </Reveal>
 
-            {/* Signature */}
-            <Reveal delay={360}>
-              <div className="mt-2 flex items-end justify-between gap-4 max-w-[58ch]">
-                <span className="font-serif italic text-2xl md:text-3xl tracking-tight text-foreground/90 -rotate-3">
-                  G. Henrico
-                </span>
-                <span className="text-[9px] md:text-[10px] uppercase tracking-lux-sm text-muted-foreground">
-                  assinatura do autor
-                </span>
-              </div>
-            </Reveal>
           </div>
         </div>
 
