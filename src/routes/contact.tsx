@@ -73,15 +73,16 @@ function ContactPage() {
 
             {/* Quick link cards */}
             <Reveal delay={380}>
-              <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-[720px]">
+              <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[520px]">
                 {[
-                  { label: "Instagram", value: "@henrico", href: "https://instagram.com", meta: "diário" },
-                  { label: "Atelier", value: "Interior · SP", href: "#", meta: "com hora marcada" },
+                  { label: "Instagram", value: "@guhenricoo", href: "https://www.instagram.com/guhenricoo/", meta: "diário" },
                   { label: "Resposta", value: "em até 48h", href: "mailto:gustavo.henrico01@gmail.com", meta: "seg — sex" },
                 ].map((c) => (
                   <a
                     key={c.label}
                     href={c.href}
+                    target={c.href.startsWith("http") ? "_blank" : undefined}
+                    rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="tilt-card group block border border-border/70 p-5 bg-background"
                   >
                     <div className="flex items-center justify-between text-[10px] uppercase tracking-lux-sm text-muted-foreground">
