@@ -96,6 +96,66 @@ function ContactPage() {
               </div>
             </Reveal>
 
+            {/* Form */}
+            <Reveal delay={400}>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const form = e.currentTarget;
+                  const data = new FormData(form);
+                  const subject = encodeURIComponent(`Contato de ${data.get("name") ?? ""}`);
+                  const body = encodeURIComponent(
+                    `${data.get("message") ?? ""}\n\n— ${data.get("name") ?? ""} (${data.get("email") ?? ""})`
+                  );
+                  window.location.href = `mailto:gustavo.henrico01@gmail.com?subject=${subject}&body=${body}`;
+                }}
+                className="mt-14 max-w-[640px] border-t border-border/60 pt-10"
+              >
+                <p className="text-[10px] uppercase tracking-lux text-muted-foreground">
+                  Ou envie uma mensagem
+                </p>
+                <div className="mt-8 grid grid-cols-1 gap-7 md:grid-cols-2">
+                  <label className="block">
+                    <span className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Nome</span>
+                    <input
+                      name="name"
+                      type="text"
+                      required
+                      className="mt-2 w-full border-0 border-b border-border bg-transparent pb-2 font-serif text-lg text-foreground placeholder:text-muted-foreground/50 focus:border-foreground focus:outline-none transition-colors"
+                      placeholder="Seu nome"
+                    />
+                  </label>
+                  <label className="block">
+                    <span className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">E-mail</span>
+                    <input
+                      name="email"
+                      type="email"
+                      required
+                      className="mt-2 w-full border-0 border-b border-border bg-transparent pb-2 font-serif text-lg text-foreground placeholder:text-muted-foreground/50 focus:border-foreground focus:outline-none transition-colors"
+                      placeholder="voce@email.com"
+                    />
+                  </label>
+                </div>
+                <label className="mt-7 block">
+                  <span className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Mensagem</span>
+                  <textarea
+                    name="message"
+                    rows={4}
+                    required
+                    className="mt-2 w-full resize-none border-0 border-b border-border bg-transparent pb-2 font-serif text-lg text-foreground placeholder:text-muted-foreground/50 focus:border-foreground focus:outline-none transition-colors"
+                    placeholder="Conte sobre sua ideia…"
+                  />
+                </label>
+                <button
+                  type="submit"
+                  className="cta-fill group mt-10 inline-flex items-center justify-between gap-8 border border-foreground px-8 py-4 text-xs uppercase tracking-lux-sm text-foreground transition-colors"
+                >
+                  <span>Enviar mensagem</span>
+                  <span className="transition-transform duration-500 group-hover:translate-x-2" aria-hidden>→</span>
+                </button>
+              </form>
+            </Reveal>
+
             {/* Meta details */}
             <Reveal delay={420}>
               <dl className="mt-14 grid grid-cols-2 gap-y-6 gap-x-8 border-t border-border/60 pt-8 max-w-[640px] md:grid-cols-3">
