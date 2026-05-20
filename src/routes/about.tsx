@@ -64,10 +64,6 @@ function AboutPage() {
                 </span>
               </figure>
             </div>
-            <figcaption className="mt-5 md:mt-8 flex items-center justify-between text-[10px] uppercase tracking-lux-sm text-muted-foreground">
-              <span>Auto-retrato</span>
-              <span>São Paulo · SP</span>
-            </figcaption>
           </Reveal>
 
           <div className="col-span-12 md:col-span-7 flex flex-col gap-6 md:gap-8 min-w-0">
@@ -127,10 +123,6 @@ function AboutPage() {
                   <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Desde</dt>
                   <dd className="mt-1 font-serif text-base md:text-lg">MMXXII</dd>
                 </div>
-                <div>
-                  <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Disponível</dt>
-                  <dd className="mt-1 font-serif text-base md:text-lg italic">Comissões abertas</dd>
-                </div>
               </dl>
             </Reveal>
 
@@ -149,17 +141,6 @@ function AboutPage() {
               </div>
             </Reveal>
 
-            {/* Signature */}
-            <Reveal delay={360}>
-              <div className="mt-2 flex items-end justify-between gap-4 max-w-[58ch]">
-                <span className="font-serif italic text-2xl md:text-3xl tracking-tight text-foreground/90 -rotate-3">
-                  G. Henrico
-                </span>
-                <span className="text-[9px] md:text-[10px] uppercase tracking-lux-sm text-muted-foreground">
-                  assinatura do autor
-                </span>
-              </div>
-            </Reveal>
           </div>
         </div>
 
@@ -171,9 +152,6 @@ function AboutPage() {
               Fotografar é <span className="text-muted-foreground">esperar</span> a luz dizer
               o que as palavras não alcançam.
             </blockquote>
-            <figcaption className="mt-6 text-center text-[10px] uppercase tracking-lux-sm text-muted-foreground">
-              — caderno de campo, MMXXV
-            </figcaption>
           </figure>
         </Reveal>
       </section>

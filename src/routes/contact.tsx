@@ -37,11 +37,6 @@ function ContactPage() {
 
           <div className="col-span-12 md:col-span-9 md:col-start-3">
             <Reveal>
-              <span className="inline-flex items-center gap-2 text-[10px] uppercase tracking-lux-sm text-muted-foreground mb-6">
-                <span className="pulse-dot" aria-hidden /> Aceitando comissões · 2026
-              </span>
-            </Reveal>
-            <Reveal>
               <h1 className="font-serif text-[2.25rem] sm:text-5xl md:text-[clamp(2.5rem,6vw,6rem)] leading-[1.02] md:leading-[0.98] tracking-[-0.02em]">
                 Vamos conversar sobre o que ainda{" "}
                 <em className="italic text-muted-foreground">não foi feito</em>.
@@ -50,7 +45,7 @@ function ContactPage() {
 
             <Reveal delay={200}>
               <p className="mt-6 max-w-[52ch] text-[14px] md:text-base text-muted-foreground leading-relaxed">
-                Ensaios autorais, retratos, colaborações editoriais e projetos comerciais.
+                Ensaios autorais, retratos e projetos comerciais.
                 Conte-me sua ideia — a melhor parte começa antes da câmera.
               </p>
             </Reveal>
@@ -78,15 +73,16 @@ function ContactPage() {
 
             {/* Quick link cards */}
             <Reveal delay={380}>
-              <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-[720px]">
+              <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[520px]">
                 {[
-                  { label: "Instagram", value: "@henrico", href: "https://instagram.com", meta: "diário" },
-                  { label: "Atelier", value: "Interior · SP", href: "#", meta: "com hora marcada" },
+                  { label: "Instagram", value: "@guhenricoo", href: "https://www.instagram.com/guhenricoo/", meta: "diário" },
                   { label: "Resposta", value: "em até 48h", href: "mailto:gustavo.henrico01@gmail.com", meta: "seg — sex" },
                 ].map((c) => (
                   <a
                     key={c.label}
                     href={c.href}
+                    target={c.href.startsWith("http") ? "_blank" : undefined}
+                    rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="tilt-card group block border border-border/70 p-5 bg-background"
                   >
                     <div className="flex items-center justify-between text-[10px] uppercase tracking-lux-sm text-muted-foreground">
@@ -110,10 +106,6 @@ function ContactPage() {
                 <div>
                   <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Base</dt>
                   <dd className="mt-2 font-serif text-lg">Interior de SP</dd>
-                </div>
-                <div>
-                  <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Trabalhos</dt>
-                  <dd className="mt-2 font-serif text-lg italic">Brasil e exterior</dd>
                 </div>
               </dl>
             </Reveal>
