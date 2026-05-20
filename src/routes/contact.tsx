@@ -107,10 +107,6 @@ function ContactPage() {
                   <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Base</dt>
                   <dd className="mt-2 font-serif text-lg">Interior de SP</dd>
                 </div>
-                <div>
-                  <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Trabalhos</dt>
-                  <dd className="mt-2 font-serif text-lg italic">Brasil e exterior</dd>
-                </div>
               </dl>
             </Reveal>
           </div>
