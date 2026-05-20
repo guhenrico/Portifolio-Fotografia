@@ -152,9 +152,6 @@ function AboutPage() {
               Fotografar é <span className="text-muted-foreground">esperar</span> a luz dizer
               o que as palavras não alcançam.
             </blockquote>
-            <figcaption className="mt-6 text-center text-[10px] uppercase tracking-lux-sm text-muted-foreground">
-              — caderno de campo, MMXXV
-            </figcaption>
           </figure>
         </Reveal>
       </section>
