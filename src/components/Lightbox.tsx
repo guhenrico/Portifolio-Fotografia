@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { Photo } from "@/lib/photos";
 
@@ -28,70 +29,90 @@ export function Lightbox({ photos, index, onClose, onNavigate }: LightboxProps) 
   }, [index, photos.length, onClose, onNavigate]);
 
   if (!photo || index === null) return null;
+  if (typeof document === "undefined") return null;
 
   const prev = () => onNavigate((index - 1 + photos.length) % photos.length);
   const next = () => onNavigate((index + 1) % photos.length);
 
-  return (
+  return createPortal(
     <div
       onClick={onClose}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-xl px-4 py-10 md:px-6 md:py-12 animate-in fade-in duration-300"
+      role="dialog"
+      aria-modal="true"
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 2147483000,
+        background: "var(--background)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "4rem 1rem",
+      }}
     >
+      <img
+        key={photo.id}
+        src={photo.src}
+        alt={photo.alt}
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          maxHeight: "calc(100vh - 10rem)",
+          maxWidth: "min(1400px, 100%)",
+          width: "auto",
+          height: "auto",
+          objectFit: "contain",
+          display: "block",
+        }}
+      />
+
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="mt-5 flex w-full max-w-[1400px] flex-wrap items-end justify-between gap-x-6 gap-y-2 px-2 text-xs"
+      >
+        <div className="flex items-baseline gap-3">
+          <p className="font-serif text-lg italic text-foreground">{photo.title}</p>
+          {photo.country && (
+            <span className="inline-flex items-center gap-2 text-[11px] text-muted-foreground">
+              <img
+                src={`https://flagcdn.com/20x15/${photo.country.code}.png`}
+                width={16}
+                height={12}
+                alt={photo.country.label}
+                className="inline-block rounded-[1px]"
+                loading="lazy"
+              />
+              {photo.country.label}
+            </span>
+          )}
+        </div>
+        <p className="text-muted-foreground tracking-lux-sm uppercase tabular-nums">
+          {String(index + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")} · {photo.category}
+        </p>
+      </div>
+
       <button
-        onClick={onClose}
+        onClick={(e) => { e.stopPropagation(); onClose(); }}
         aria-label="Fechar"
-        className="absolute top-5 right-5 z-10 inline-flex h-10 w-10 items-center justify-center text-foreground/70 transition-colors hover:text-foreground"
+        className="absolute top-5 right-5 inline-flex h-10 w-10 items-center justify-center text-foreground/80 transition-colors hover:text-foreground"
       >
         <X className="h-5 w-5" />
       </button>
-
       <button
         onClick={(e) => { e.stopPropagation(); prev(); }}
         aria-label="Foto anterior"
-        className="absolute left-3 top-1/2 z-10 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center text-foreground/60 transition-colors hover:text-foreground md:left-6"
+        className="absolute left-3 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center text-foreground/70 transition-colors hover:text-foreground md:left-6"
       >
         <ChevronLeft className="h-7 w-7" />
       </button>
       <button
         onClick={(e) => { e.stopPropagation(); next(); }}
         aria-label="Próxima foto"
-        className="absolute right-3 top-1/2 z-10 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center text-foreground/60 transition-colors hover:text-foreground md:right-6"
+        className="absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center text-foreground/70 transition-colors hover:text-foreground md:right-6"
       >
         <ChevronRight className="h-7 w-7" />
       </button>
-
-      <div
-        key={photo.id}
-        className="relative flex max-h-full max-w-[1400px] flex-col items-center gap-5 animate-in fade-in zoom-in-95 duration-300"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <img
-          src={photo.src}
-          alt={photo.alt}
-          className="max-h-[78vh] w-auto object-contain"
-        />
-        <div className="flex w-full flex-wrap items-end justify-between gap-x-6 gap-y-2 text-xs">
-          <div className="flex items-baseline gap-3">
-            <p className="font-serif text-lg italic text-foreground">{photo.title}</p>
-            {photo.country && (
-              <span className="inline-flex items-center gap-2 text-[11px] text-muted-foreground">
-                <img
-                  src={`https://flagcdn.com/20x15/${photo.country.code}.png`}
-                  width={16}
-                  height={12}
-                  alt={photo.country.label}
-                  className="inline-block rounded-[1px]"
-                  loading="lazy"
-                />
-                {photo.country.label}
-              </span>
-            )}
-          </div>
-          <p className="text-muted-foreground tracking-lux-sm uppercase tabular-nums">
-            {String(index + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")} · {photo.category}
-          </p>
-        </div>
-      </div>
-    </div>
+    </div>,
+    document.body
   );
 }
