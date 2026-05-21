@@ -15,6 +15,7 @@ import annaVenezia from "@/assets/portfolio/anna-venezia.jpg";
 import beatrizVenezia from "@/assets/portfolio/beatriz-venezia.jpg";
 import stMoritz from "@/assets/portfolio/st-moritz.jpeg";
 import varenna from "@/assets/portfolio/varenna.jpeg";
+import allana3 from "@/assets/portfolio/allana-3.jpg";
 
 export type Category = "Retratos" | "Paisagens" | "Animais";
 
@@ -36,6 +37,7 @@ const CH = { code: "ch", label: "Suíça" };
 export const photos: Photo[] = [
   { id: "allana", title: "Allana, golden hour", category: "Retratos", src: allana, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
   { id: "allana-2", title: "Allana, golden hour", category: "Retratos", src: allana2, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
+  { id: "allana-3", title: "Allana, golden hour", category: "Retratos", src: allana3, orientation: "portrait", country: BR, alt: "Allana em retrato com cabelos ruivos e sardas, luz natural" },
   { id: "anna-venezia", title: "Anna em Venezia", category: "Retratos", src: annaVenezia, orientation: "portrait", country: IT, alt: "Anna em Venezia, ponte ao fundo" },
   { id: "beatriz-venezia", title: "Beatriz, ponte de Veneza", category: "Retratos", src: beatrizVenezia, orientation: "portrait", country: IT, alt: "Beatriz na ponte de Veneza, Itália" },
   { id: "st-moritz", title: "Beatriz, St. Moritz", category: "Retratos", src: stMoritz, orientation: "portrait", country: CH, alt: "Beatriz em St. Moritz, neve ao fundo, Suíça" },
