@@ -102,10 +102,6 @@ function AboutPage() {
                   <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Foco</dt>
                   <dd className="mt-1 font-serif text-base md:text-lg italic">Retrato · Paisagem</dd>
                 </div>
-                <div>
-                  <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Desde</dt>
-                  <dd className="mt-1 font-serif text-base md:text-lg">MMXXII</dd>
-                </div>
               </dl>
             </Reveal>
 
