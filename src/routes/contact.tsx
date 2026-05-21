@@ -76,7 +76,7 @@ function ContactPage() {
               <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[520px]">
                 {[
                   { label: "Instagram", value: "@guhenricoo", href: "https://www.instagram.com/guhenricoo/", meta: "diário" },
-                  { label: "Resposta", value: "em até 48h", href: "mailto:gustavo.henrico01@gmail.com", meta: "seg — sex" },
+                  { label: "Resposta", value: "em até 12h", href: "mailto:gustavo.henrico01@gmail.com", meta: "seg — sex" },
                 ].map((c) => (
                   <a
                     key={c.label}
@@ -161,7 +161,7 @@ function ContactPage() {
               <dl className="mt-14 grid grid-cols-2 gap-y-6 gap-x-8 border-t border-border/60 pt-8 max-w-[640px] md:grid-cols-3">
                 <div>
                   <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Resposta</dt>
-                  <dd className="mt-2 font-serif text-lg">em até 48h</dd>
+                  <dd className="mt-2 font-serif text-lg">em até 12h</dd>
                 </div>
                 <div>
                   <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Base</dt>
