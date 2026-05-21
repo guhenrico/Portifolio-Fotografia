@@ -16,8 +16,13 @@ import beatrizVenezia from "@/assets/portfolio/beatriz-venezia.jpg";
 import stMoritz from "@/assets/portfolio/st-moritz.jpeg";
 import varenna from "@/assets/portfolio/varenna.jpeg";
 import allana3 from "@/assets/portfolio/allana-3.jpg";
+import duomoMilano from "@/assets/portfolio/Duomo.jpeg";
+import noiva from "@/assets/portfolio/Noiva.jpeg";
+import davi from "@/assets/portfolio/Davi.jpg";
+import violino from "@/assets/portfolio/Violino.jpg";
+import lavanda from "@/assets/portfolio/Lavanda.jpg";
 
-export type Category = "Retratos" | "Paisagens" | "Animais";
+export type Category = "Retratos" | "Paisagens" | "Animais" | "Detalhes";
 
 export interface Photo {
   id: string;
@@ -47,10 +52,15 @@ export const photos: Photo[] = [
   { id: "venezia-1", title: "Venezia", category: "Paisagens", src: venezia1, orientation: "portrait", country: IT, alt: "Canal de Venezia com barcos, Itália" },
   { id: "venezia-2", title: "Venezia", category: "Paisagens", src: venezia2, orientation: "portrait", country: IT, alt: "Canal de Venezia com barcos, Itália" },
   { id: "amsterdam", title: "Amsterdam", category: "Paisagens", src: amsterdam, orientation: "portrait", country: NL, alt: "Vista aérea de Amsterdam com canais, Holanda" },
-  { id: "cachorro", title: "Labrador, luz de tarde", category: "Animais", src: cachorro, orientation: "portrait", alt: "Labrador em luz de tarde" },
+  { id: "cachorro", title: "Cacau, luz de tarde", category: "Animais", src: cachorro, orientation: "portrait", alt: "Cacau em luz de tarde" },
   { id: "gato-1", title: "Gato, janela de manhã", category: "Animais", src: gato1, orientation: "portrait", alt: "Gato observando pela janela de manhã" },
   { id: "gato-2", title: "Gato, sombra e reflexo", category: "Animais", src: gato2, orientation: "portrait", alt: "Gato em sombra e reflexo" },
   { id: "pato", title: "Pato, beira d'água", category: "Animais", src: pato, orientation: "portrait", alt: "Pato à beira d'água" },
   { id: "cavalo", title: "Cavalo, campo aberto", category: "Animais", src: cavalo, orientation: "portrait", alt: "Cavalo em campo aberto" },
   { id: "passaro", title: "Pássaro, galho seco", category: "Animais", src: passaro, orientation: "portrait", alt: "Pássaro pousado em galho seco" },
+  { id: "duomo-milano", title: "Duomo di Milano", category: "Detalhes", src: duomoMilano, orientation: "portrait", country: IT, alt: "Detalhe do Duomo di Milano na Itália" },
+  { id: "noiva-detalhes", title: "Elegância nos detalhes", category: "Detalhes", src: noiva, orientation: "portrait", alt: "Mão da noiva mostrando a aliança e acessórios delicados no pulso" },
+  { id: "davi", title: "Davi de Michelangelo", category: "Detalhes", src: davi, orientation: "portrait", country: IT, alt: "Estátua do Davi de Michelangelo em Florença, Itália" },
+  { id: "violino", title: "Museu da Música", category: "Detalhes", src: violino, orientation: "portrait", country: IT, alt: "Violino clássico exposto no Museu da Música em Veneza, Itália" },
+  { id: "lavanda", title: "Campo de Lavanda", category: "Detalhes", src: lavanda, orientation: "portrait", alt: "Close em um campinho de lavandas com cores vibrantes" },
 ];
