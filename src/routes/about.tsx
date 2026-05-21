@@ -90,23 +90,6 @@ function AboutPage() {
               </div>
             </Reveal>
 
-            {/* Stats — editorial counters */}
-            <Reveal delay={220}>
-              <div className="mt-2 grid grid-cols-3 gap-3 md:gap-6 border-y border-border/60 py-5 md:py-6 max-w-[58ch]">
-                {[
-                  { n: "04", l: "anos de ofício" },
-                  { n: "12+", l: "ensaios autorais" },
-                  { n: "05", l: "países visitados" },
-                ].map((s) => (
-                  <div key={s.l} className="text-center sm:text-left">
-                    <div className="font-serif text-3xl md:text-5xl leading-none tracking-tight">{s.n}</div>
-                    <div className="mt-2 text-[9px] md:text-[10px] uppercase tracking-lux-sm text-muted-foreground">
-                      {s.l}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
 
             {/* Mini-bio meta */}
             <Reveal delay={260}>
