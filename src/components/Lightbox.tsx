@@ -35,42 +35,28 @@ export function Lightbox({ photos, index, onClose, onNavigate }: LightboxProps) 
   return (
     <div
       onClick={onClose}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-xl px-4 py-10 md:px-6 md:py-12 animate-in fade-in duration-300"
+      role="dialog"
+      aria-modal="true"
+      className="fixed inset-0 z-[100] bg-background/95 backdrop-blur-xl"
     >
-      <button
-        onClick={onClose}
-        aria-label="Fechar"
-        className="absolute top-5 right-5 z-10 inline-flex h-10 w-10 items-center justify-center text-foreground/70 transition-colors hover:text-foreground"
-      >
-        <X className="h-5 w-5" />
-      </button>
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 px-4 py-16 md:px-16 md:py-20">
+        <div
+          className="relative flex w-full max-w-[1400px] flex-1 items-center justify-center"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <img
+            key={photo.id}
+            src={photo.src}
+            alt={photo.alt}
+            className="max-h-full max-w-full object-contain"
+            style={{ maxHeight: "calc(100vh - 12rem)" }}
+          />
+        </div>
 
-      <button
-        onClick={(e) => { e.stopPropagation(); prev(); }}
-        aria-label="Foto anterior"
-        className="absolute left-3 top-1/2 z-10 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center text-foreground/60 transition-colors hover:text-foreground md:left-6"
-      >
-        <ChevronLeft className="h-7 w-7" />
-      </button>
-      <button
-        onClick={(e) => { e.stopPropagation(); next(); }}
-        aria-label="Próxima foto"
-        className="absolute right-3 top-1/2 z-10 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center text-foreground/60 transition-colors hover:text-foreground md:right-6"
-      >
-        <ChevronRight className="h-7 w-7" />
-      </button>
-
-      <div
-        key={photo.id}
-        className="relative flex max-h-full max-w-[1400px] flex-col items-center gap-5 animate-in fade-in zoom-in-95 duration-300"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <img
-          src={photo.src}
-          alt={photo.alt}
-          className="max-h-[78vh] w-auto object-contain"
-        />
-        <div className="flex w-full flex-wrap items-end justify-between gap-x-6 gap-y-2 text-xs">
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="flex w-full max-w-[1400px] flex-wrap items-end justify-between gap-x-6 gap-y-2 text-xs"
+        >
           <div className="flex items-baseline gap-3">
             <p className="font-serif text-lg italic text-foreground">{photo.title}</p>
             {photo.country && (
@@ -92,6 +78,29 @@ export function Lightbox({ photos, index, onClose, onNavigate }: LightboxProps) 
           </p>
         </div>
       </div>
+
+      <button
+        onClick={(e) => { e.stopPropagation(); onClose(); }}
+        aria-label="Fechar"
+        className="absolute top-5 right-5 z-10 inline-flex h-10 w-10 items-center justify-center text-foreground/80 transition-colors hover:text-foreground"
+      >
+        <X className="h-5 w-5" />
+      </button>
+
+      <button
+        onClick={(e) => { e.stopPropagation(); prev(); }}
+        aria-label="Foto anterior"
+        className="absolute left-3 top-1/2 z-10 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center text-foreground/70 transition-colors hover:text-foreground md:left-6"
+      >
+        <ChevronLeft className="h-7 w-7" />
+      </button>
+      <button
+        onClick={(e) => { e.stopPropagation(); next(); }}
+        aria-label="Próxima foto"
+        className="absolute right-3 top-1/2 z-10 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center text-foreground/70 transition-colors hover:text-foreground md:right-6"
+      >
+        <ChevronRight className="h-7 w-7" />
+      </button>
     </div>
   );
 }
