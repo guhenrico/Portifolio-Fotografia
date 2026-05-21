@@ -15,6 +15,7 @@ import annaVenezia from "@/assets/portfolio/anna-venezia.jpg";
 import beatrizVenezia from "@/assets/portfolio/beatriz-venezia.jpg";
 import stMoritz from "@/assets/portfolio/st-moritz.jpeg";
 import varenna from "@/assets/portfolio/varenna.jpeg";
+import allana3 from "@/assets/portfolio/allana-3.jpg";
 
 export type Category = "Retratos" | "Paisagens" | "Animais";
 
