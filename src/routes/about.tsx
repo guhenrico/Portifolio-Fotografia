@@ -139,16 +139,16 @@ function AboutPage() {
       <div className="border-y border-border/60 py-5 md:py-7 overflow-hidden">
         <Marquee className="font-serif italic text-foreground/80 text-2xl md:text-4xl" slow>
           <span className="inline-flex items-center gap-12 pr-12">
-            <span>retratos autorais</span><span>·</span>
+            <span>fotografia autoral</span><span>·</span>
             <span>ensaios editoriais</span><span>·</span>
-            <span>paisagens</span><span>·</span>
+            <span>detalhes</span><span>·</span>
             <span>colaborações</span><span>·</span>
             <span>direção de imagem</span><span>·</span>
           </span>
           <span className="inline-flex items-center gap-12 pr-12">
-            <span>retratos autorais</span><span>·</span>
+            <span>fotografia autoral</span><span>·</span>
             <span>ensaios editoriais</span><span>·</span>
-            <span>paisagens</span><span>·</span>
+            <span>detalhes</span><span>·</span>
             <span>colaborações</span><span>·</span>
             <span>direção de imagem</span><span>·</span>
           </span>
