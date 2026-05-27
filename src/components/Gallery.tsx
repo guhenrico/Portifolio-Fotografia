@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { photos, type Category, type Photo } from "@/lib/photos";
 import { Lightbox } from "./Lightbox";
 
-const FILTERS: ("Todos" | Category)[] = ["Todos", "Retratos", "Paisagens", "Animais", "Detalhes"];
+const FILTERS: ("Todos" | Category)[] = ["Todos", "Fotos", "Detalhes"];
 
 export function Gallery() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>("Todos");
