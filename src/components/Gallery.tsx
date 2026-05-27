@@ -79,12 +79,12 @@ export function Gallery() {
 
 function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (i: number) => void }) {
   return (
-    <div className="grid grid-cols-12 gap-x-4 gap-y-10 md:gap-x-10 md:gap-y-28">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-16 md:gap-x-10 md:gap-y-20 items-start">
       {list.map((p, i) => {
-        const layout = layoutFor(i, p.orientation);
+        const layout = layoutFor(i);
         const idx = String(i + 1).padStart(2, "0");
         return (
-          <figure key={p.id} className={`group ${layout.col} ${layout.offset} ${layout.mt}`}>
+          <figure key={p.id} className={`group col-span-1 ${layout.col} ${layout.mt}`}>
             <button
               onClick={() => onOpen(i)}
               className="img-hover relative block w-full overflow-hidden bg-muted"
@@ -94,13 +94,7 @@ function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (i: number) =>
                 src={p.src}
                 alt={p.alt}
                 loading="lazy"
-                className={`block w-full object-cover transition duration-700 group-hover:grayscale-0 ${
-                  p.orientation === "portrait"
-                    ? "aspect-[4/5]"
-                    : p.orientation === "landscape"
-                    ? "aspect-[3/2]"
-                    : "aspect-square"
-                }`}
+                className="block w-full h-auto transition duration-700 group-hover:grayscale-0"
               />
               {/* Index badge */}
               <span className="pointer-events-none absolute left-3 top-3 z-10 inline-flex items-center gap-1.5 bg-background/80 px-2 py-1 text-[10px] uppercase tracking-lux-sm text-foreground backdrop-blur-sm opacity-0 transition-opacity duration-500 group-hover:opacity-100">
@@ -152,18 +146,14 @@ function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (i: number) =>
 
 /* ---------------- Editorial layout pattern ---------------- */
 
-function layoutFor(i: number, orientation: Photo["orientation"]) {
+function layoutFor(i: number) {
+  // Padrão de 4 fotos (ideal para seus ensaios)
+  // Cria um layout 2 por linha, assimétrico e com "degrau" vertical
   const patterns = [
-    { col: "col-span-12 md:col-span-7", offset: "md:col-start-1", mt: "" },
-    { col: "col-span-12 md:col-span-4", offset: "md:col-start-9", mt: "md:mt-32" },
-    { col: "col-span-12 md:col-span-5", offset: "md:col-start-2", mt: "" },
-    { col: "col-span-12 md:col-span-6", offset: "md:col-start-7", mt: "md:mt-16" },
-    { col: "col-span-12 md:col-span-4", offset: "md:col-start-1", mt: "md:mt-12" },
-    { col: "col-span-12 md:col-span-7", offset: "md:col-start-6", mt: "" },
+    { col: "md:col-span-7", mt: "" },                 // Foto 1: Mais larga
+    { col: "md:col-span-5", mt: "md:mt-24" },         // Foto 2: Mais estreita, rebaixada
+    { col: "md:col-span-5", mt: "" },                 // Foto 3: Mais estreita
+    { col: "md:col-span-7", mt: "md:mt-24" },         // Foto 4: Mais larga, rebaixada
   ];
-  const base = patterns[i % patterns.length];
-  if (orientation === "landscape" && i % patterns.length === 4) {
-    return { ...base, col: "col-span-12 md:col-span-6" };
-  }
-  return base;
+  return patterns[i % patterns.length];
 }
