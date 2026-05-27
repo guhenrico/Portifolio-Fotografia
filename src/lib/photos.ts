@@ -22,6 +22,10 @@ import fl1 from "@/assets/portfolio/FL.JPEG";
 import fl2 from "@/assets/portfolio/FL2.JPEG";
 import fl3 from "@/assets/portfolio/FL3.JPEG";
 import fl4 from "@/assets/portfolio/FL4.JPEG";
+import np1 from "@/assets/portfolio/NP.JPEG";
+import np2 from "@/assets/portfolio/NP2.JPEG";
+import np3 from "@/assets/portfolio/NP3.JPEG";
+import np4 from "@/assets/portfolio/NP4.JPEG";
 
 export type Category = "Fotos" | "Detalhes";
 
@@ -64,4 +68,8 @@ export const photos: Photo[] = [
   { id: "fl-2", title: "Florença", category: "Fotos", src: fl2, orientation: "landscape", country: IT, alt: "Florença, paisagem" },
   { id: "fl-3", title: "Florença", category: "Fotos", src: fl3, orientation: "landscape", country: IT, alt: "Florença, paisagem" },
   { id: "fl-4", title: "Florença", category: "Fotos", src: fl4, orientation: "landscape", country: IT, alt: "Florença, paisagem" },
+  { id: "np-1", title: "Nápoles", category: "Fotos", src: np1, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
+  { id: "np-2", title: "Nápoles", category: "Fotos", src: np2, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
+  { id: "np-3", title: "Nápoles", category: "Fotos", src: np3, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
+  { id: "np-4", title: "Nápoles", category: "Fotos", src: np4, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
 ];
