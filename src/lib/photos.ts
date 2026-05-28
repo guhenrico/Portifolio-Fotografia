@@ -26,6 +26,16 @@ import np1 from "@/assets/portfolio/NP.JPEG";
 import np2 from "@/assets/portfolio/NP2.JPEG";
 import np3 from "@/assets/portfolio/NP3.JPEG";
 import np4 from "@/assets/portfolio/NP4.JPEG";
+import dt1 from "@/assets/portfolio/DT.JPEG";
+import dt2 from "@/assets/portfolio/DT2.JPEG";
+import dt3 from "@/assets/portfolio/DT3.JPEG";
+import dt4 from "@/assets/portfolio/DT4.JPEG";
+import dt5 from "@/assets/portfolio/DT5.JPEG";
+import dt6 from "@/assets/portfolio/DT6.JPEG";
+import dt7 from "@/assets/portfolio/DT7.JPEG";
+import det8 from "@/assets/portfolio/DET8.JPEG";
+import det9 from "@/assets/portfolio/DET9.JPEG";
+import det10 from "@/assets/portfolio/DET10.JPEG";
 
 export type Category = "Fotos" | "Detalhes";
 
@@ -72,4 +82,14 @@ export const photos: Photo[] = [
   { id: "np-2", title: "Nápoles", category: "Fotos", src: np2, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
   { id: "np-3", title: "Nápoles", category: "Fotos", src: np3, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
   { id: "np-4", title: "Nápoles", category: "Fotos", src: np4, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
+  { id: "dt-1", title: "Detalhes 1", category: "Detalhes", src: dt1, orientation: "portrait", alt: "Fotografia de detalhes" },
+  { id: "dt-2", title: "Detalhes 2", category: "Detalhes", src: dt2, orientation: "portrait", alt: "Fotografia de detalhes" },
+  { id: "dt-3", title: "Detalhes 3", category: "Detalhes", src: dt3, orientation: "portrait", alt: "Fotografia de detalhes" },
+  { id: "dt-4", title: "Detalhes 4", category: "Detalhes", src: dt4, orientation: "portrait", alt: "Fotografia de detalhes" },
+  { id: "dt-5", title: "Detalhes 5", category: "Detalhes", src: dt5, orientation: "portrait", alt: "Fotografia de detalhes" },
+  { id: "dt-6", title: "Detalhes 6", category: "Detalhes", src: dt6, orientation: "portrait", alt: "Fotografia de detalhes" },
+  { id: "dt-7", title: "Detalhes 7", category: "Detalhes", src: dt7, orientation: "portrait", alt: "Fotografia de detalhes" },
+  { id: "det-8", title: "Detalhes 8", category: "Detalhes", src: det8, orientation: "portrait", alt: "Fotografia de detalhes" },
+  { id: "det-9", title: "Detalhes 9", category: "Detalhes", src: det9, orientation: "portrait", alt: "Fotografia de detalhes" },
+  { id: "det-10", title: "Detalhes 10", category: "Detalhes", src: det10, orientation: "portrait", alt: "Fotografia de detalhes" },
 ];

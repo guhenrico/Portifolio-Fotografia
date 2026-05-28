@@ -100,7 +100,7 @@ function AboutPage() {
                 </div>
                 <div>
                   <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">Foco</dt>
-                  <dd className="mt-1 font-serif text-base md:text-lg italic">Retrato · Ensaio externo</dd>
+                  <dd className="mt-1 font-serif text-base md:text-lg italic">Ensaio Externo</dd>
                 </div>
               </dl>
             </Reveal>
@@ -110,13 +110,15 @@ function AboutPage() {
                 <span className="inline-flex items-center gap-2 text-muted-foreground">
                   <span className="pulse-dot" aria-hidden /> Disponível para 2026
                 </span>
-                <Link
-                  to="/contact"
+                <a
+                  href="https://wa.me/5511997372512"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="word-swap font-serif text-base italic normal-case tracking-normal text-foreground"
                 >
                   <span className="swap-out">vamos conversar →</span>
-                  <span className="swap-in">marcar uma sessão →</span>
-                </Link>
+                  <span className="swap-in text-[#25D366]">WhatsApp →</span>
+                </a>
               </div>
             </Reveal>
 
@@ -128,32 +130,14 @@ function AboutPage() {
           <figure className="mt-16 md:mt-28 border-t border-border/60 pt-10 md:pt-16">
             <span aria-hidden className="block text-center font-serif text-6xl md:text-8xl leading-none text-muted-foreground/50 select-none">“</span>
             <blockquote className="-mt-4 md:-mt-6 font-serif italic text-[1.6rem] sm:text-3xl md:text-[clamp(2rem,4.2vw,3.75rem)] leading-[1.15] md:leading-[1.1] tracking-[-0.01em] max-w-[22ch] mx-auto text-center break-words">
-              Fotografar é <span className="text-muted-foreground">esperar</span> a luz dizer
-              o que as palavras não alcançam.
+              A realidade deixa <span className="text-muted-foreground">muito</span> para a imaginação.
             </blockquote>
+            <figcaption className="mt-8 text-center font-sans text-xs md:text-sm uppercase tracking-[0.2em] text-muted-foreground">
+              — John Lennon
+            </figcaption>
           </figure>
         </Reveal>
       </section>
-
-      {/* Process marquee */}
-      <div className="border-y border-border/60 py-5 md:py-7 overflow-hidden">
-        <Marquee className="font-serif italic text-foreground/80 text-2xl md:text-4xl" slow>
-          <span className="inline-flex items-center gap-12 pr-12">
-            <span>fotografia autoral</span><span>·</span>
-            <span>ensaios editoriais</span><span>·</span>
-            <span>detalhes</span><span>·</span>
-            <span>colaborações</span><span>·</span>
-            <span>direção de imagem</span><span>·</span>
-          </span>
-          <span className="inline-flex items-center gap-12 pr-12">
-            <span>fotografia autoral</span><span>·</span>
-            <span>ensaios editoriais</span><span>·</span>
-            <span>detalhes</span><span>·</span>
-            <span>colaborações</span><span>·</span>
-            <span>direção de imagem</span><span>·</span>
-          </span>
-        </Marquee>
-      </div>
 
       <Footer />
     </main>
