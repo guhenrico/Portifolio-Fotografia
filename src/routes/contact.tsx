@@ -70,6 +70,7 @@ function ContactPage() {
               <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[520px]">
                 {[
                   { label: "Instagram", value: "@guhenricoo", href: "https://www.instagram.com/guhenricoo/", meta: "diário" },
+                  { label: "Local", value: "Boituva, SP", href: "https://maps.google.com/?q=Boituva,+SP", meta: "base" },
                 ].map((c) => (
                   <a
                     key={c.label}

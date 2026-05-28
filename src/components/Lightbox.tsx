@@ -101,14 +101,14 @@ export function Lightbox({ photos, index, onClose, onNavigate }: LightboxProps) 
       <button
         onClick={(e) => { e.stopPropagation(); prev(); }}
         aria-label="Foto anterior"
-        className="absolute left-3 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center text-foreground/70 transition-colors hover:text-foreground md:left-6"
+        className="absolute left-3 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full bg-black/10 text-foreground/70 transition-colors hover:bg-black/20 hover:text-foreground md:left-6 md:bg-transparent md:hover:bg-transparent"
       >
         <ChevronLeft className="h-7 w-7" />
       </button>
       <button
         onClick={(e) => { e.stopPropagation(); next(); }}
         aria-label="Próxima foto"
-        className="absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center text-foreground/70 transition-colors hover:text-foreground md:right-6"
+        className="absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full bg-black/10 text-foreground/70 transition-colors hover:bg-black/20 hover:text-foreground md:right-6 md:bg-transparent md:hover:bg-transparent"
       >
         <ChevronRight className="h-7 w-7" />
       </button>
