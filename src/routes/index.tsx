@@ -7,12 +7,10 @@ import { Marquee } from "@/components/Marquee";
 
 export const Route = createFileRoute("/")({
   component: Index,
-  head: () => ({
-    meta: [
-      { title: "Henrico — Selected Works" },
-      { name: "description", content: "Portfólio fotográfico: fotos e detalhes." },
-    ],
-  }),
+  meta: () => [
+    { title: "Henrico Fotografia | Portfólio de Fotografia em Boituva" },
+    { name: "description", content: "Conheça o portfólio de Henrico, fotógrafo com foco em Ensaios Externos em Boituva e região. Acesse as galerias de fotos e agende seu ensaio." },
+  ],
 });
 
 function Star() {
