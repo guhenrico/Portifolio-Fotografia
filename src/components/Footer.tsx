@@ -29,7 +29,6 @@ export function Footer() {
             <p className="text-[11px] uppercase tracking-lux text-muted-foreground">Onde encontrar</p>
             <ul className="mt-3 space-y-2 text-sm">
               <li><a href="https://www.instagram.com/guhenricoo/" target="_blank" rel="noreferrer" className="hover:opacity-60">Instagram</a></li>
-              <li><a href="https://vsco.co/guhenrico/albums" target="_blank" rel="noreferrer" className="hover:opacity-60">VSCO</a></li>
             </ul>
           </div>
         </div>
