@@ -2,20 +2,20 @@ import { useMemo, useState } from "react";
 import { photos, type Category, type Photo } from "@/lib/photos";
 import { Lightbox } from "./Lightbox";
 
-const FILTERS: ("Todos" | Category)[] = ["Todos", "Fotos", "Detalhes"];
+const FILTERS: ("Todas" | Category)[] = ["Todas", "Retratos", "Detalhes"];
 
 export function Gallery() {
-  const [filter, setFilter] = useState<(typeof FILTERS)[number]>("Todos");
+  const [filter, setFilter] = useState<(typeof FILTERS)[number]>("Todas");
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const counts = useMemo(() => {
-    const map: Record<string, number> = { Todos: photos.length };
+    const map: Record<string, number> = { Todas: photos.length };
     for (const p of photos) map[p.category] = (map[p.category] ?? 0) + 1;
     return map;
   }, []);
 
   const list = useMemo(
-    () => (filter === "Todos" ? photos : photos.filter((p) => p.category === filter)),
+    () => (filter === "Todas" ? photos : photos.filter((p) => p.category === filter)),
     [filter]
   );
 
