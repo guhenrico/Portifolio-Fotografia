@@ -59,9 +59,9 @@ const IT = { code: "it", label: "Itália" };
 
 export const photos: Photo[] = [
   // --- Allana ---
-  { id: "allana", title: "Allana, golden hour", category: "Retratos", src: allana, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
-  { id: "allana-2", title: "Allana, golden hour", category: "Retratos", src: allana2, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
-  { id: "allana-3", title: "Allana, golden hour", category: "Retratos", src: allana3, orientation: "portrait", country: BR, alt: "Allana em retrato com cabelos ruivos e sardas, luz natural" },
+  { id: "allana", title: "Allana", category: "Retratos", src: allana, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
+  { id: "allana-2", title: "Allana", category: "Retratos", src: allana2, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
+  { id: "allana-3", title: "Allana", category: "Retratos", src: allana3, orientation: "portrait", country: BR, alt: "Allana em retrato com cabelos ruivos e sardas, luz natural" },
   { id: "allana-4", title: "Allana", category: "Retratos", src: allana4, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
   { id: "allana-5", title: "Allana", category: "Retratos", src: allana5, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
   { id: "allana-6", title: "Allana", category: "Retratos", src: allana6, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },

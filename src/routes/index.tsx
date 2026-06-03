@@ -109,20 +109,20 @@ function Index() {
       <div className="border-y border-border/60 py-5 md:py-7">
         <Marquee className="font-serif italic text-foreground/80 text-2xl md:text-4xl">
           <span className="inline-flex items-center gap-12">
-            <span>📍 Boituva Interior de SP</span> <Star />
-            <span>📍 Boituva Interior de SP</span> <Star />
-            <span>📍 Boituva Interior de SP</span> <Star />
-            <span>📍 Boituva Interior de SP</span> <Star />
-            <span>📍 Boituva Interior de SP</span> <Star />
-            <span>📍 Boituva Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
           </span>
           <span className="inline-flex items-center gap-12 pl-12">
-            <span>📍 Boituva Interior de SP</span> <Star />
-            <span>📍 Boituva Interior de SP</span> <Star />
-            <span>📍 Boituva Interior de SP</span> <Star />
-            <span>📍 Boituva Interior de SP</span> <Star />
-            <span>📍 Boituva Interior de SP</span> <Star />
-            <span>📍 Boituva Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
+            <span>Interior de SP</span> <Star />
           </span>
         </Marquee>
       </div>
