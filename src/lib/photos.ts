@@ -30,18 +30,16 @@ import np1 from "@/assets/portfolio/NP.JPEG";
 import np2 from "@/assets/portfolio/NP2.JPEG";
 import np3 from "@/assets/portfolio/NP3.JPEG";
 import np4 from "@/assets/portfolio/NP4.JPEG";
-import dt1 from "@/assets/portfolio/DT.JPEG";
-import dt2 from "@/assets/portfolio/DT2.JPEG";
-import dt3 from "@/assets/portfolio/DT3.JPEG";
-import dt4 from "@/assets/portfolio/DT4.JPEG";
-import dt5 from "@/assets/portfolio/DT5.JPEG";
-import dt6 from "@/assets/portfolio/DT6.JPEG";
-import dt7 from "@/assets/portfolio/DT7.JPEG";
-import det8 from "@/assets/portfolio/DET8.JPEG";
-import det9 from "@/assets/portfolio/DET9.JPEG";
-import det10 from "@/assets/portfolio/DET10.JPEG";
 
-export type Category = "Retratos" | "Detalhes" | "Outras";
+export type Category =
+  | "Ensaio 1 Allana"
+  | "Ensaio 2 Allana"
+  | "Veneza IT"
+  | "Roma IT"
+  | "St. Moritz CH"
+  | "Lago di Como IT"
+  | "Florença IT"
+  | "Nápoles IT";
 
 export interface Photo {
   id: string;
@@ -59,60 +57,48 @@ const IT = { code: "it", label: "Itália" };
 
 export const photos: Photo[] = [
   // --- Allana ---
-  { id: "allana", title: "Allana", category: "Retratos", src: allana, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
-  { id: "allana-2", title: "Allana", category: "Retratos", src: allana2, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
-  { id: "allana-3", title: "Allana", category: "Retratos", src: allana3, orientation: "portrait", country: BR, alt: "Allana em retrato com cabelos ruivos e sardas, luz natural" },
-  { id: "allana-4", title: "Allana", category: "Retratos", src: allana4, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
-  { id: "allana-5", title: "Allana", category: "Retratos", src: allana5, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
-  { id: "allana-6", title: "Allana", category: "Retratos", src: allana6, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
-  { id: "allana-7", title: "Allana", category: "Retratos", src: allana7, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
-  { id: "allana-8", title: "Allana", category: "Retratos", src: allana8, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
+  { id: "allana", title: "Allana", category: "Ensaio 1 Allana", src: allana, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
+  { id: "allana-2", title: "Allana", category: "Ensaio 1 Allana", src: allana2, orientation: "portrait", country: BR, alt: "Allana em golden hour, retrato com luz quente" },
+  { id: "allana-3", title: "Allana", category: "Ensaio 1 Allana", src: allana3, orientation: "portrait", country: BR, alt: "Allana em retrato com cabelos ruivos e sardas, luz natural" },
+  { id: "allana-4", title: "Allana", category: "Ensaio 1 Allana", src: allana4, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
+  { id: "allana-5", title: "Allana", category: "Ensaio 2 Allana", src: allana5, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
+  { id: "allana-6", title: "Allana", category: "Ensaio 1 Allana", src: allana6, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
+  { id: "allana-7", title: "Allana", category: "Ensaio 1 Allana", src: allana7, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
+  { id: "allana-8", title: "Allana", category: "Ensaio 1 Allana", src: allana8, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
 
   // --- Veneza (VZ) ---
-  { id: "vz-1", title: "Veneza", category: "Retratos", src: vz1, orientation: "landscape", country: IT, alt: "Veneza, paisagem" },
-  { id: "vz-2", title: "Veneza", category: "Outras", src: vz2, orientation: "landscape", country: IT, alt: "Veneza, paisagem" },
-  { id: "vz-3", title: "Veneza", category: "Outras", src: vz3, orientation: "landscape", country: IT, alt: "Veneza, paisagem" },
-  { id: "vz-4", title: "Veneza", category: "Outras", src: vz4, orientation: "landscape", country: IT, alt: "Veneza, paisagem" },
+  { id: "vz-1", title: "Veneza", category: "Veneza IT", src: vz1, orientation: "landscape", country: IT, alt: "Veneza, paisagem" },
+  { id: "vz-2", title: "Veneza", category: "Veneza IT", src: vz2, orientation: "landscape", country: IT, alt: "Veneza, paisagem" },
+  { id: "vz-3", title: "Veneza", category: "Veneza IT", src: vz3, orientation: "landscape", country: IT, alt: "Veneza, paisagem" },
+  { id: "vz-4", title: "Veneza", category: "Veneza IT", src: vz4, orientation: "landscape", country: IT, alt: "Veneza, paisagem" },
 
   // --- Roma ---
-  { id: "roma-1", title: "Roma", category: "Retratos", src: roma1, orientation: "landscape", country: IT, alt: "Roma, paisagem" },
-  { id: "roma-2", title: "Roma", category: "Outras", src: roma2, orientation: "landscape", country: IT, alt: "Roma, paisagem" },
-  { id: "roma-3", title: "Roma", category: "Outras", src: roma3, orientation: "landscape", country: IT, alt: "Roma, paisagem" },
-  { id: "roma-4", title: "Roma", category: "Retratos", src: roma4, orientation: "landscape", country: IT, alt: "Roma, paisagem" },
+  { id: "roma-1", title: "Roma", category: "Roma IT", src: roma1, orientation: "landscape", country: IT, alt: "Roma, paisagem" },
+  { id: "roma-2", title: "Roma", category: "Roma IT", src: roma2, orientation: "landscape", country: IT, alt: "Roma, paisagem" },
+  { id: "roma-3", title: "Roma", category: "Roma IT", src: roma3, orientation: "landscape", country: IT, alt: "Roma, paisagem" },
+  { id: "roma-4", title: "Roma", category: "Roma IT", src: roma4, orientation: "landscape", country: IT, alt: "Roma, paisagem" },
 
   // --- St. Moritz ---
-  { id: "st-moritz-1", title: "St. Moritz", category: "Outras", src: stMoritz1, orientation: "landscape", country: CH, alt: "St. Moritz" },
-  { id: "st-moritz-2", title: "St. Moritz", category: "Retratos", src: stMoritz2, orientation: "landscape", country: CH, alt: "St. Moritz" },
-  { id: "st-moritz-3", title: "St. Moritz", category: "Outras", src: stMoritz3, orientation: "landscape", country: CH, alt: "St. Moritz" },
-  { id: "st-moritz-4", title: "St. Moritz", category: "Outras", src: stMoritz4, orientation: "landscape", country: CH, alt: "St. Moritz" },
+  { id: "st-moritz-1", title: "St. Moritz", category: "St. Moritz CH", src: stMoritz1, orientation: "landscape", country: CH, alt: "St. Moritz" },
+  { id: "st-moritz-2", title: "St. Moritz", category: "St. Moritz CH", src: stMoritz2, orientation: "landscape", country: CH, alt: "St. Moritz" },
+  { id: "st-moritz-3", title: "St. Moritz", category: "St. Moritz CH", src: stMoritz3, orientation: "landscape", country: CH, alt: "St. Moritz" },
+  { id: "st-moritz-4", title: "St. Moritz", category: "St. Moritz CH", src: stMoritz4, orientation: "landscape", country: CH, alt: "St. Moritz" },
 
   // --- Lago di Como (LC) ---
-  { id: "lc-1", title: "Lago di Como", category: "Retratos", src: lc1, orientation: "landscape", country: IT, alt: "Lago di Como, paisagem" },
-  { id: "lc-2", title: "Lago di Como", category: "Outras", src: lc2, orientation: "landscape", country: IT, alt: "Lago di Como, paisagem" },
-  { id: "lc-3", title: "Lago di Como", category: "Outras", src: lc3, orientation: "landscape", country: IT, alt: "Lago di Como, paisagem" },
-  { id: "lc-4", title: "Lago di Como", category: "Outras", src: lc4, orientation: "landscape", country: IT, alt: "Lago di Como, paisagem" },
+  { id: "lc-1", title: "Lago di Como", category: "Lago di Como IT", src: lc1, orientation: "landscape", country: IT, alt: "Lago di Como, paisagem" },
+  { id: "lc-2", title: "Lago di Como", category: "Lago di Como IT", src: lc2, orientation: "landscape", country: IT, alt: "Lago di Como, paisagem" },
+  { id: "lc-3", title: "Lago di Como", category: "Lago di Como IT", src: lc3, orientation: "landscape", country: IT, alt: "Lago di Como, paisagem" },
+  { id: "lc-4", title: "Lago di Como", category: "Lago di Como IT", src: lc4, orientation: "landscape", country: IT, alt: "Lago di Como, paisagem" },
 
   // --- Florença (FL) ---
-  { id: "fl-1", title: "Florença", category: "Retratos", src: fl1, orientation: "landscape", country: IT, alt: "Florença, paisagem" },
-  { id: "fl-2", title: "Florença", category: "Outras", src: fl2, orientation: "landscape", country: IT, alt: "Florença, paisagem" },
-  { id: "fl-3", title: "Florença", category: "Outras", src: fl3, orientation: "landscape", country: IT, alt: "Florença, paisagem" },
-  { id: "fl-4", title: "Florença", category: "Outras", src: fl4, orientation: "landscape", country: IT, alt: "Florença, paisagem" },
+  { id: "fl-1", title: "Florença", category: "Florença IT", src: fl1, orientation: "landscape", country: IT, alt: "Florença, paisagem" },
+  { id: "fl-2", title: "Florença", category: "Florença IT", src: fl2, orientation: "landscape", country: IT, alt: "Florença, paisagem" },
+  { id: "fl-3", title: "Florença", category: "Florença IT", src: fl3, orientation: "landscape", country: IT, alt: "Florença, paisagem" },
+  { id: "fl-4", title: "Florença", category: "Florença IT", src: fl4, orientation: "landscape", country: IT, alt: "Florença, paisagem" },
 
   // --- Nápoles (NP) ---
-  { id: "np-1", title: "Nápoles", category: "Retratos", src: np1, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
-  { id: "np-2", title: "Nápoles", category: "Outras", src: np2, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
-  { id: "np-3", title: "Nápoles", category: "Outras", src: np3, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
-  { id: "np-4", title: "Nápoles", category: "Outras", src: np4, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
-
-  // --- Detalhes ---
-  { id: "dt-1", title: "Detalhes 1", category: "Detalhes", src: dt1, orientation: "portrait", alt: "Fotografia de detalhes" },
-  { id: "dt-2", title: "Detalhes 2", category: "Detalhes", src: dt2, orientation: "portrait", alt: "Fotografia de detalhes" },
-  { id: "dt-3", title: "Detalhes 3", category: "Detalhes", src: dt3, orientation: "portrait", alt: "Fotografia de detalhes" },
-  { id: "dt-4", title: "Detalhes 4", category: "Detalhes", src: dt4, orientation: "portrait", alt: "Fotografia de detalhes" },
-  { id: "dt-5", title: "Detalhes 5", category: "Detalhes", src: dt5, orientation: "portrait", alt: "Fotografia de detalhes" },
-  { id: "dt-6", title: "Detalhes 6", category: "Detalhes", src: dt6, orientation: "portrait", alt: "Fotografia de detalhes" },
-  { id: "dt-7", title: "Detalhes 7", category: "Detalhes", src: dt7, orientation: "portrait", alt: "Fotografia de detalhes" },
-  { id: "det-8", title: "Detalhes 8", category: "Detalhes", src: det8, orientation: "portrait", alt: "Fotografia de detalhes" },
-  { id: "det-9", title: "Detalhes 9", category: "Detalhes", src: det9, orientation: "portrait", alt: "Fotografia de detalhes" },
-  { id: "det-10", title: "Detalhes 10", category: "Detalhes", src: det10, orientation: "portrait", alt: "Fotografia de detalhes" },
+  { id: "np-1", title: "Nápoles", category: "Nápoles IT", src: np1, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
+  { id: "np-2", title: "Nápoles", category: "Nápoles IT", src: np2, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
+  { id: "np-3", title: "Nápoles", category: "Nápoles IT", src: np3, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
+  { id: "np-4", title: "Nápoles", category: "Nápoles IT", src: np4, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
 ];

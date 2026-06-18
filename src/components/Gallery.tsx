@@ -2,7 +2,17 @@ import { useMemo, useState } from "react";
 import { photos, type Category, type Photo } from "@/lib/photos";
 import { Lightbox } from "./Lightbox";
 
-const FILTERS: ("Todas" | Category)[] = ["Todas", "Retratos", "Detalhes"];
+const FILTERS: ("Todas" | Category)[] = [
+  "Todas",
+  "Ensaio 1 Allana",
+  "Ensaio 2 Allana",
+  "Veneza IT",
+  "Roma IT",
+  "St. Moritz CH",
+  "Lago di Como IT",
+  "Florença IT",
+  "Nápoles IT",
+];
 
 export function Gallery() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>("Todas");
@@ -24,17 +34,22 @@ export function Gallery() {
       {/* Header — editorial control bar */}
       <div className="mb-10 border-b border-border/60 pb-5 md:mb-16 md:pb-7">
         <div className="flex flex-wrap items-end justify-between gap-y-5 gap-x-8">
-          <div className="flex items-baseline gap-4">
-            <p className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] md:tracking-lux text-muted-foreground">
-              Henrico / Pics
-            </p>
-            <span className="hidden md:inline-block h-px w-12 bg-border" />
-            <p className="font-serif text-base md:text-lg italic text-foreground tabular-nums">
-              <span key={list.length} className="inline-block animate-fade-in">
-                {String(list.length).padStart(2, "0")}
+          <div className="flex flex-col gap-1.5 md:gap-2">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground tracking-tight">
+              Ensaios<span className="italic text-muted-foreground/60 font-light">.</span>
+            </h2>
+            <div className="flex items-center gap-4 mt-1 md:mt-2">
+              <span className="text-[10px] md:text-xs font-medium uppercase tracking-[0.4em] text-muted-foreground">
+                Pics
               </span>
-              <span className="text-muted-foreground"> / {String(photos.length).padStart(2, "0")}</span>
-            </p>
+              <span className="hidden md:inline-block h-[1px] w-12 bg-foreground/20" />
+              <p className="font-serif text-sm md:text-base italic text-foreground tabular-nums">
+                <span key={list.length} className="inline-block animate-fade-in">
+                  {String(list.length).padStart(2, "0")}
+                </span>
+                <span className="text-muted-foreground/50"> / {String(photos.length).padStart(2, "0")}</span>
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-2 md:gap-3">
