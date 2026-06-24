@@ -6,6 +6,12 @@ import allana5 from "@/assets/portfolio/allana-5.JPEG";
 import allana6 from "@/assets/portfolio/allana-6.JPEG";
 import allana7 from "@/assets/portfolio/allana-7.JPEG";
 import allana8 from "@/assets/portfolio/allana-8.JPEG";
+import allana2a from "@/assets/portfolio/allana2.jpg";
+import allana2b from "@/assets/portfolio/allana2 (2).jpg";
+import allana2d from "@/assets/portfolio/allana2 (4).jpg";
+import allana2e from "@/assets/portfolio/allana2 (5).jpg";
+import allana2f from "@/assets/portfolio/allana2 (6).jpg";
+import allana2g from "@/assets/portfolio/allana2 (7).jpg";
 import stMoritz1 from "@/assets/portfolio/St.Moritz.jpg";
 import stMoritz2 from "@/assets/portfolio/St.Moritz2.jpg";
 import stMoritz3 from "@/assets/portfolio/St.Moritz3.jpg";
@@ -65,6 +71,14 @@ export const photos: Photo[] = [
   { id: "allana-6", title: "Allana", category: "Ensaio 1 Allana", src: allana6, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
   { id: "allana-7", title: "Allana", category: "Ensaio 1 Allana", src: allana7, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
   { id: "allana-8", title: "Allana", category: "Ensaio 1 Allana", src: allana8, orientation: "portrait", country: BR, alt: "Allana em retrato com luz natural" },
+
+  // --- Allana 2 (extras) ---
+  { id: "allana2-1", title: "Allana", category: "Ensaio 2 Allana", src: allana2a, orientation: "portrait", country: BR, alt: "Allana - Ensaio 2" },
+  { id: "allana2-2", title: "Allana", category: "Ensaio 2 Allana", src: allana2b, orientation: "portrait", country: BR, alt: "Allana - Ensaio 2" },
+  { id: "allana2-4", title: "Allana", category: "Ensaio 2 Allana", src: allana2d, orientation: "portrait", country: BR, alt: "Allana - Ensaio 2" },
+  { id: "allana2-5", title: "Allana", category: "Ensaio 2 Allana", src: allana2e, orientation: "portrait", country: BR, alt: "Allana - Ensaio 2" },
+  { id: "allana2-6", title: "Allana", category: "Ensaio 2 Allana", src: allana2f, orientation: "portrait", country: BR, alt: "Allana - Ensaio 2" },
+  { id: "allana2-7", title: "Allana", category: "Ensaio 2 Allana", src: allana2g, orientation: "portrait", country: BR, alt: "Allana - Ensaio 2" },
 
   // --- Veneza (VZ) ---
   { id: "vz-1", title: "Veneza", category: "Veneza IT", src: vz1, orientation: "landscape", country: IT, alt: "Veneza, paisagem" },
