@@ -6,6 +6,7 @@ const FILTERS: ("Todas" | Category)[] = [
   "Todas",
   "Ensaio 1 Allana",
   "Ensaio 2 Allana",
+  "Ensaio Beatriz",
   "Veneza IT",
   "Roma IT",
   "St. Moritz CH",
@@ -38,6 +39,7 @@ export function Gallery() {
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground tracking-tight">
               Ensaios<span className="italic text-muted-foreground/60 font-light">.</span>
             </h2>
+            <p className="text-sm text-muted-foreground mt-1">Apenas algumas amostras dos meus cliques</p>
             <div className="flex items-center gap-4 mt-1 md:mt-2">
               <span className="text-[10px] md:text-xs font-medium uppercase tracking-[0.4em] text-muted-foreground">
                 Pics

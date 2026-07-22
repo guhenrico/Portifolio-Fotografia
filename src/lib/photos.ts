@@ -36,6 +36,14 @@ import np1 from "@/assets/portfolio/NP.JPEG";
 import np2 from "@/assets/portfolio/NP2.JPEG";
 import np3 from "@/assets/portfolio/NP3.JPEG";
 import np4 from "@/assets/portfolio/NP4.JPEG";
+import beatriz1 from "@/assets/portfolio/Beatriz1.jpg";
+import beatriz2 from "@/assets/portfolio/Beatriz2.jpg";
+import beatriz3 from "@/assets/portfolio/Beatriz3.jpg";
+import beatriz4 from "@/assets/portfolio/Beatriz4.jpg";
+import beatriz5 from "@/assets/portfolio/Beatriz5.jpg";
+import beatriz6 from "@/assets/portfolio/Beatriz6.jpg";
+import beatriz7 from "@/assets/portfolio/Beatriz7.jpg";
+import beatriz8 from "@/assets/portfolio/Beatriz8.jpg";
 
 export type Category =
   | "Ensaio 1 Allana"
@@ -45,7 +53,8 @@ export type Category =
   | "St. Moritz CH"
   | "Lago di Como IT"
   | "Florença IT"
-  | "Nápoles IT";
+  | "Nápoles IT"
+  | "Ensaio Beatriz";
 
 export interface Photo {
   id: string;
@@ -115,4 +124,14 @@ export const photos: Photo[] = [
   { id: "np-2", title: "Nápoles", category: "Nápoles IT", src: np2, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
   { id: "np-3", title: "Nápoles", category: "Nápoles IT", src: np3, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
   { id: "np-4", title: "Nápoles", category: "Nápoles IT", src: np4, orientation: "landscape", country: IT, alt: "Nápoles, paisagem" },
+
+  // --- Ensaio Beatriz ---
+  { id: "beatriz-1", title: "Beatriz", category: "Ensaio Beatriz", src: beatriz1, orientation: "portrait", country: BR, alt: "Beatriz - Ensaio" },
+  { id: "beatriz-2", title: "Beatriz", category: "Ensaio Beatriz", src: beatriz2, orientation: "portrait", country: BR, alt: "Beatriz - Ensaio" },
+  { id: "beatriz-3", title: "Beatriz", category: "Ensaio Beatriz", src: beatriz3, orientation: "portrait", country: BR, alt: "Beatriz - Ensaio" },
+  { id: "beatriz-4", title: "Beatriz", category: "Ensaio Beatriz", src: beatriz4, orientation: "portrait", country: BR, alt: "Beatriz - Ensaio" },
+  { id: "beatriz-5", title: "Beatriz", category: "Ensaio Beatriz", src: beatriz5, orientation: "portrait", country: BR, alt: "Beatriz - Ensaio" },
+  { id: "beatriz-6", title: "Beatriz", category: "Ensaio Beatriz", src: beatriz6, orientation: "portrait", country: BR, alt: "Beatriz - Ensaio" },
+  { id: "beatriz-7", title: "Beatriz", category: "Ensaio Beatriz", src: beatriz7, orientation: "portrait", country: BR, alt: "Beatriz - Ensaio" },
+  { id: "beatriz-8", title: "Beatriz", category: "Ensaio Beatriz", src: beatriz8, orientation: "portrait", country: BR, alt: "Beatriz - Ensaio" },
 ];
