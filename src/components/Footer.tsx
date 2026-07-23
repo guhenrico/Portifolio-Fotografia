@@ -26,15 +26,29 @@ export function Footer() {
             </a>
           </div>
           <div className="md:text-right">
-            <p className="text-[11px] uppercase tracking-lux text-muted-foreground">Onde encontrar</p>
+            <p className="text-[11px] uppercase tracking-lux text-muted-foreground">
+              Onde encontrar
+            </p>
             <ul className="mt-3 space-y-2 text-sm">
-              <li><a href="https://www.instagram.com/guhenricoo/" target="_blank" rel="noreferrer" className="hover:opacity-60">Instagram</a></li>
+              <li>
+                <a
+                  href="https://www.instagram.com/guhenricoo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-60"
+                  aria-label="Instagram de Gustavo Henrico Fotografia"
+                >
+                  Instagram
+                </a>
+              </li>
             </ul>
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-2 border-t border-border/60 pt-6 text-[11px] md:mt-16 md:text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} Henrico. Todos os direitos reservados.</p>
-          <p className="tracking-lux-sm uppercase">Henrico Gallery</p>
+          <p>
+            © {new Date().getFullYear()} Gustavo Henrico Fotografia. Todos os direitos reservados.
+          </p>
+          <p className="tracking-lux-sm uppercase">Gustavo Henrico Fotografia</p>
         </div>
       </div>
     </footer>

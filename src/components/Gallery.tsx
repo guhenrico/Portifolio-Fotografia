@@ -27,7 +27,7 @@ export function Gallery() {
 
   const list = useMemo(
     () => (filter === "Todas" ? photos : photos.filter((p) => p.category === filter)),
-    [filter]
+    [filter],
   );
 
   return (
@@ -39,7 +39,9 @@ export function Gallery() {
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground tracking-tight">
               Ensaios<span className="italic text-muted-foreground/60 font-light">.</span>
             </h2>
-            <p className="text-sm text-muted-foreground mt-1">Apenas algumas amostras dos meus cliques</p>
+            <p className="text-sm text-muted-foreground mt-1">
+              Apenas algumas amostras dos meus cliques
+            </p>
             <div className="flex items-center gap-4 mt-1 md:mt-2">
               <span className="text-[10px] md:text-xs font-medium uppercase tracking-[0.4em] text-muted-foreground">
                 Pics
@@ -49,7 +51,10 @@ export function Gallery() {
                 <span key={list.length} className="inline-block animate-fade-in">
                   {String(list.length).padStart(2, "0")}
                 </span>
-                <span className="text-muted-foreground/50"> / {String(photos.length).padStart(2, "0")}</span>
+                <span className="text-muted-foreground/50">
+                  {" "}
+                  / {String(photos.length).padStart(2, "0")}
+                </span>
               </p>
             </div>
           </div>
@@ -59,8 +64,10 @@ export function Gallery() {
               const isActive = filter === f;
               return (
                 <button
+                  type="button"
                   key={f}
                   onClick={() => setFilter(f)}
+                  aria-pressed={isActive}
                   className={`group inline-flex items-baseline gap-1.5 border px-3.5 py-2 text-[11px] uppercase tracking-lux transition-all duration-300 md:px-4 md:py-2.5 ${
                     isActive
                       ? "border-foreground bg-foreground text-background"
@@ -68,9 +75,11 @@ export function Gallery() {
                   }`}
                 >
                   <span>{f}</span>
-                  <sup className={`text-[9px] tracking-normal tabular-nums ${
-                    isActive ? "text-background/70" : "text-muted-foreground/70"
-                  }`}>
+                  <sup
+                    className={`text-[9px] tracking-normal tabular-nums ${
+                      isActive ? "text-background/70" : "text-muted-foreground/70"
+                    }`}
+                  >
                     {String(counts[f] ?? 0).padStart(2, "0")}
                   </sup>
                 </button>
@@ -103,6 +112,7 @@ function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (i: number) =>
         return (
           <figure key={p.id} className={`group col-span-1 ${layout.col} ${layout.mt}`}>
             <button
+              type="button"
               onClick={() => onOpen(i)}
               className="img-hover relative block w-full overflow-hidden bg-muted"
               aria-label={`Abrir ${p.title}`}
@@ -110,7 +120,9 @@ function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (i: number) =>
               <img
                 src={p.src}
                 alt={p.alt}
-                loading="lazy"
+                loading={i < 2 ? "eager" : "lazy"}
+                fetchPriority={i === 0 ? "high" : "auto"}
+                decoding="async"
                 className="block w-full h-auto transition duration-700 group-hover:grayscale-0"
               />
               {/* Index badge */}
@@ -124,6 +136,7 @@ function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (i: number) =>
                     alt={p.country.label}
                     className="inline-block rounded-[1px]"
                     loading="lazy"
+                    decoding="async"
                   />
                 )}
               </span>
@@ -147,6 +160,7 @@ function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (i: number) =>
                     alt={p.country.label}
                     className="not-italic inline-block rounded-[1px] shadow-sm"
                     loading="lazy"
+                    decoding="async"
                   />
                 )}
               </span>
@@ -167,10 +181,10 @@ function layoutFor(i: number) {
   // Padrão de 4 fotos (ideal para seus ensaios)
   // Cria um layout 2 por linha, assimétrico e com "degrau" vertical
   const patterns = [
-    { col: "md:col-span-7", mt: "" },                 // Foto 1: Mais larga
-    { col: "md:col-span-5", mt: "md:mt-24" },         // Foto 2: Mais estreita, rebaixada
-    { col: "md:col-span-5", mt: "" },                 // Foto 3: Mais estreita
-    { col: "md:col-span-7", mt: "md:mt-24" },         // Foto 4: Mais larga, rebaixada
+    { col: "md:col-span-7", mt: "" }, // Foto 1: Mais larga
+    { col: "md:col-span-5", mt: "md:mt-24" }, // Foto 2: Mais estreita, rebaixada
+    { col: "md:col-span-5", mt: "" }, // Foto 3: Mais estreita
+    { col: "md:col-span-7", mt: "md:mt-24" }, // Foto 4: Mais larga, rebaixada
   ];
   return patterns[i % patterns.length];
 }

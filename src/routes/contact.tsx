@@ -7,11 +7,20 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contato — Henrico" },
-      { name: "description", content: "Comissões, colaborações e ensaios — vamos conversar." },
-      { property: "og:title", content: "Contato — Henrico" },
-      { property: "og:description", content: "Vamos conversar sobre o seu próximo projeto." },
+      { title: "Contato | Gustavo Henrico Fotografia em Boituva" },
+      {
+        name: "description",
+        content:
+          "Solicite informações sobre ensaios externos e retratos com luz natural em Boituva e região.",
+      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { property: "og:title", content: "Contato | Gustavo Henrico Fotografia em Boituva" },
+      {
+        property: "og:description",
+        content: "Fale com Gustavo Henrico sobre seu próximo ensaio fotográfico.",
+      },
     ],
+    links: [{ rel: "canonical", href: "https://henricofotografia.com.br/contact" }],
   }),
 });
 
@@ -22,7 +31,10 @@ function ContactPage() {
 
       <section className="relative mx-auto w-full max-w-[1600px] px-5 md:px-12 pt-28 pb-10 md:pt-44 md:pb-16 flex-1">
         {/* decorative dotted block */}
-        <span className="ring-dotted absolute right-5 top-28 hidden h-32 w-32 rounded-full md:block md:right-12 md:top-44 drift" aria-hidden />
+        <span
+          className="ring-dotted absolute right-5 top-28 hidden h-32 w-32 rounded-full md:block md:right-12 md:top-44 drift"
+          aria-hidden
+        />
 
         <div className="grid grid-cols-12 gap-4 md:gap-6">
           <Reveal className="col-span-12 md:col-span-2">
@@ -44,7 +56,8 @@ function ContactPage() {
 
             <Reveal delay={200}>
               <p className="mt-6 max-w-[52ch] text-[14px] md:text-base text-muted-foreground leading-relaxed">
-                Conte-me sua ideia — a melhor parte começa antes da câmera.
+                Conte-me sua ideia para um ensaio em Boituva ou região — a melhor parte começa antes
+                da câmera.
               </p>
             </Reveal>
 
@@ -54,13 +67,19 @@ function ContactPage() {
                   href="https://wa.me/5511997372512"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Solicitar informações pelo WhatsApp"
                   className="cta-fill group inline-flex w-full items-center justify-between gap-4 border border-foreground px-6 py-4 text-xs uppercase tracking-lux-sm text-foreground transition-colors md:w-fit md:justify-start md:gap-12 md:px-10 md:py-6 md:text-sm"
                 >
                   <span className="word-swap">
                     <span className="swap-out">Vamos conversar</span>
                     <span className="swap-in text-[#25D366]">WhatsApp</span>
                   </span>
-                  <span className="transition-transform duration-500 group-hover:translate-x-2" aria-hidden>→</span>
+                  <span
+                    className="transition-transform duration-500 group-hover:translate-x-2"
+                    aria-hidden
+                  >
+                    →
+                  </span>
                 </a>
               </div>
             </Reveal>
@@ -69,8 +88,18 @@ function ContactPage() {
             <Reveal delay={380}>
               <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-[520px]">
                 {[
-                  { label: "Instagram", value: "@guhenricoo", href: "https://www.instagram.com/guhenricoo/", meta: "diário" },
-                  { label: "Local", value: "Boituva, SP", href: "https://maps.google.com/?q=Boituva,+SP", meta: "base" },
+                  {
+                    label: "Instagram",
+                    value: "@guhenricoo",
+                    href: "https://www.instagram.com/guhenricoo/",
+                    meta: "diário",
+                  },
+                  {
+                    label: "Local",
+                    value: "Boituva, SP",
+                    href: "https://maps.google.com/?q=Boituva,+SP",
+                    meta: "base",
+                  },
                 ].map((c) => (
                   <a
                     key={c.label}
@@ -81,7 +110,12 @@ function ContactPage() {
                   >
                     <div className="flex items-center justify-between text-[10px] uppercase tracking-lux-sm text-muted-foreground">
                       <span>{c.label}</span>
-                      <span aria-hidden className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                      <span
+                        aria-hidden
+                        className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
+                      >
+                        ↗
+                      </span>
                     </div>
                     <p className="mt-6 font-serif text-xl italic">{c.value}</p>
                     <p className="mt-1 text-[11px] text-muted-foreground">{c.meta}</p>
