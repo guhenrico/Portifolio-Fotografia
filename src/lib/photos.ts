@@ -1,16 +1,12 @@
 import allana from "@/assets/portfolio/allana.jpg";
 import allana2 from "@/assets/portfolio/allana-2.jpg";
-import allana3 from "@/assets/portfolio/allana-3.jpg";
 import allana4 from "@/assets/portfolio/allana-4.jpg";
-import allana5 from "@/assets/portfolio/allana-5.JPEG";
-import allana6 from "@/assets/portfolio/allana-6.JPEG";
 import allana7 from "@/assets/portfolio/allana-7.JPEG";
 import allana8 from "@/assets/portfolio/allana-8.JPEG";
 import allana2a from "@/assets/portfolio/allana2.jpg";
 import allana2b from "@/assets/portfolio/allana2 (2).jpg";
 import allana2d from "@/assets/portfolio/allana2 (4).jpg";
 import allana2e from "@/assets/portfolio/allana2 (5).jpg";
-import allana2f from "@/assets/portfolio/allana2 (6).jpg";
 import allana2g from "@/assets/portfolio/allana2 (7).jpg";
 import stMoritz1 from "@/assets/portfolio/St.Moritz.jpg";
 import stMoritz2 from "@/assets/portfolio/St.Moritz2.jpg";
@@ -95,15 +91,6 @@ export const photos: Photo[] = [
     alt: "Allana de perfil em um jardim iluminado pelo fim de tarde",
   },
   {
-    id: "allana-3",
-    title: "Allana",
-    category: "Ensaio 1 Allana",
-    src: allana3,
-    orientation: "portrait",
-    country: BR,
-    alt: "Retrato próximo de Allana com cabelos ruivos e sardas",
-  },
-  {
     id: "allana-4",
     title: "Allana",
     category: "Ensaio 1 Allana",
@@ -111,24 +98,6 @@ export const photos: Photo[] = [
     orientation: "portrait",
     country: BR,
     alt: "Allana voltada para a câmera em meio à vegetação",
-  },
-  {
-    id: "allana-5",
-    title: "Allana",
-    category: "Ensaio 2 Allana",
-    src: allana5,
-    orientation: "portrait",
-    country: BR,
-    alt: "Allana com uma flor amarela nos cabelos ao pôr do sol",
-  },
-  {
-    id: "allana-6",
-    title: "Allana",
-    category: "Ensaio 1 Allana",
-    src: allana6,
-    orientation: "portrait",
-    country: BR,
-    alt: "Allana caminhando por uma alameda arborizada",
   },
   {
     id: "allana-7",
@@ -185,15 +154,6 @@ export const photos: Photo[] = [
     orientation: "portrait",
     country: BR,
     alt: "Allana em primeiro plano com vegetação desfocada",
-  },
-  {
-    id: "allana2-6",
-    title: "Allana",
-    category: "Ensaio 2 Allana",
-    src: allana2f,
-    orientation: "portrait",
-    country: BR,
-    alt: "Retrato fechado de Allana sob luz natural suave",
   },
   {
     id: "allana2-7",
@@ -490,7 +450,6 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-3",
-    title: "Beatriz",
     category: "Ensaio Beatriz",
     src: beatriz3,
     orientation: "portrait",
@@ -499,7 +458,6 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-4",
-    title: "Beatriz",
     category: "Ensaio Beatriz",
     src: beatriz4,
     orientation: "portrait",
@@ -508,7 +466,6 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-5",
-    title: "Beatriz",
     category: "Ensaio Beatriz",
     src: beatriz5,
     orientation: "portrait",
@@ -517,7 +474,6 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-6",
-    title: "Beatriz",
     category: "Ensaio Beatriz",
     src: beatriz6,
     orientation: "portrait",
@@ -526,7 +482,6 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-7",
-    title: "Beatriz",
     category: "Ensaio Beatriz",
     src: beatriz7,
     orientation: "portrait",
@@ -535,7 +490,6 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-8",
-    title: "Beatriz",
     category: "Ensaio Beatriz",
     src: beatriz8,
     orientation: "portrait",
