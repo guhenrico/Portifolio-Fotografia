@@ -44,6 +44,10 @@ import beatriz5 from "@/assets/portfolio/Beatriz5.jpg";
 import beatriz6 from "@/assets/portfolio/Beatriz6.jpg";
 import beatriz7 from "@/assets/portfolio/Beatriz7.jpg";
 import beatriz8 from "@/assets/portfolio/Beatriz8.jpg";
+import lago1 from "@/assets/portfolio/Lago1.JPEG";
+import lago2 from "@/assets/portfolio/Lago2.JPEG";
+import lago3 from "@/assets/portfolio/Lago3.JPEG";
+import lago4 from "@/assets/portfolio/Lago4.JPEG";
 
 export type Category =
   | "Ensaio 1 Allana"
@@ -351,6 +355,42 @@ export const photos: Photo[] = [
     orientation: "landscape",
     country: IT,
     alt: "Nadador e embarcação nas águas do Lago di Como",
+  },
+  {
+    id: "lago-1",
+    title: "Lago di Como",
+    category: "Lago di Como IT",
+    src: lago1,
+    orientation: "landscape",
+    country: IT,
+    alt: "Vista panorâmica do Lago di Como com montanhas ao fundo",
+  },
+  {
+    id: "lago-2",
+    title: "Lago di Como",
+    category: "Lago di Como IT",
+    src: lago2,
+    orientation: "landscape",
+    country: IT,
+    alt: "Arquitetura à beira do Lago di Como",
+  },
+  {
+    id: "lago-3",
+    title: "Lago di Como",
+    category: "Lago di Como IT",
+    src: lago3,
+    orientation: "landscape",
+    country: IT,
+    alt: "Ponte e arquitetura sobre as águas do Lago di Como",
+  },
+  {
+    id: "lago-4",
+    title: "Lago di Como",
+    category: "Lago di Como IT",
+    src: lago4,
+    orientation: "landscape",
+    country: IT,
+    alt: "Ruela e arquitetura na região do Lago di Como",
   },
 
   // --- Florença (FL) ---
