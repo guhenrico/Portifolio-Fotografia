@@ -41,7 +41,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <h1 className="font-serif text-3xl text-foreground">Algo se desfocou.</h1>
         <p className="mt-3 text-sm text-muted-foreground">{error.message}</p>
         <button
-          onClick={() => { router.invalidate(); reset(); }}
+          onClick={() => {
+            router.invalidate();
+            reset();
+          }}
           className="mt-6 border-b border-foreground pb-1 text-sm text-foreground transition-opacity hover:opacity-60"
         >
           Tentar novamente
@@ -56,19 +59,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Henrico Portfólio" },
-      { name: "description", content: "Registros de Gustavo Henrico" },
-      { property: "og:title", content: "Henrico Portfólio" },
-      { property: "og:description", content: "Registros de Gustavo Henrico" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Henrico Portfólio" },
-      { name: "twitter:description", content: "Registros de Gustavo Henrico" },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/81fa6333-cbe3-4428-9678-a1fcdcd8cb0e/id-preview-dab4ac1e--90da24e2-11f5-447a-9bb2-fe38250810eb.lovable.app-1778869886335.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/81fa6333-cbe3-4428-9678-a1fcdcd8cb0e/id-preview-dab4ac1e--90da24e2-11f5-447a-9bb2-fe38250810eb.lovable.app-1778869886335.png" },
+      { name: "theme-color", content: "#f7f6f3" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.ico", sizes: "any" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
