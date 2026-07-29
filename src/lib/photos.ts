@@ -20,6 +20,10 @@ import vz1 from "@/assets/portfolio/VZ.JPEG";
 import vz2 from "@/assets/portfolio/VZ2.JPEG";
 import vz3 from "@/assets/portfolio/VZ3.JPEG";
 import vz4 from "@/assets/portfolio/VZ4.JPEG";
+import vez1 from "@/assets/portfolio/vez1.JPEG";
+import vez2 from "@/assets/portfolio/vez2.JPEG";
+import vez3 from "@/assets/portfolio/vez3.JPEG";
+import vez4 from "@/assets/portfolio/vez4.JPEG";
 import roma1 from "@/assets/portfolio/ROMA.JPEG";
 import roma2 from "@/assets/portfolio/ROMA2.JPEG";
 import roma3 from "@/assets/portfolio/ROMA3.JPEG";
@@ -201,6 +205,42 @@ export const photos: Photo[] = [
     orientation: "landscape",
     country: IT,
     alt: "Interior de uma embarcação veneziana iluminado por luzes quentes",
+  },
+  {
+    id: "vez-1",
+    title: "Veneza",
+    category: "Veneza IT",
+    src: vez1,
+    orientation: "landscape",
+    country: IT,
+    alt: "Canal de Veneza com gôndolas e arquitetura histórica",
+  },
+  {
+    id: "vez-2",
+    title: "Veneza",
+    category: "Veneza IT",
+    src: vez2,
+    orientation: "landscape",
+    country: IT,
+    alt: "Gôndolas em um canal de Veneza com edifícios coloridos",
+  },
+  {
+    id: "vez-3",
+    title: "Veneza",
+    category: "Veneza IT",
+    src: vez3,
+    orientation: "landscape",
+    country: IT,
+    alt: "Ponte sobre um canal em Veneza com gôndolas",
+  },
+  {
+    id: "vez-4",
+    title: "Veneza",
+    category: "Veneza IT",
+    src: vez4,
+    orientation: "landscape",
+    country: IT,
+    alt: "Pessoa em uma gôndola em um canal de Veneza",
   },
 
   // --- Roma ---
