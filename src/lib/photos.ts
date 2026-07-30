@@ -11,6 +11,7 @@ import allana2g from "@/assets/portfolio/allana2 (7).jpg";
 import stMoritz1 from "@/assets/portfolio/St.Moritz.jpg";
 import stMoritz2 from "@/assets/portfolio/St.Moritz2.jpg";
 import stMoritz3 from "@/assets/portfolio/St.Moritz3.jpg";
+import stMoritz4 from "@/assets/portfolio/st.JPEG";
 
 import lc1 from "@/assets/portfolio/LC.JPEG";
 import lc2 from "@/assets/portfolio/LC2.JPEG";
@@ -38,6 +39,7 @@ import np1 from "@/assets/portfolio/NP.JPEG";
 import np2 from "@/assets/portfolio/NP2.JPEG";
 import np3 from "@/assets/portfolio/NP3.JPEG";
 import np4 from "@/assets/portfolio/NP4.JPEG";
+import np5 from "@/assets/portfolio/NP5.JPEG";
 import beatriz1 from "@/assets/portfolio/Beatriz1.jpg";
 import beatriz2 from "@/assets/portfolio/Beatriz2.jpg";
 import beatriz3 from "@/assets/portfolio/Beatriz3.jpg";
@@ -320,7 +322,15 @@ export const photos: Photo[] = [
     country: CH,
     alt: "Lago e montanhas de St. Moritz em fotografia preto e branco",
   },
-
+  {
+    id: "st-moritz-4",
+    title: "St. Moritz",
+    category: "Capítulo VI — St. Moritz",
+    src: stMoritz4,
+    orientation: "landscape",
+    country: CH,
+    alt: "Paisagem de St. Moritz em fotografia em preto e branco",
+  },
 
   // --- Capítulo VII — Lago di Como ---
   {
@@ -454,15 +464,6 @@ export const photos: Photo[] = [
     alt: "Rua estreita e movimentada no centro de Nápoles",
   },
   {
-    id: "np-3",
-    title: "Nápoles",
-    category: "Capítulo IX — Nápoles",
-    src: np3,
-    orientation: "landscape",
-    country: IT,
-    alt: "Retrato em cartaz visto em uma rua de Nápoles",
-  },
-  {
     id: "np-4",
     title: "Nápoles",
     category: "Capítulo IX — Nápoles",
@@ -470,6 +471,15 @@ export const photos: Photo[] = [
     orientation: "landscape",
     country: IT,
     alt: "Vista do porto e dos edifícios de Nápoles sob céu nublado",
+  },
+  {
+    id: "np-5",
+    title: "Nápoles",
+    category: "Capítulo IX — Nápoles",
+    src: np5,
+    orientation: "landscape",
+    country: IT,
+    alt: "Detalhe urbano e paisagem de Nápoles",
   },
 
   // --- Capítulo III — Vaticano ---
