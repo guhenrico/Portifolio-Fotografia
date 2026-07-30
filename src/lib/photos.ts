@@ -52,15 +52,15 @@ import lago3 from "@/assets/portfolio/Lago3.JPEG";
 import lago4 from "@/assets/portfolio/Lago4.JPEG";
 
 export type Category =
-  | "Ensaio 1 Allana"
-  | "Ensaio 2 Allana"
-  | "Veneza IT"
-  | "Roma IT"
-  | "St. Moritz CH"
-  | "Lago di Como IT"
-  | "Florença IT"
-  | "Nápoles IT"
-  | "Ensaio Beatriz";
+  | "Capítulo I — Haras"
+  | "Capítulo II — Parque"
+  | "Capítulo IV — Veneza"
+  | "Capítulo V — Roma"
+  | "Capítulo VI — St. Moritz"
+  | "Capítulo VII — Lago di Como"
+  | "Capítulo VIII — Florença"
+  | "Capítulo IX — Nápoles"
+  | "Capítulo III — Vaticano";
 
 export interface Photo {
   id: string;
@@ -81,7 +81,7 @@ export const photos: Photo[] = [
   {
     id: "allana",
     title: "Allana",
-    category: "Ensaio 1 Allana",
+    category: "Capítulo I — Haras",
     src: allana,
     orientation: "portrait",
     country: BR,
@@ -90,7 +90,7 @@ export const photos: Photo[] = [
   {
     id: "allana-2",
     title: "Allana",
-    category: "Ensaio 1 Allana",
+    category: "Capítulo I — Haras",
     src: allana2,
     orientation: "portrait",
     country: BR,
@@ -99,7 +99,7 @@ export const photos: Photo[] = [
   {
     id: "allana-4",
     title: "Allana",
-    category: "Ensaio 1 Allana",
+    category: "Capítulo I — Haras",
     src: allana4,
     orientation: "portrait",
     country: BR,
@@ -108,7 +108,7 @@ export const photos: Photo[] = [
   {
     id: "allana-7",
     title: "Allana",
-    category: "Ensaio 1 Allana",
+    category: "Capítulo I — Haras",
     src: allana7,
     orientation: "portrait",
     country: BR,
@@ -117,7 +117,7 @@ export const photos: Photo[] = [
   {
     id: "allana-8",
     title: "Allana",
-    category: "Ensaio 1 Allana",
+    category: "Capítulo I — Haras",
     src: allana8,
     orientation: "portrait",
     country: BR,
@@ -128,7 +128,7 @@ export const photos: Photo[] = [
   {
     id: "allana2-1",
     title: "Allana",
-    category: "Ensaio 2 Allana",
+    category: "Capítulo II — Parque",
     src: allana2a,
     orientation: "portrait",
     country: BR,
@@ -137,7 +137,7 @@ export const photos: Photo[] = [
   {
     id: "allana2-2",
     title: "Allana",
-    category: "Ensaio 2 Allana",
+    category: "Capítulo II — Parque",
     src: allana2b,
     orientation: "portrait",
     country: BR,
@@ -146,7 +146,7 @@ export const photos: Photo[] = [
   {
     id: "allana2-4",
     title: "Allana",
-    category: "Ensaio 2 Allana",
+    category: "Capítulo II — Parque",
     src: allana2d,
     orientation: "portrait",
     country: BR,
@@ -155,7 +155,7 @@ export const photos: Photo[] = [
   {
     id: "allana2-5",
     title: "Allana",
-    category: "Ensaio 2 Allana",
+    category: "Capítulo II — Parque",
     src: allana2e,
     orientation: "portrait",
     country: BR,
@@ -164,7 +164,7 @@ export const photos: Photo[] = [
   {
     id: "allana2-7",
     title: "Allana",
-    category: "Ensaio 2 Allana",
+    category: "Capítulo II — Parque",
     src: allana2g,
     orientation: "portrait",
     country: BR,
@@ -175,7 +175,7 @@ export const photos: Photo[] = [
   {
     id: "vz-1",
     title: "Veneza",
-    category: "Veneza IT",
+    category: "Capítulo IV — Veneza",
     src: vz1,
     orientation: "landscape",
     country: IT,
@@ -184,7 +184,7 @@ export const photos: Photo[] = [
   {
     id: "vz-2",
     title: "Veneza",
-    category: "Veneza IT",
+    category: "Capítulo IV — Veneza",
     src: vz2,
     orientation: "landscape",
     country: IT,
@@ -193,7 +193,7 @@ export const photos: Photo[] = [
   {
     id: "vz-3",
     title: "Veneza",
-    category: "Veneza IT",
+    category: "Capítulo IV — Veneza",
     src: vz3,
     orientation: "landscape",
     country: IT,
@@ -202,7 +202,7 @@ export const photos: Photo[] = [
   {
     id: "vz-4",
     title: "Veneza",
-    category: "Veneza IT",
+    category: "Capítulo IV — Veneza",
     src: vz4,
     orientation: "landscape",
     country: IT,
@@ -211,7 +211,7 @@ export const photos: Photo[] = [
   {
     id: "vez-1",
     title: "Veneza",
-    category: "Veneza IT",
+    category: "Capítulo IV — Veneza",
     src: vez1,
     orientation: "landscape",
     country: IT,
@@ -220,7 +220,7 @@ export const photos: Photo[] = [
   {
     id: "vez-2",
     title: "Veneza",
-    category: "Veneza IT",
+    category: "Capítulo IV — Veneza",
     src: vez2,
     orientation: "landscape",
     country: IT,
@@ -229,7 +229,7 @@ export const photos: Photo[] = [
   {
     id: "vez-3",
     title: "Veneza",
-    category: "Veneza IT",
+    category: "Capítulo IV — Veneza",
     src: vez3,
     orientation: "landscape",
     country: IT,
@@ -238,18 +238,18 @@ export const photos: Photo[] = [
   {
     id: "vez-4",
     title: "Veneza",
-    category: "Veneza IT",
+    category: "Capítulo IV — Veneza",
     src: vez4,
     orientation: "landscape",
     country: IT,
     alt: "Pessoa em uma gôndola em um canal de Veneza",
   },
 
-  // --- Roma ---
+  // --- Capítulo V — Roma ---
   {
     id: "roma-1",
     title: "Roma",
-    category: "Roma IT",
+    category: "Capítulo V — Roma",
     src: roma1,
     orientation: "landscape",
     country: IT,
@@ -258,7 +258,7 @@ export const photos: Photo[] = [
   {
     id: "roma-2",
     title: "Roma",
-    category: "Roma IT",
+    category: "Capítulo V — Roma",
     src: roma2,
     orientation: "landscape",
     country: IT,
@@ -267,7 +267,7 @@ export const photos: Photo[] = [
   {
     id: "roma-4",
     title: "Roma",
-    category: "Roma IT",
+    category: "Capítulo V — Roma",
     src: roma4,
     orientation: "landscape",
     country: IT,
@@ -276,7 +276,7 @@ export const photos: Photo[] = [
   {
     id: "rom-1",
     title: "Roma",
-    category: "Roma IT",
+    category: "Capítulo V — Roma",
     src: rom1,
     orientation: "landscape",
     country: IT,
@@ -285,18 +285,18 @@ export const photos: Photo[] = [
   {
     id: "rom-2",
     title: "Roma",
-    category: "Roma IT",
+    category: "Capítulo V — Roma",
     src: rom2,
     orientation: "landscape",
     country: IT,
     alt: "Outra vista de Roma",
   },
 
-  // --- St. Moritz ---
+  // --- Capítulo VI — St. Moritz ---
   {
     id: "st-moritz-1",
     title: "St. Moritz",
-    category: "St. Moritz CH",
+    category: "Capítulo VI — St. Moritz",
     src: stMoritz1,
     orientation: "landscape",
     country: CH,
@@ -305,7 +305,7 @@ export const photos: Photo[] = [
   {
     id: "st-moritz-2",
     title: "St. Moritz",
-    category: "St. Moritz CH",
+    category: "Capítulo VI — St. Moritz",
     src: stMoritz2,
     orientation: "landscape",
     country: CH,
@@ -314,7 +314,7 @@ export const photos: Photo[] = [
   {
     id: "st-moritz-3",
     title: "St. Moritz",
-    category: "St. Moritz CH",
+    category: "Capítulo VI — St. Moritz",
     src: stMoritz3,
     orientation: "landscape",
     country: CH,
@@ -322,11 +322,11 @@ export const photos: Photo[] = [
   },
 
 
-  // --- Lago di Como (LC) ---
+  // --- Capítulo VII — Lago di Como ---
   {
     id: "lc-1",
     title: "Lago di Como",
-    category: "Lago di Como IT",
+    category: "Capítulo VII — Lago di Como",
     src: lc1,
     orientation: "landscape",
     country: IT,
@@ -335,7 +335,7 @@ export const photos: Photo[] = [
   {
     id: "lc-2",
     title: "Lago di Como",
-    category: "Lago di Como IT",
+    category: "Capítulo VII — Lago di Como",
     src: lc2,
     orientation: "landscape",
     country: IT,
@@ -344,7 +344,7 @@ export const photos: Photo[] = [
   {
     id: "lc-3",
     title: "Lago di Como",
-    category: "Lago di Como IT",
+    category: "Capítulo VII — Lago di Como",
     src: lc3,
     orientation: "landscape",
     country: IT,
@@ -353,7 +353,7 @@ export const photos: Photo[] = [
   {
     id: "lc-4",
     title: "Lago di Como",
-    category: "Lago di Como IT",
+    category: "Capítulo VII — Lago di Como",
     src: lc4,
     orientation: "landscape",
     country: IT,
@@ -362,7 +362,7 @@ export const photos: Photo[] = [
   {
     id: "lago-1",
     title: "Lago di Como",
-    category: "Lago di Como IT",
+    category: "Capítulo VII — Lago di Como",
     src: lago1,
     orientation: "landscape",
     country: IT,
@@ -371,7 +371,7 @@ export const photos: Photo[] = [
   {
     id: "lago-2",
     title: "Lago di Como",
-    category: "Lago di Como IT",
+    category: "Capítulo VII — Lago di Como",
     src: lago2,
     orientation: "landscape",
     country: IT,
@@ -380,7 +380,7 @@ export const photos: Photo[] = [
   {
     id: "lago-3",
     title: "Lago di Como",
-    category: "Lago di Como IT",
+    category: "Capítulo VII — Lago di Como",
     src: lago3,
     orientation: "landscape",
     country: IT,
@@ -389,18 +389,18 @@ export const photos: Photo[] = [
   {
     id: "lago-4",
     title: "Lago di Como",
-    category: "Lago di Como IT",
+    category: "Capítulo VII — Lago di Como",
     src: lago4,
     orientation: "landscape",
     country: IT,
     alt: "Ruela e arquitetura na região do Lago di Como",
   },
 
-  // --- Florença (FL) ---
+  // --- Capítulo VIII — Florença ---
   {
     id: "fl-1",
     title: "Florença",
-    category: "Florença IT",
+    category: "Capítulo VIII — Florença",
     src: fl1,
     orientation: "landscape",
     country: IT,
@@ -409,7 +409,7 @@ export const photos: Photo[] = [
   {
     id: "fl-2",
     title: "Florença",
-    category: "Florença IT",
+    category: "Capítulo VIII — Florença",
     src: fl2,
     orientation: "landscape",
     country: IT,
@@ -418,7 +418,7 @@ export const photos: Photo[] = [
   {
     id: "fl-3",
     title: "Florença",
-    category: "Florença IT",
+    category: "Capítulo VIII — Florença",
     src: fl3,
     orientation: "landscape",
     country: IT,
@@ -427,18 +427,18 @@ export const photos: Photo[] = [
   {
     id: "fl-4",
     title: "Florença",
-    category: "Florença IT",
+    category: "Capítulo VIII — Florença",
     src: fl4,
     orientation: "landscape",
     country: IT,
     alt: "Escultura renascentista em uma galeria de Florença",
   },
 
-  // --- Nápoles (NP) ---
+  // --- Capítulo IX — Nápoles ---
   {
     id: "np-1",
     title: "Nápoles",
-    category: "Nápoles IT",
+    category: "Capítulo IX — Nápoles",
     src: np1,
     orientation: "landscape",
     country: IT,
@@ -447,7 +447,7 @@ export const photos: Photo[] = [
   {
     id: "np-2",
     title: "Nápoles",
-    category: "Nápoles IT",
+    category: "Capítulo IX — Nápoles",
     src: np2,
     orientation: "landscape",
     country: IT,
@@ -456,7 +456,7 @@ export const photos: Photo[] = [
   {
     id: "np-3",
     title: "Nápoles",
-    category: "Nápoles IT",
+    category: "Capítulo IX — Nápoles",
     src: np3,
     orientation: "landscape",
     country: IT,
@@ -465,18 +465,18 @@ export const photos: Photo[] = [
   {
     id: "np-4",
     title: "Nápoles",
-    category: "Nápoles IT",
+    category: "Capítulo IX — Nápoles",
     src: np4,
     orientation: "landscape",
     country: IT,
     alt: "Vista do porto e dos edifícios de Nápoles sob céu nublado",
   },
 
-  // --- Ensaio Beatriz ---
+  // --- Capítulo III — Vaticano ---
   {
     id: "beatriz-1",
     title: "Beatriz",
-    category: "Ensaio Beatriz",
+    category: "Capítulo III — Vaticano",
     src: beatriz1,
     orientation: "portrait",
     country: BR,
@@ -485,7 +485,7 @@ export const photos: Photo[] = [
   {
     id: "beatriz-2",
     title: "Beatriz",
-    category: "Ensaio Beatriz",
+    category: "Capítulo III — Vaticano",
     src: beatriz2,
     orientation: "portrait",
     country: BR,
@@ -493,7 +493,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-3",
-    category: "Ensaio Beatriz",
+    category: "Capítulo III — Vaticano",
     src: beatriz3,
     orientation: "portrait",
     country: BR,
@@ -501,7 +501,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-4",
-    category: "Ensaio Beatriz",
+    category: "Capítulo III — Vaticano",
     src: beatriz4,
     orientation: "portrait",
     country: BR,
@@ -509,7 +509,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-5",
-    category: "Ensaio Beatriz",
+    category: "Capítulo III — Vaticano",
     src: beatriz5,
     orientation: "portrait",
     country: BR,
@@ -517,7 +517,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-6",
-    category: "Ensaio Beatriz",
+    category: "Capítulo III — Vaticano",
     src: beatriz6,
     orientation: "portrait",
     country: BR,
@@ -525,7 +525,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-7",
-    category: "Ensaio Beatriz",
+    category: "Capítulo III — Vaticano",
     src: beatriz7,
     orientation: "portrait",
     country: BR,
@@ -533,7 +533,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-8",
-    category: "Ensaio Beatriz",
+    category: "Capítulo III — Vaticano",
     src: beatriz8,
     orientation: "portrait",
     country: BR,
