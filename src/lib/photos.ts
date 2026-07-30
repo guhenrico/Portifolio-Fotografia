@@ -11,7 +11,7 @@ import allana2g from "@/assets/portfolio/allana2 (7).jpg";
 import stMoritz1 from "@/assets/portfolio/St.Moritz.jpg";
 import stMoritz2 from "@/assets/portfolio/St.Moritz2.jpg";
 import stMoritz3 from "@/assets/portfolio/St.Moritz3.jpg";
-import stMoritz4 from "@/assets/portfolio/St.Moritz4.jpg";
+
 import lc1 from "@/assets/portfolio/LC.JPEG";
 import lc2 from "@/assets/portfolio/LC2.JPEG";
 import lc3 from "@/assets/portfolio/LC3.JPEG";
@@ -26,7 +26,9 @@ import vez3 from "@/assets/portfolio/vez3.JPEG";
 import vez4 from "@/assets/portfolio/vez4.JPEG";
 import roma1 from "@/assets/portfolio/ROMA.JPEG";
 import roma2 from "@/assets/portfolio/ROMA2.JPEG";
-import roma3 from "@/assets/portfolio/ROMA3.JPEG";
+import rom1 from "@/assets/portfolio/rom1.JPEG";
+import rom2 from "@/assets/portfolio/rom2.JPEG";
+
 import roma4 from "@/assets/portfolio/ROMA4.JPEG";
 import fl1 from "@/assets/portfolio/FL.JPEG";
 import fl2 from "@/assets/portfolio/FL2.JPEG";
@@ -263,15 +265,6 @@ export const photos: Photo[] = [
     alt: "Fontana di Trevi sob o céu azul de Roma",
   },
   {
-    id: "roma-3",
-    title: "Roma",
-    category: "Roma IT",
-    src: roma3,
-    orientation: "landscape",
-    country: IT,
-    alt: "Arquibancadas e arena do Coliseu vistas do interior",
-  },
-  {
     id: "roma-4",
     title: "Roma",
     category: "Roma IT",
@@ -279,6 +272,24 @@ export const photos: Photo[] = [
     orientation: "landscape",
     country: IT,
     alt: "Retrato noturno com vestido vermelho diante do Coliseu",
+  },
+  {
+    id: "rom-1",
+    title: "Roma",
+    category: "Roma IT",
+    src: rom1,
+    orientation: "landscape",
+    country: IT,
+    alt: "Vista de Roma",
+  },
+  {
+    id: "rom-2",
+    title: "Roma",
+    category: "Roma IT",
+    src: rom2,
+    orientation: "landscape",
+    country: IT,
+    alt: "Outra vista de Roma",
   },
 
   // --- St. Moritz ---
@@ -309,15 +320,7 @@ export const photos: Photo[] = [
     country: CH,
     alt: "Lago e montanhas de St. Moritz em fotografia preto e branco",
   },
-  {
-    id: "st-moritz-4",
-    title: "St. Moritz",
-    category: "St. Moritz CH",
-    src: stMoritz4,
-    orientation: "landscape",
-    country: CH,
-    alt: "Bandeira suíça diante dos Alpes cobertos de neve",
-  },
+
 
   // --- Lago di Como (LC) ---
   {

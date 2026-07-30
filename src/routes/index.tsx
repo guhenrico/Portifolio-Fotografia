@@ -58,7 +58,7 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-function Star() {
+function Camera() {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -66,7 +66,11 @@ function Star() {
       fill="currentColor"
       aria-hidden
     >
-      <path d="M12 0l2 9 10 .5-8 5.5 3 9-7-5-7 5 3-9-8-5.5L10 9z" />
+      <path
+        fillRule="evenodd"
+        d="M6.827 6.175A2.25 2.25 0 018.675 4.5h6.65a2.25 2.25 0 011.848 1.675M17.25 10.5h-10.5m10.5 0a1.5 1.5 0 011.5 1.5v4.375c0 1.241-.986 2.25-2.227 2.25H5.477c-1.24 0-2.227-1.009-2.227-2.25V12c0-.88.214-1.603.586-2.227a2.25 2.25 0 011.848-1.675h6.65a2.25 2.25 0 011.848 1.675Zm-8.986 0h.005M12 14.5c0-.966-.784-1.75-1.75-1.75s-1.75.784-1.75 1.75.784 1.75 1.75 1.75S12 15.466 12 14.5Z"
+        clipRule="evenodd"
+      />
     </svg>
   );
 }
@@ -88,11 +92,11 @@ function Index() {
                 <path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
               </defs>
               <text fontSize="8" letterSpacing="3" fill="currentColor" fontFamily="Inter">
-                <textPath href="#circ">HENRICO · COLLECTION 01 · MMXXVI · </textPath>
+                <textPath href="#circ">HENRICO · PORTIFÓLIO · MMXXVI · </textPath>
               </text>
             </svg>
             <div className="absolute inset-0 flex items-center justify-center">
-              <Star />
+              <Camera />
             </div>
           </div>
         </div>
@@ -100,9 +104,11 @@ function Index() {
         <div className="grid grid-cols-12 gap-y-10 md:gap-6">
           <Reveal className="col-span-7 md:col-span-2">
             <p className="text-[10px] md:text-[11px] uppercase tracking-[0.28em] md:tracking-lux text-muted-foreground leading-relaxed">
+              Gustavo
+              <br />
               Henrico
               <br />
-              Collection 01
+              Portifólio
             </p>
           </Reveal>
           <Reveal className="col-span-5 self-start text-right md:hidden">
@@ -119,13 +125,17 @@ function Index() {
               <span style={{ animationDelay: "220ms" }} className="italic text-muted-foreground">
                 Boituva&nbsp;
               </span>
-              <span style={{ animationDelay: "300ms" }}>—&nbsp;</span>
-              <span style={{ animationDelay: "380ms" }}>imagens&nbsp;</span>
-              <span style={{ animationDelay: "460ms" }}>entre&nbsp;</span>
-              <span style={{ animationDelay: "540ms" }}>olhar,&nbsp;</span>
-              <span style={{ animationDelay: "620ms" }}>luz&nbsp;</span>
-              <span style={{ animationDelay: "700ms" }}>e&nbsp;</span>
-              <span style={{ animationDelay: "780ms" }}>memória.</span>
+              <span style={{ animationDelay: "300ms" }}>e&nbsp;</span>
+              <span style={{ animationDelay: "380ms" }} className="italic text-muted-foreground">
+                região&nbsp;
+              </span>
+              <span style={{ animationDelay: "460ms" }}>—&nbsp;</span>
+              <span style={{ animationDelay: "540ms" }}>imagens&nbsp;</span>
+              <span style={{ animationDelay: "620ms" }}>entre&nbsp;</span>
+              <span style={{ animationDelay: "700ms" }}>olhar,&nbsp;</span>
+              <span style={{ animationDelay: "780ms" }}>luz&nbsp;</span>
+              <span style={{ animationDelay: "860ms" }}>e&nbsp;</span>
+              <span style={{ animationDelay: "940ms" }}>memória.</span>
             </h1>
           </Reveal>
 
@@ -134,9 +144,9 @@ function Index() {
             delay={240}
           >
             <p className="text-[13px] md:text-sm text-muted-foreground leading-relaxed">
-              Gustavo Henrico é fotógrafo em Boituva, São Paulo. Atua principalmente com ensaios
-              externos e retratos com luz natural, atendendo Boituva e região. Imagens que respiram
-              silêncio, feitas para ser sentidas, não apenas vistas.
+              Gustavo Henrico é fotógrafo com base em Boituva, interior de SP. Atua com ensaios
+              externos, disponível para ensaios em qualquer lugar que a história pedir. Imagens que
+              respiram silêncio, feitas para ser sentidas, não apenas vistas.
             </p>
             <a
               href="#works"

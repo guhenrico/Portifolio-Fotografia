@@ -103,13 +103,16 @@ function AboutPage() {
             <Reveal delay={180}>
               <div className="space-y-5 text-[14px] md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
                 <p className="drop-cap">
-                  Olá, sou Gustavo Henrico, fotógrafo em Boituva. Gosto de registrar o que vejo por
-                  aí.
+                  Olá, sou Gustavo Henrico. Depois de anos fotografando por prazer, decidi abrir
+                  minha agenda para ensaios profissionais em 2026.
                 </p>
                 <p>
-                  Através do meu olhar, busco capturar a calma e o detalhe em ensaios externos e
-                  retratos com luz natural. Atendo Boituva e região, criando imagens que valorizam o
-                  silêncio, a textura das coisas e a luz que envolve cada cena.
+                  Com base em Boituva, interior de SP, busco capturar a calma e o detalhe através
+                  da luz natural. Cada imagem valoriza o silêncio, a textura das coisas e a
+                  atmosfera do momento — feita para ser sentida, não apenas vista.
+                </p>
+                <p>Atendo Boituva e região, e estou disponível para ensaios em qualquer lugar que a
+                  história pedir.
                 </p>
               </div>
             </Reveal>
