@@ -103,8 +103,9 @@ function AboutPage() {
             <Reveal delay={180}>
               <div className="space-y-5 text-[14px] md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
                 <p className="drop-cap">
-                  Olá, sou Gustavo Henrico. Depois de anos fotografando por prazer, decidi abrir
-                  minha agenda para ensaios profissionais em 2026.
+                  Olá, Sou Gustavo Henrico. A fotografia sempre foi minha forma de enxergar o mundo
+                  com mais calma — agora, decidi compartilhar esse olhar com quem quiser registrar
+                  sua própria história.
                 </p>
                 <p>
                   Com base em Boituva, interior de SP, busco capturar a calma e o detalhe através
