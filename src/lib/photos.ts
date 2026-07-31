@@ -503,6 +503,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-3",
+    title: "Beatriz",
     category: "Capítulo III — Vaticano",
     src: beatriz3,
     orientation: "portrait",
@@ -511,6 +512,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-4",
+    title: "Beatriz",
     category: "Capítulo III — Vaticano",
     src: beatriz4,
     orientation: "portrait",
@@ -519,6 +521,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-5",
+    title: "Beatriz",
     category: "Capítulo III — Vaticano",
     src: beatriz5,
     orientation: "portrait",
@@ -527,6 +530,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-6",
+    title: "Beatriz",
     category: "Capítulo III — Vaticano",
     src: beatriz6,
     orientation: "portrait",
@@ -535,6 +539,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-7",
+    title: "Beatriz",
     category: "Capítulo III — Vaticano",
     src: beatriz7,
     orientation: "portrait",
@@ -543,6 +548,7 @@ export const photos: Photo[] = [
   },
   {
     id: "beatriz-8",
+    title: "Beatriz",
     category: "Capítulo III — Vaticano",
     src: beatriz8,
     orientation: "portrait",
