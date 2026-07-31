@@ -4,9 +4,6 @@ import allana4 from "@/assets/portfolio/allana-4.jpg";
 import allana7 from "@/assets/portfolio/allana-7.JPEG";
 import allana8 from "@/assets/portfolio/allana-8.JPEG";
 import allana2a from "@/assets/portfolio/allana2.jpg";
-import allana2b from "@/assets/portfolio/allana2 (2).jpg";
-import allana2d from "@/assets/portfolio/allana2 (4).jpg";
-import allana2e from "@/assets/portfolio/allana2 (5).jpg";
 import allana2g from "@/assets/portfolio/allana2 (7).jpg";
 import stMoritz1 from "@/assets/portfolio/St.Moritz.jpg";
 import stMoritz2 from "@/assets/portfolio/St.Moritz2.jpg";
@@ -108,15 +105,6 @@ export const photos: Photo[] = [
     alt: "Allana voltada para a câmera em meio à vegetação",
   },
   {
-    id: "allana-7",
-    title: "Allana",
-    category: "Capítulo I — Haras",
-    src: allana7,
-    orientation: "portrait",
-    country: BR,
-    alt: "Perfil de Allana em retrato preto e branco com luz lateral",
-  },
-  {
     id: "allana-8",
     title: "Allana",
     category: "Capítulo I — Haras",
@@ -135,33 +123,6 @@ export const photos: Photo[] = [
     orientation: "portrait",
     country: BR,
     alt: "Allana em retrato preto e branco entre folhagens",
-  },
-  {
-    id: "allana2-2",
-    title: "Allana",
-    category: "Capítulo II — Parque",
-    src: allana2b,
-    orientation: "portrait",
-    country: BR,
-    alt: "Allana com casaco em contraluz entre árvores",
-  },
-  {
-    id: "allana2-4",
-    title: "Allana",
-    category: "Capítulo II — Parque",
-    src: allana2d,
-    orientation: "portrait",
-    country: BR,
-    alt: "Retrato de Allana com flor amarela e luz suave ao fundo",
-  },
-  {
-    id: "allana2-5",
-    title: "Allana",
-    category: "Capítulo II — Parque",
-    src: allana2e,
-    orientation: "portrait",
-    country: BR,
-    alt: "Allana em primeiro plano com vegetação desfocada",
   },
   {
     id: "allana2-7",
@@ -370,15 +331,6 @@ export const photos: Photo[] = [
     alt: "Nadador e embarcação nas águas do Lago di Como",
   },
   {
-    id: "lago-1",
-    title: "Lago di Como",
-    category: "Capítulo VII — Lago di Como",
-    src: lago1,
-    orientation: "landscape",
-    country: IT,
-    alt: "Vista panorâmica do Lago di Como com montanhas ao fundo",
-  },
-  {
     id: "lago-2",
     title: "Lago di Como",
     category: "Capítulo VII — Lago di Como",
@@ -509,15 +461,6 @@ export const photos: Photo[] = [
     orientation: "portrait",
     country: BR,
     alt: "Retrato de Beatriz em meio à luz suave do fim da tarde",
-  },
-  {
-    id: "beatriz-4",
-    title: "Beatriz",
-    category: "Capítulo III — Vaticano",
-    src: beatriz4,
-    orientation: "portrait",
-    country: BR,
-    alt: "Beatriz sorrindo em retrato preto e branco ao ar livre",
   },
   {
     id: "beatriz-5",
