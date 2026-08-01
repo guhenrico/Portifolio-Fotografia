@@ -5,7 +5,6 @@ import { Lightbox } from "./Lightbox";
 const FILTERS: ("Todas" | Category)[] = [
   "Todas",
   "Capítulo I — Haras",
-  "Capítulo II — Parque",
   "Capítulo III — Vaticano",
   "Capítulo IV — Veneza",
   "Capítulo V — Roma",

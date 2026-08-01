@@ -52,7 +52,6 @@ import lago4 from "@/assets/portfolio/Lago4.JPEG";
 
 export type Category =
   | "Capítulo I — Haras"
-  | "Capítulo II — Parque"
   | "Capítulo IV — Veneza"
   | "Capítulo V — Roma"
   | "Capítulo VI — St. Moritz"
@@ -114,11 +113,11 @@ export const photos: Photo[] = [
     alt: "Allana sentada junto a uma janela em fotografia preto e branco",
   },
 
-  // --- Allana 2 (extras) ---
+  // --- Capítulo I — Haras (extras) ---
   {
     id: "allana2-1",
     title: "Allana",
-    category: "Capítulo II — Parque",
+    category: "Capítulo I — Haras",
     src: allana2a,
     orientation: "portrait",
     country: BR,
@@ -127,7 +126,7 @@ export const photos: Photo[] = [
   {
     id: "allana2-7",
     title: "Allana",
-    category: "Capítulo II — Parque",
+    category: "Capítulo I — Haras",
     src: allana2g,
     orientation: "portrait",
     country: BR,
