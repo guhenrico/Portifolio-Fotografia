@@ -18,7 +18,7 @@ import vz1 from "@/assets/portfolio/VZ.JPEG";
 import vz2 from "@/assets/portfolio/VZ2.JPEG";
 import vz3 from "@/assets/portfolio/VZ3.JPEG";
 import vz4 from "@/assets/portfolio/VZ4.JPEG";
-import vez1 from "@/assets/portfolio/vez1.JPEG";
+import vez1 from "@/assets/portfolio/Retrato-Veneza.JPEG";
 import vez2 from "@/assets/portfolio/vez2.JPEG";
 import vez3 from "@/assets/portfolio/vez3.JPEG";
 import vez4 from "@/assets/portfolio/vez4.JPEG";
