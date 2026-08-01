@@ -73,6 +73,15 @@ const IT = { code: "it", label: "Itália" };
 export const photos: Photo[] = [
   // --- Allana ---
   {
+    id: "allana-4",
+    title: "Allana",
+    category: "Capítulo I — Haras",
+    src: allana4,
+    orientation: "portrait",
+    country: BR,
+    alt: "Allana voltada para a câmera em meio à vegetação",
+  },
+  {
     id: "allana",
     title: "Allana",
     category: "Capítulo I — Haras",
@@ -89,15 +98,6 @@ export const photos: Photo[] = [
     orientation: "portrait",
     country: BR,
     alt: "Allana de perfil em um jardim iluminado pelo fim de tarde",
-  },
-  {
-    id: "allana-4",
-    title: "Allana",
-    category: "Capítulo I — Haras",
-    src: allana4,
-    orientation: "portrait",
-    country: BR,
-    alt: "Allana voltada para a câmera em meio à vegetação",
   },
   {
     id: "allana-8",
