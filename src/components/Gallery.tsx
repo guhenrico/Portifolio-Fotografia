@@ -10,7 +10,6 @@ const FILTERS: ("Todas" | Category)[] = [
   "Capítulo V — Roma",
   "Capítulo VI — St. Moritz",
   "Capítulo VII — Lago di Como",
-  "Capítulo VIII — Florença",
   "Capítulo IX — Nápoles",
 ];
 

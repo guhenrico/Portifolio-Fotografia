@@ -28,10 +28,7 @@ import rom1 from "@/assets/portfolio/rom1.JPEG";
 import rom2 from "@/assets/portfolio/rom2.JPEG";
 
 import roma4 from "@/assets/portfolio/ROMA4.JPEG";
-import fl1 from "@/assets/portfolio/FL.JPEG";
-import fl2 from "@/assets/portfolio/FL2.JPEG";
 import fl3 from "@/assets/portfolio/FL3.JPEG";
-import fl4 from "@/assets/portfolio/FL4.JPEG";
 import np1 from "@/assets/portfolio/NP.JPEG";
 import np2 from "@/assets/portfolio/NP2.JPEG";
 import np3 from "@/assets/portfolio/NP3.JPEG";
@@ -56,7 +53,6 @@ export type Category =
   | "Capítulo V — Roma"
   | "Capítulo VI — St. Moritz"
   | "Capítulo VII — Lago di Como"
-  | "Capítulo VIII — Florença"
   | "Capítulo IX — Nápoles"
   | "Capítulo III — Vaticano";
 
@@ -357,42 +353,15 @@ export const photos: Photo[] = [
     alt: "Ruela e arquitetura na região do Lago di Como",
   },
 
-  // --- Capítulo VIII — Florença ---
+  // --- Capítulo V — Roma ---
   {
-    id: "fl-1",
-    title: "Florença",
-    category: "Capítulo VIII — Florença",
-    src: fl1,
-    orientation: "landscape",
-    country: IT,
-    alt: "Retrato feminino em uma praça histórica de Florença",
-  },
-  {
-    id: "fl-2",
-    title: "Florença",
-    category: "Capítulo VIII — Florença",
-    src: fl2,
-    orientation: "landscape",
-    country: IT,
-    alt: "Bandeiras e cúpula da Catedral de Florença entre edifícios",
-  },
-  {
-    id: "fl-3",
-    title: "Florença",
-    category: "Capítulo VIII — Florença",
+    id: "roma-3",
+    title: "Roma",
+    category: "Capítulo V — Roma",
     src: fl3,
     orientation: "landscape",
     country: IT,
     alt: "Detalhe de uma mão com anéis sobre tecido estampado",
-  },
-  {
-    id: "fl-4",
-    title: "Florença",
-    category: "Capítulo VIII — Florença",
-    src: fl4,
-    orientation: "landscape",
-    country: IT,
-    alt: "Escultura renascentista em uma galeria de Florença",
   },
 
   // --- Capítulo IX — Nápoles ---
