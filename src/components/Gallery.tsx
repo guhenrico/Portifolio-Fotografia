@@ -5,12 +5,12 @@ import { Lightbox } from "./Lightbox";
 const FILTERS: ("Todas" | Category)[] = [
   "Todas",
   "Capítulo I — Haras",
-  "Capítulo III — Vaticano",
-  "Capítulo IV — Veneza",
-  "Capítulo V — Roma",
-  "Capítulo VI — St. Moritz",
-  "Capítulo VII — Lago di Como",
-  "Capítulo IX — Nápoles",
+  "Capítulo II — Veneza",
+  "Capítulo III — Roma",
+  "Capítulo IV — St. Moritz",
+  "Capítulo V — Lago di Como",
+  "Capítulo VI — Nápoles",
+  "Capítulo VII — Vaticano",
 ];
 
 export function Gallery() {
