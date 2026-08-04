@@ -33,7 +33,6 @@ import np1 from "@/assets/portfolio/NP.JPEG";
 import np2 from "@/assets/portfolio/NP2.JPEG";
 import np3 from "@/assets/portfolio/NP3.JPEG";
 import np4 from "@/assets/portfolio/NP4.JPEG";
-import np5 from "@/assets/portfolio/NP5.JPEG";
 import beatriz1 from "@/assets/portfolio/Beatriz1.jpg";
 import beatriz2 from "@/assets/portfolio/Beatriz2.jpg";
 import beatriz3 from "@/assets/portfolio/Beatriz3.jpg";
@@ -392,16 +391,6 @@ export const photos: Photo[] = [
     country: IT,
     alt: "Vista do porto e dos edifícios de Nápoles sob céu nublado",
   },
-  {
-    id: "np-5",
-    title: "Nápoles",
-    category: "Capítulo VI — Nápoles",
-    src: np5,
-    orientation: "landscape",
-    country: IT,
-    alt: "Detalhe urbano e paisagem de Nápoles",
-  },
-
   // --- Capítulo VII — Vaticano ---
   {
     id: "beatriz-1",
