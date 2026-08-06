@@ -32,7 +32,7 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               <li>
                 <a
-                  href="https://www.instagram.com/guhenricoo/"
+                  href="https://www.instagram.com/henricofotografia/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:opacity-60"

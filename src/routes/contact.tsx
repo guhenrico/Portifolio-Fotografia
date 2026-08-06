@@ -91,7 +91,7 @@ function ContactPage() {
                   {
                     label: "Instagram",
                     value: "@guhenricoo",
-                    href: "https://www.instagram.com/guhenricoo/",
+                    href: "https://www.instagram.com/henricofotografia/",
                     meta: "diário",
                   },
                   {
