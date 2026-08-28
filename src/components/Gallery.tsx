@@ -4,13 +4,9 @@ import { Lightbox } from "./Lightbox";
 
 const FILTERS: ("Todas" | Category)[] = [
   "Todas",
-  "Capítulo I — Haras",
-  "Capítulo II — Veneza",
-  "Capítulo III — Roma",
-  "Capítulo IV — St. Moritz",
-  "Capítulo V — Lago di Como",
-  "Capítulo VI — Nápoles",
-  "Capítulo VII — Vaticano",
+  "Ensaio Externo - Haras",
+  "Ensaio Externo - Itália & Suíça",
+  "Ensaio Externo - Bailarina",
 ];
 
 export function Gallery() {
@@ -32,7 +28,7 @@ export function Gallery() {
     <section id="works" className="mx-auto max-w-[1600px] px-5 md:px-12 scroll-mt-24">
       {/* Header — editorial control bar */}
       <div className="mb-10 border-b border-border/60 pb-5 md:mb-16 md:pb-7">
-        <div className="flex flex-wrap items-end justify-between gap-y-5 gap-x-8">
+        <div>
           <div className="flex flex-col gap-1.5 md:gap-2">
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground tracking-tight">
               Ensaios<span className="italic text-muted-foreground/60 font-light">.</span>
@@ -55,34 +51,33 @@ export function Gallery() {
                 </span>
               </p>
             </div>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-2 md:gap-3">
-            {FILTERS.map((f) => {
-              const isActive = filter === f;
-              return (
-                <button
-                  type="button"
-                  key={f}
-                  onClick={() => setFilter(f)}
-                  aria-pressed={isActive}
-                  className={`group inline-flex items-baseline gap-1.5 border px-3.5 py-2 text-[11px] uppercase tracking-lux transition-all duration-300 md:px-4 md:py-2.5 ${
-                    isActive
-                      ? "border-foreground bg-foreground text-background"
-                      : "border-border/70 text-muted-foreground hover:border-foreground hover:text-foreground"
-                  }`}
-                >
-                  <span>{f}</span>
-                  <sup
-                    className={`text-[9px] tracking-normal tabular-nums ${
-                      isActive ? "text-background/70" : "text-muted-foreground/70"
+            <div className="mt-5 flex flex-wrap items-center gap-2 md:mt-6 md:gap-3">
+              {FILTERS.map((f) => {
+                const isActive = filter === f;
+                return (
+                  <button
+                    type="button"
+                    key={f}
+                    onClick={() => setFilter(f)}
+                    aria-pressed={isActive}
+                    className={`group inline-flex items-baseline gap-1.5 border px-3.5 py-2 text-[11px] uppercase tracking-lux transition-all duration-300 md:px-4 md:py-2.5 ${
+                      isActive
+                        ? "border-foreground bg-foreground text-background"
+                        : "border-border/70 text-muted-foreground hover:border-foreground hover:text-foreground"
                     }`}
                   >
-                    {String(counts[f] ?? 0).padStart(2, "0")}
-                  </sup>
-                </button>
-              );
-            })}
+                    <span>{f}</span>
+                    <sup
+                      className={`text-[9px] tracking-normal tabular-nums ${
+                        isActive ? "text-background/70" : "text-muted-foreground/70"
+                      }`}
+                    >
+                      {String(counts[f] ?? 0).padStart(2, "0")}
+                    </sup>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
