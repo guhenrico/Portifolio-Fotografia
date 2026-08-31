@@ -55,6 +55,22 @@ import ana6 from "@/assets/portfolio/Ana6.JPEG";
 import ana7 from "@/assets/portfolio/Ana7.JPEG";
 import ana8 from "@/assets/portfolio/Ana8.JPEG";
 import ana9 from "@/assets/portfolio/Ana9.JPEG";
+import campo1 from "@/assets/portfolio/Campo 1.JPEG";
+import campo2 from "@/assets/portfolio/Campo 2.JPEG";
+import campo3 from "@/assets/portfolio/Campo 3.JPEG";
+import campo4 from "@/assets/portfolio/Campo 4.JPEG";
+import campo5 from "@/assets/portfolio/Campo 5.JPEG";
+import campo6 from "@/assets/portfolio/Campo 6.JPEG";
+import campo7 from "@/assets/portfolio/Campo 7.JPEG";
+import campo8 from "@/assets/portfolio/Campo 8.JPEG";
+import campo9 from "@/assets/portfolio/Campo 9.JPEG";
+import campo10 from "@/assets/portfolio/Campo 10.JPEG";
+import campo11 from "@/assets/portfolio/Campo 11.JPEG";
+import campo12 from "@/assets/portfolio/Campo 12.JPEG";
+import campo13 from "@/assets/portfolio/Campo 13.JPEG";
+import campo14 from "@/assets/portfolio/Campo 14.JPEG";
+import campo15 from "@/assets/portfolio/Campo 15.JPEG";
+import campo16 from "@/assets/portfolio/Campo 16.JPEG";
 
 export type Category =
   | "Ensaio Externo - Haras"
@@ -78,6 +94,34 @@ const IT = { code: "it", label: "Itália" };
 const HARAS_CHAPTER: Category = "Ensaio Externo - Haras";
 const ITALY_CHAPTER: Category = "Ensaio Externo - Itália & Suíça";
 const BALLERINA_CHAPTER: Category = "Ensaio Externo - Bailarina";
+const FIELD_CHAPTER: Category = "Ensaio Externo - Campo aberto";
+
+const campoPhotos: Photo[] = [
+  campo1,
+  campo2,
+  campo3,
+  campo4,
+  campo5,
+  campo14,
+  campo15,
+  campo16,
+  campo6,
+  campo7,
+  campo8,
+  campo9,
+  campo10,
+  campo11,
+  campo12,
+  campo13,
+].map((src, index) => ({
+  id: `campo-${index + 1}`,
+  title: "Campo aberto",
+  category: FIELD_CHAPTER,
+  src,
+  orientation: "portrait",
+  country: BR,
+  alt: `Foto ${index + 1} do ensaio externo em campo aberto`,
+}));
 
 export const photos: Photo[] = [
   // --- Allana ---
@@ -557,4 +601,5 @@ export const photos: Photo[] = [
     country: BR,
     alt: "Ana em ensaio externo de bailarina",
   },
+  ...campoPhotos,
 ];
