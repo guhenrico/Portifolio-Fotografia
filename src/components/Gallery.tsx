@@ -7,6 +7,7 @@ const FILTERS: ("Todas" | Category)[] = [
   "Ensaio Externo - Haras",
   "Ensaio Externo - Itália & Suíça",
   "Ensaio Externo - Bailarina",
+  "Ensaio Externo - Campo aberto",
 ];
 
 export function Gallery() {

@@ -59,7 +59,8 @@ import ana9 from "@/assets/portfolio/Ana9.JPEG";
 export type Category =
   | "Ensaio Externo - Haras"
   | "Ensaio Externo - Itália & Suíça"
-  | "Ensaio Externo - Bailarina";
+  | "Ensaio Externo - Bailarina"
+  | "Ensaio Externo - Campo aberto";
 
 export interface Photo {
   id: string;
