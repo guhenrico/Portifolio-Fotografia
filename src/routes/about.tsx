@@ -131,7 +131,7 @@ function AboutPage() {
                   <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">
                     Foco
                   </dt>
-                  <dd className="mt-1 font-serif text-base md:text-lg italic">Ensaio Externo</dd>
+                  <dd className="mt-1 font-serif text-base md:text-lg italic">Ensaios Externos &amp; Eventos</dd>
                 </div>
               </dl>
             </Reveal>
@@ -139,7 +139,7 @@ function AboutPage() {
             <Reveal delay={300}>
               <div className="mt-2 flex flex-wrap items-center gap-x-6 gap-y-3 text-[11px] uppercase tracking-lux-sm">
                 <span className="inline-flex items-center gap-2 text-muted-foreground">
-                  <span className="pulse-dot" aria-hidden /> Disponível para 2026
+                  <span className="pulse-dot" aria-hidden /> Agenda de 2026/2027 aberta
                 </span>
                 <a
                   href="https://wa.me/5511997372512"
