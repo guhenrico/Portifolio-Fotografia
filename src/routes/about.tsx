@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { Marquee } from "@/components/Marquee";
 import aboutPortrait from "@/assets/portfolio/about-portrait.jpeg";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -142,7 +143,7 @@ function AboutPage() {
                   <span className="pulse-dot" aria-hidden /> Agenda de 2026/2027 aberta
                 </span>
                 <a
-                  href="https://wa.me/5511997372512"
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="word-swap font-serif text-base italic normal-case tracking-normal text-foreground"

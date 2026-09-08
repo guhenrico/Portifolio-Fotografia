@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Gallery } from "@/components/Gallery";
 import { Reveal } from "@/components/Reveal";
 import GustavoHenrico from "@/assets/portfolio/Gustavo-Henrico.JPEG";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 const SITE_URL = "https://henricofotografia.com.br/";
 const TITLE = "Fotógrafo em Boituva | Gustavo Henrico Fotografia";
@@ -44,7 +45,7 @@ export const Route = createFileRoute("/")({
           name: "Gustavo Henrico Fotografia",
           alternateName: "Henrico Fotografia",
           url: SITE_URL,
-          telephone: "+55 11 99737-2512",
+          telephone: "+55 15 99144-6560",
           email: "gustavo.henrico01@gmail.com",
           image: SOCIAL_IMAGE_URL,
           description: DESCRIPTION,
@@ -172,7 +173,7 @@ function Index() {
               </span>
             </a>
             <a
-              href="https://wa.me/5511997372512"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="ml-6 mt-8 inline-flex items-center gap-3 border-b border-white/40 pb-1.5 text-[11px] uppercase tracking-lux text-white transition-colors hover:border-white"

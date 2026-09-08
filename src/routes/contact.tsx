@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -64,7 +65,7 @@ function ContactPage() {
             <Reveal delay={320}>
               <div className="mt-10 flex flex-col gap-4 md:mt-14">
                 <a
-                  href="https://wa.me/5511997372512"
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Solicitar informações pelo WhatsApp"

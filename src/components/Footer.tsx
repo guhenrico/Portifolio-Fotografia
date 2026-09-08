@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { whatsappUrl } from "@/lib/whatsapp";
 
 export function Footer() {
   return (
@@ -16,7 +17,7 @@ export function Footer() {
               <span aria-hidden>→</span>
             </Link>
             <a
-              href="https://wa.me/5511997372512"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-3 border-b border-foreground pb-1 text-sm text-foreground transition-opacity hover:opacity-60 text-[#25D366]"
