@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { Marquee } from "@/components/Marquee";
-import aboutPortrait from "@/assets/portfolio/about-portrait.jpeg";
+import aboutPortrait from "@/assets/portfolio/Beatriz e Gustavo.JPEG";
 import { whatsappUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/about")({
@@ -35,7 +35,7 @@ function AboutPage() {
         <Reveal>
           <div className="flex items-center gap-3">
             <p className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] md:tracking-lux text-muted-foreground">
-              Sobre · № 003
+              Sobre · № 002
             </p>
             <span className="h-px flex-1 max-w-[160px] bg-border" />
             <span className="text-[10px] uppercase tracking-lux-sm text-muted-foreground hidden sm:inline">
@@ -62,15 +62,15 @@ function AboutPage() {
                 aria-hidden
                 className="hidden md:block absolute -left-14 bottom-0 [writing-mode:vertical-rl] rotate-180 text-[10px] uppercase tracking-lux text-muted-foreground whitespace-nowrap"
               >
-                Gustavo Henrico — MMXXVI
+                Gustavo &amp; Beatriz — MMXXVI
               </span>
-              <figure className="img-hover relative overflow-hidden grain group aspect-[4/5] bg-muted">
+              <figure className="img-hover relative overflow-hidden grain group bg-muted">
                 <img
                   src={aboutPortrait}
-                  alt="Gustavo Henrico"
+                  alt="Beatriz e Gustavo"
                   loading="eager"
                   decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover grayscale transition-[filter,transform] duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:grayscale-0 group-hover:scale-[1.02]"
+                  className="relative block h-auto w-full transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02]"
                 />
                 <span className="pointer-events-none absolute left-3 top-3 z-10 bg-background/85 px-2 py-1 text-[10px] uppercase tracking-lux-sm backdrop-blur-sm">
                   № 003 · Retrato
