@@ -3,11 +3,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Gallery } from "@/components/Gallery";
 import { Reveal } from "@/components/Reveal";
-import GustavoHenrico from "@/assets/portfolio/Gustavo-Henrico.JPEG";
+import BeGuFontana from "@/assets/portfolio/Be e Gu Fontana.JPEG";
 import { whatsappUrl } from "@/lib/whatsapp";
 
 const SITE_URL = "https://henricofotografia.com.br/";
-const TITLE = "Fotógrafo em Boituva | Gustavo Henrico Fotografia";
+const TITLE = "Fotografia em Boituva | Gustavo & Beatriz Fotografia";
 const DESCRIPTION =
   "Fotógrafo em Boituva especializado em ensaios externos e retratos com luz natural. Conheça o portfólio de Gustavo Henrico e solicite informações.";
 const SOCIAL_IMAGE_URL = `${SITE_URL}gustavo-henrico-fotografia.jpg`;
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Gustavo Henrico Fotografia" },
+      { property: "og:site_name", content: "Gustavo & Beatriz Fotografia" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: SITE_URL },
@@ -42,8 +42,8 @@ export const Route = createFileRoute("/")({
         "script:ld+json": {
           "@context": "https://schema.org",
           "@type": ["ProfessionalService", "LocalBusiness"],
-          name: "Gustavo Henrico Fotografia",
-          alternateName: "Henrico Fotografia",
+          name: "Gustavo & Beatriz Fotografia",
+          alternateName: "Gustavo & Beatriz",
           url: SITE_URL,
           telephone: "+55 15 99144-6560",
           email: "gustavo.henrico01@gmail.com",
@@ -82,12 +82,12 @@ function Index() {
     <main className="min-h-screen bg-background text-foreground">
       <Header />
 
-      <section className="relative overflow-hidden mx-auto max-w-[1600px] px-5 md:px-12 pt-32 pb-12 md:pt-44 md:pb-16">
+      <section className="relative overflow-hidden w-full px-5 md:px-12 pt-32 pb-12 md:pt-44 md:pb-16">
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${GustavoHenrico})` }}
+          className="absolute inset-0 bg-cover bg-[position:72%_bottom] md:bg-[position:65%_bottom]"
+          style={{ backgroundImage: `url(${BeGuFontana})` }}
         />
-        <div className="absolute inset-0 bg-black/65" />
+        <div className="absolute inset-0 bg-black/38" />
         <div className="pointer-events-none absolute right-5 top-28 hidden md:block md:right-12 md:top-40">
           <div className="relative h-28 w-28">
             <svg
@@ -98,7 +98,7 @@ function Index() {
                 <path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0" />
               </defs>
               <text fontSize="8" letterSpacing="3" fill="currentColor" fontFamily="Inter">
-                <textPath href="#circ">HENRICO · PORTIFÓLIO · MMXXVI · </textPath>
+                <textPath href="#circ">GUSTAVO &amp; BEATRIZ · PORTFÓLIO · </textPath>
               </text>
             </svg>
             <div className="absolute inset-0 flex items-center justify-center">
@@ -110,9 +110,9 @@ function Index() {
         <div className="grid grid-cols-12 gap-y-10 md:gap-6">
           <Reveal className="col-span-7 md:col-span-2">
             <p className="text-[10px] md:text-[11px] uppercase tracking-[0.28em] md:tracking-lux text-white leading-relaxed">
-              Gustavo
+              Gustavo &amp;
               <br />
-              Henrico
+              Beatriz
               <br />
               Portifólio
             </p>
@@ -126,16 +126,12 @@ function Index() {
 
           <Reveal className="col-span-12 md:col-span-9 md:col-start-3" delay={120}>
             <h1 className="word-rise font-serif text-[2.5rem] sm:text-5xl md:text-[clamp(2.75rem,7vw,7rem)] leading-[1.02] md:leading-[0.95] tracking-[-0.02em] text-white">
-              <span style={{ animationDelay: "60ms" }}>Fotógrafo&nbsp;</span>
-              <span style={{ animationDelay: "140ms" }}>em&nbsp;</span>
-              <span style={{ animationDelay: "220ms" }} className="italic text-white/90">
-                Boituva&nbsp;
+              <span style={{ animationDelay: "60ms" }}>Fotógrafos&nbsp;</span>
+              <span style={{ animationDelay: "140ms" }} className="italic text-white/90">
+                de&nbsp;
               </span>
-              <span style={{ animationDelay: "300ms" }}>e&nbsp;</span>
-              <span style={{ animationDelay: "380ms" }} className="italic text-white/90">
-                região&nbsp;
-              </span>
-              <span style={{ animationDelay: "460ms" }}>—&nbsp;</span>
+              <span style={{ animationDelay: "220ms" }}>histórias&nbsp;</span>
+              <span style={{ animationDelay: "300ms" }}>—&nbsp;</span>
               <span style={{ animationDelay: "540ms" }}>imagens&nbsp;</span>
               <span style={{ animationDelay: "620ms" }}>entre&nbsp;</span>
               <span style={{ animationDelay: "700ms" }}>olhar,&nbsp;</span>
@@ -150,9 +146,9 @@ function Index() {
             delay={240}
           >
             <p className="text-[13px] md:text-sm text-white/85 leading-relaxed">
-              Gustavo Henrico é fotógrafo com base em Boituva, interior de SP. Atua com ensaios
-              externos, disponível para ensaios em qualquer lugar que a história pedir. Imagens que
-              respiram silêncio, feitas para ser sentidas, não apenas vistas.
+              Somos fotógrafos com base em Boituva, interior de SP. Atuamos com ensaios e
+              casamentos, disponíveis para registrar histórias em qualquer lugar que elas pedirem.
+              Criamos imagens que respiram silêncio, feitas para ser sentidas, não apenas vistas.
             </p>
             <a
               href="#works"
