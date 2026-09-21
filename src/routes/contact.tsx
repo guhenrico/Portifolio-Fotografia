@@ -90,9 +90,9 @@ function ContactPage() {
                   <div className="mt-10 grid max-w-[520px] grid-cols-1 gap-3 sm:grid-cols-2 md:mt-12">
                     {[
                       {
-                        label: "Instagram",
-                        value: "@guhenricoo",
-                        href: "https://www.instagram.com/henricofotografia/",
+                        label: "Entre Nós Fotografia",
+                        value: "@entrenosphotos",
+                        href: "https://www.instagram.com/entrenosphotos/",
                         meta: "diário",
                       },
                       {
@@ -136,7 +136,7 @@ function ContactPage() {
                     decoding="async"
                   />
                   <figcaption className="absolute bottom-4 left-4 text-[10px] uppercase tracking-lux-sm text-white/80">
-                    Gustavo &amp; Beatriz · Entre Nós
+                    Entre Nós Fotografia
                   </figcaption>
                 </figure>
               </Reveal>

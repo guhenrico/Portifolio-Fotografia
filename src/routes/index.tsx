@@ -52,7 +52,7 @@ export const Route = createFileRoute("/")({
           areaServed: ["Boituva", "Iperó", "Tatuí", "Cerquilho", "Porto Feliz", "Sorocaba"].map(
             (name) => ({ "@type": "City", name }),
           ),
-          sameAs: ["https://www.instagram.com/henricofotografia/"],
+          sameAs: ["https://www.instagram.com/entrenosphotos/"],
         },
       },
     ],

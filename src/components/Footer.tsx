@@ -33,11 +33,11 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               <li>
                 <a
-                  href="https://www.instagram.com/henricofotografia/"
+                  href="https://www.instagram.com/entrenosphotos/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:opacity-60"
-                  aria-label="Instagram de Gustavo & Beatriz Fotografia"
+                  aria-label="Instagram de Entre Nós Fotografia"
                 >
                   Instagram
                 </a>
@@ -47,9 +47,9 @@ export function Footer() {
         </div>
         <div className="mt-12 flex flex-col gap-2 border-t border-border/60 pt-6 text-[11px] md:mt-16 md:text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} Gustavo &amp; Beatriz Fotografia. Todos os direitos reservados.
+            © {new Date().getFullYear()} Entre Nós Fotografia. Todos os direitos reservados.
           </p>
-          <p className="tracking-lux-sm uppercase">Gustavo &amp; Beatriz Fotografia</p>
+          <p className="tracking-lux-sm uppercase">Entre Nós Fotografia</p>
         </div>
       </div>
     </footer>
