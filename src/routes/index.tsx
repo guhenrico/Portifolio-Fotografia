@@ -7,7 +7,7 @@ import BeGuFontana from "@/assets/portfolio/Be e Gu Fontana.JPEG";
 import { whatsappUrl } from "@/lib/whatsapp";
 
 const SITE_URL = "https://henricofotografia.com.br/";
-const TITLE = "Fotografia em Boituva | Gustavo & Beatriz Fotografia";
+const TITLE = "Fotografia em Boituva | Por Gustavo & Beatriz";
 const DESCRIPTION =
   "Fotógrafo em Boituva especializado em ensaios externos e retratos com luz natural. Conheça o portfólio de Gustavo Henrico e solicite informações.";
 const SOCIAL_IMAGE_URL = `${SITE_URL}gustavo-henrico-fotografia.jpg`;
