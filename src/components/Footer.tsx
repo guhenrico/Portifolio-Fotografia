@@ -49,7 +49,7 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} Entre Nós Fotografia. Todos os direitos reservados.
           </p>
-          <p className="tracking-lux-sm uppercase">Entre Nós Fotografia</p>
+          <p className="tracking-lux-sm uppercase">Por Gustavo &amp; Beatriz</p>
         </div>
       </div>
     </footer>
