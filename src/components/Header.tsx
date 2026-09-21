@@ -17,9 +17,9 @@ export function Header() {
           to="/"
           onClick={() => setOpen(false)}
           className="flex items-baseline gap-2 text-foreground"
-          aria-label="Gustavo & Beatriz Fotografia — página inicial"
+          aria-label="Entre Nós Fotografia — página inicial"
         >
-          <span className="font-serif text-lg tracking-tight md:text-xl">Gustavo &amp; Beatriz</span>
+          <span className="font-serif text-lg tracking-tight md:text-xl">Entre Nós</span>
           <span className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground/80 font-light">
             fotografia
           </span>
@@ -96,7 +96,7 @@ export function Header() {
             Contato
           </Link>
           <p className="mt-6 text-[10px] uppercase tracking-[0.32em] text-muted-foreground">
-            Gustavo &amp; Beatriz Fotografia — Collection 01
+            Entre Nós Fotografia — Collection 01
           </p>
         </nav>
       </div>

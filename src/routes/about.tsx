@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { Marquee } from "@/components/Marquee";
 import aboutPortrait from "@/assets/portfolio/Beatriz e Gustavo.JPEG";
+import coliseumPortrait from "@/assets/portfolio/Be e Gu parque do coliseu.JPEG";
 import { whatsappUrl } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/about")({
@@ -29,13 +30,13 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   return (
-    <main className="min-h-screen bg-background text-foreground flex flex-col overflow-x-clip">
+    <main className="min-h-screen bg-background text-foreground flex flex-col overflow-x-clip [&>footer]:mt-0">
       <Header />
-      <section className="relative mx-auto w-full max-w-[1200px] px-5 md:px-12 pt-20 pb-12 md:pt-32 md:pb-20 flex-1">
+      <section className="relative mx-auto w-full max-w-[1200px] px-5 pt-20 md:px-12 md:pt-32">
         <Reveal>
           <div className="flex items-center gap-3">
             <p className="text-[10px] md:text-[11px] uppercase tracking-[0.22em] md:tracking-lux text-muted-foreground">
-              Sobre · № 002
+              Sobre
             </p>
             <span className="h-px flex-1 max-w-[160px] bg-border" />
             <span className="text-[10px] uppercase tracking-lux-sm text-muted-foreground hidden sm:inline">
@@ -73,7 +74,7 @@ function AboutPage() {
                   className="relative block h-auto w-full transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02]"
                 />
                 <span className="pointer-events-none absolute left-3 top-3 z-10 bg-background/85 px-2 py-1 text-[10px] uppercase tracking-lux-sm backdrop-blur-sm">
-                  № 003 · Retrato
+                  Retrato
                 </span>
                 <span className="pointer-events-none absolute inset-x-0 bottom-0 z-10 translate-y-full bg-gradient-to-t from-foreground/85 via-foreground/55 to-transparent px-4 pb-3 pt-12 text-background transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0">
                   <span className="flex items-baseline justify-between gap-3">
@@ -90,7 +91,7 @@ function AboutPage() {
           <div className="col-span-12 md:col-span-7 flex flex-col gap-6 md:gap-8 min-w-0">
             <Reveal delay={120}>
               <h1 className="font-serif text-[2rem] sm:text-5xl md:text-[clamp(2.25rem,4vw,4rem)] leading-[1.05] md:leading-[1.0] tracking-[-0.02em] max-w-[18ch] break-words">
-                O olhar <em className="italic text-muted-foreground">por trás</em> da{" "}
+                Dois olhares <em className="italic text-muted-foreground">por trás</em> da{" "}
                 <span className="relative inline-block">
                   lente
                   <span
@@ -104,24 +105,21 @@ function AboutPage() {
             <Reveal delay={180}>
               <div className="space-y-5 text-[14px] md:space-y-6 md:text-[16px] leading-relaxed text-foreground/80 max-w-[58ch]">
                 <p className="drop-cap">
-                  Olá, Sou Gustavo Henrico. A fotografia sempre foi minha forma de enxergar o mundo
-                  com mais calma — agora, decidi compartilhar esse olhar com quem quiser registrar
-                  sua própria história.
+                  Olá, somos Gustavo e Beatriz. A fotografia sempre foi a nossa maneira de
+                  desacelerar e enxergar a beleza nos detalhes — agora, decidimos unir esses dois
+                  olhares para registrar quem quiser eternizar a sua própria história.
                 </p>
                 <p>
-                  Com base em Boituva, interior de SP, busco capturar a calma e o detalhe através
-                  da luz natural. Cada imagem valoriza o silêncio, a textura das coisas e a
-                  atmosfera do momento — feita para ser sentida, não apenas vista.
-                </p>
-                <p>Atendo Boituva e região, e estou disponível para ensaios em qualquer lugar que a
-                  história pedir.
+                  Com base em Boituva, interior de SP, procuramos capturar a calma e os detalhes
+                  mais genuínos. Cada imagem valoriza o silêncio, a textura das coisas e a atmosfera
+                  do momento — feita para ser sentida, não apenas vista.
                 </p>
               </div>
             </Reveal>
 
             {/* Mini-bio meta */}
             <Reveal delay={260}>
-              <dl className="grid grid-cols-2 gap-y-4 gap-x-6 md:gap-x-8 max-w-[58ch]">
+              <dl className="grid grid-cols-1 gap-x-6 gap-y-4 max-w-[58ch] sm:grid-cols-2 md:gap-x-8">
                 <div>
                   <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">
                     Base
@@ -132,7 +130,7 @@ function AboutPage() {
                   <dt className="text-[10px] uppercase tracking-lux-sm text-muted-foreground">
                     Foco
                   </dt>
-                  <dd className="mt-1 font-serif text-base md:text-lg italic">Ensaios Externos &amp; Eventos</dd>
+                  <dd className="mt-1 max-w-[28ch] font-serif text-base italic leading-snug md:text-lg">Casamentos, Eventos e Ensaios Externos</dd>
                 </div>
               </dl>
             </Reveal>
@@ -158,20 +156,26 @@ function AboutPage() {
 
         {/* Pull quote */}
         <Reveal delay={200}>
-          <figure className="mt-16 md:mt-28 border-t border-border/60 pt-10 md:pt-16">
-            <span
-              aria-hidden
-              className="block text-center font-serif text-6xl md:text-8xl leading-none text-muted-foreground/50 select-none"
-            >
-              “
-            </span>
-            <blockquote className="-mt-4 md:-mt-6 font-serif italic text-[1.6rem] sm:text-3xl md:text-[clamp(2rem,4.2vw,3.75rem)] leading-[1.15] md:leading-[1.1] tracking-[-0.01em] max-w-[22ch] mx-auto text-center break-words">
-              A realidade deixa <span className="text-muted-foreground">muito</span> para a
-              imaginação.
-            </blockquote>
-            <figcaption className="mt-8 text-center font-sans text-xs md:text-sm uppercase tracking-[0.2em] text-muted-foreground">
-              — John Lennon
-            </figcaption>
+          <figure className="relative left-1/2 mt-16 h-[78vw] max-h-[30rem] w-screen -translate-x-1/2 overflow-hidden md:mt-28 md:h-auto md:max-h-none">
+            <img
+              src={coliseumPortrait}
+              alt="Gustavo e Beatriz no parque do Coliseu"
+              className="block h-full w-full object-cover object-[center_55%] md:h-auto md:object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="absolute inset-0 bg-black/38" aria-hidden />
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-5 py-10 md:px-8 md:py-16">
+              <span
+                aria-hidden
+                className="block text-center font-serif text-6xl leading-none text-white/60 select-none md:text-8xl"
+              >
+                “
+              </span>
+              <blockquote className="-mt-4 max-w-[22ch] break-words text-center font-serif text-[1.6rem] italic leading-[1.15] tracking-[-0.01em] text-white sm:text-3xl md:-mt-6 md:text-[clamp(2rem,4.2vw,3.75rem)] md:leading-[1.1]">
+                Vamos aonde a sua história pedir.
+              </blockquote>
+            </div>
           </figure>
         </Reveal>
       </section>

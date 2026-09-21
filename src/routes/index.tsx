@@ -79,12 +79,12 @@ function Camera() {
 
 function Index() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen overflow-x-clip bg-background text-foreground">
       <Header />
 
       <section className="relative overflow-hidden w-full px-5 md:px-12 pt-32 pb-12 md:pt-44 md:pb-16">
         <div
-          className="absolute inset-0 bg-cover bg-[position:72%_bottom] md:bg-[position:65%_bottom]"
+          className="absolute inset-0 bg-cover bg-[position:68%_bottom] md:bg-[position:65%_bottom]"
           style={{ backgroundImage: `url(${BeGuFontana})` }}
         />
         <div className="absolute inset-0 bg-black/38" />
@@ -110,11 +110,9 @@ function Index() {
         <div className="grid grid-cols-12 gap-y-10 md:gap-6">
           <Reveal className="col-span-7 md:col-span-2">
             <p className="text-[10px] md:text-[11px] uppercase tracking-[0.28em] md:tracking-lux text-white leading-relaxed">
-              Gustavo &amp;
+              Por Gustavo &amp;
               <br />
               Beatriz
-              <br />
-              Portifólio
             </p>
           </Reveal>
           <Reveal className="col-span-5 self-start text-right md:hidden">
@@ -142,10 +140,10 @@ function Index() {
           </Reveal>
 
           <Reveal
-            className="col-span-10 col-start-3 md:col-span-4 md:col-start-9 md:mt-12"
+            className="col-span-10 col-start-3 flex flex-wrap items-center gap-x-6 gap-y-4 md:col-span-4 md:col-start-9 md:mt-12"
             delay={240}
           >
-            <p className="text-[13px] md:text-sm text-white/85 leading-relaxed">
+            <p className="w-full text-[13px] leading-relaxed text-white/85 md:text-sm">
               Somos fotógrafos com base em Boituva, interior de SP. Atuamos com ensaios e
               casamentos, disponíveis para registrar histórias em qualquer lugar que elas pedirem.
               Criamos imagens que respiram silêncio, feitas para ser sentidas, não apenas vistas.
@@ -158,7 +156,7 @@ function Index() {
                   .getElementById("works")
                   ?.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
-              className="group mt-8 inline-flex items-center gap-3 border-b border-white/40 pb-1.5 text-[11px] uppercase tracking-lux text-white transition-colors hover:border-white"
+              className="group mt-4 inline-flex items-center gap-3 border-b border-white/40 pb-1.5 text-[11px] uppercase tracking-lux text-white transition-colors hover:border-white md:mt-8"
             >
               Ver trabalhos
               <span
@@ -172,7 +170,7 @@ function Index() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-6 mt-8 inline-flex items-center gap-3 border-b border-white/40 pb-1.5 text-[11px] uppercase tracking-lux text-white transition-colors hover:border-white"
+              className="mt-4 inline-flex items-center gap-3 border-b border-white/40 pb-1.5 text-[11px] uppercase tracking-lux text-white transition-colors hover:border-white md:mt-8"
               aria-label="Solicitar informações sobre ensaio pelo WhatsApp"
             >
               Solicitar informações

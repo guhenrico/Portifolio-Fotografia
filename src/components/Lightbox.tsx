@@ -68,7 +68,7 @@ export function Lightbox({ photos, index, onClose, onNavigate }: LightboxProps) 
 
       <div
         onClick={(e) => e.stopPropagation()}
-        className="mt-5 flex w-full max-w-[1400px] flex-wrap items-end justify-between gap-x-6 gap-y-2 px-2 text-xs"
+        className="mt-4 flex w-full max-w-[1400px] flex-wrap items-end justify-between gap-x-4 gap-y-2 px-1 text-xs sm:mt-5 sm:px-2"
       >
         <div className="flex items-baseline gap-3">
           <p className="font-serif text-lg italic text-foreground">{photo.title}</p>
@@ -86,7 +86,7 @@ export function Lightbox({ photos, index, onClose, onNavigate }: LightboxProps) 
             </span>
           )}
         </div>
-        <p className="text-muted-foreground tracking-lux-sm uppercase tabular-nums">
+        <p className="max-w-[18rem] text-right text-[9px] leading-relaxed tracking-[0.16em] text-muted-foreground uppercase tabular-nums sm:max-w-none sm:text-xs sm:tracking-lux-sm">
           {String(index + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")} · {photo.category}
         </p>
       </div>

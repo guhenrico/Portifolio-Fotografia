@@ -61,7 +61,7 @@ export function Gallery() {
                     key={f}
                     onClick={() => setFilter(f)}
                     aria-pressed={isActive}
-                    className={`group inline-flex items-baseline gap-1.5 border px-3.5 py-2 text-[11px] uppercase tracking-lux transition-all duration-300 md:px-4 md:py-2.5 ${
+                    className={`group inline-flex items-baseline gap-1.5 border px-3 py-2 text-[10px] uppercase tracking-[0.18em] transition-all duration-300 md:px-4 md:py-2.5 md:text-[11px] md:tracking-lux ${
                       isActive
                         ? "border-foreground bg-foreground text-background"
                         : "border-border/70 text-muted-foreground hover:border-foreground hover:text-foreground"
@@ -142,7 +142,7 @@ function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (i: number) =>
                 </span>
               </span>
             </button>
-            <figcaption className="mt-4 flex items-baseline justify-between gap-4 text-xs text-muted-foreground">
+            <figcaption className="mt-4 flex flex-col items-start gap-1 text-xs text-muted-foreground sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
               <span className="font-serif text-sm italic text-foreground inline-flex items-center gap-2">
                 {p.title}
                 {p.country && (
@@ -158,7 +158,7 @@ function EditorialGrid({ list, onOpen }: { list: Photo[]; onOpen: (i: number) =>
                   />
                 )}
               </span>
-              <span className="tracking-lux-sm uppercase tabular-nums">
+              <span className="text-[10px] leading-relaxed tracking-[0.16em] uppercase tabular-nums sm:text-xs sm:tracking-lux-sm">
                 {idx} · {p.category}
               </span>
             </figcaption>
