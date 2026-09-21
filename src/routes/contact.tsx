@@ -9,17 +9,17 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contato | Gustavo Henrico Fotografia em Boituva" },
+      { title: "Contato | Entre Nós Fotografia em Boituva" },
       {
         name: "description",
         content:
-          "Solicite informações sobre ensaios externos e retratos com luz natural em Boituva e região.",
+          "Entre em contato com a Entre Nós Fotografia para registrar casamentos, eventos e ensaios em Boituva e região.",
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
-      { property: "og:title", content: "Contato | Gustavo Henrico Fotografia em Boituva" },
+      { property: "og:title", content: "Contato | Entre Nós Fotografia em Boituva" },
       {
         property: "og:description",
-        content: "Fale com Gustavo Henrico sobre seu próximo ensaio fotográfico.",
+        content: "Fale com Gustavo e Beatriz sobre seu próximo casamento, evento ou ensaio.",
       },
     ],
     links: [{ rel: "canonical", href: "https://henricofotografia.com.br/contact" }],

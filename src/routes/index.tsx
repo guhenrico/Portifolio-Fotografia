@@ -7,9 +7,9 @@ import BeGuFontana from "@/assets/portfolio/Be e Gu Fontana.JPEG";
 import { whatsappUrl } from "@/lib/whatsapp";
 
 const SITE_URL = "https://henricofotografia.com.br/";
-const TITLE = "Fotografia em Boituva | Por Gustavo & Beatriz";
+const TITLE = "Entre Nós Fotografia | Casal de Fotógrafos em Boituva";
 const DESCRIPTION =
-  "Fotógrafo em Boituva especializado em ensaios externos e retratos com luz natural. Conheça o portfólio de Gustavo Henrico e solicite informações.";
+  "Entre Nós Fotografia é um casal de fotógrafos em Boituva focados em Casamentos, Eventos e Ensaios Externos. Vamos aonde sua história pedir";
 const SOCIAL_IMAGE_URL = `${SITE_URL}gustavo-henrico-fotografia.jpg`;
 
 export const Route = createFileRoute("/")({
@@ -21,14 +21,14 @@ export const Route = createFileRoute("/")({
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Gustavo & Beatriz Fotografia" },
+      { property: "og:site_name", content: "Entre Nós Fotografia" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:url", content: SITE_URL },
       { property: "og:image", content: SOCIAL_IMAGE_URL },
       {
         property: "og:image:alt",
-        content: "Retrato feminino ao ar livre fotografado por Gustavo Henrico",
+        content: "Casal de fotógrafos em Boituva, Gustavo e Beatriz",
       },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
@@ -36,14 +36,14 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: SOCIAL_IMAGE_URL },
       {
         name: "twitter:image:alt",
-        content: "Retrato feminino ao ar livre fotografado por Gustavo Henrico",
+        content: "Casal de fotógrafos em Boituva, Gustavo e Beatriz",
       },
       {
         "script:ld+json": {
           "@context": "https://schema.org",
           "@type": ["ProfessionalService", "LocalBusiness"],
-          name: "Gustavo & Beatriz Fotografia",
-          alternateName: "Gustavo & Beatriz",
+          name: "Entre Nós Fotografia",
+          alternateName: "Por Gustavo & Beatriz",
           url: SITE_URL,
           telephone: "+55 15 99144-6560",
           email: "gustavo.henrico01@gmail.com",

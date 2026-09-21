@@ -11,17 +11,18 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "Sobre Gustavo Henrico | Fotógrafo em Boituva" },
+      { title: "Sobre Nós | Entre Nós Fotografia em Boituva" },
       {
         name: "description",
         content:
-          "Conheça Gustavo Henrico, fotógrafo em Boituva dedicado a ensaios externos e retratos com luz natural.",
+          "Conheça Gustavo e Beatriz, o casal por trás da Entre Nós Fotografia. Registramos casamentos, eventos e ensaios com olhar sensível em Boituva e região.",
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
-      { property: "og:title", content: "Sobre Gustavo Henrico | Fotógrafo em Boituva" },
+      { property: "og:title", content: "Sobre Nós | Entre Nós Fotografia em Boituva" },
       {
         property: "og:description",
-        content: "Conheça o olhar por trás de Gustavo Henrico Fotografia.",
+        content:
+          "Conheça Gustavo e Beatriz, o casal por trás da Entre Nós Fotografia, em Boituva e região.",
       },
     ],
     links: [{ rel: "canonical", href: "https://henricofotografia.com.br/about" }],
