@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 import BeGuFontana from "@/assets/portfolio/Be e Gu Fontana.JPEG";
 import { whatsappUrl } from "@/lib/whatsapp";
 
-const SITE_URL = "https://henricofotografia.com.br/";
+const SITE_URL = "https://entrenosphotos.com.br/";
 const TITLE = "Entre Nós Fotografia | Casal de Fotógrafos em Boituva";
 const DESCRIPTION =
   "Entre Nós Fotografia é um casal de fotógrafos em Boituva focados em Casamentos, Eventos e Ensaios Externos. Vamos aonde sua história pedir";
@@ -33,6 +33,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:url", content: SITE_URL },
       { name: "twitter:image", content: SOCIAL_IMAGE_URL },
       {
         name: "twitter:image:alt",

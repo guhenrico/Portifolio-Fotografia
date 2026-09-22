@@ -17,12 +17,20 @@ export const Route = createFileRoute("/contact")({
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "Contato | Entre Nós Fotografia em Boituva" },
+      { property: "og:url", content: "https://entrenosphotos.com.br/contact" },
       {
         property: "og:description",
         content: "Fale com Gustavo e Beatriz sobre seu próximo casamento, evento ou ensaio.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Contato | Entre Nós Fotografia em Boituva" },
+      {
+        name: "twitter:description",
+        content: "Fale com Gustavo e Beatriz sobre seu próximo casamento, evento ou ensaio.",
+      },
+      { name: "twitter:url", content: "https://entrenosphotos.com.br/contact" },
     ],
-    links: [{ rel: "canonical", href: "https://henricofotografia.com.br/contact" }],
+    links: [{ rel: "canonical", href: "https://entrenosphotos.com.br/contact" }],
   }),
 });
 

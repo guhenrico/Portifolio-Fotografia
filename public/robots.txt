@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://henricofotografia.com.br/sitemap.xml
+Sitemap: https://entrenosphotos.com.br/sitemap.xml

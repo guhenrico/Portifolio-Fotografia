@@ -19,13 +19,22 @@ export const Route = createFileRoute("/about")({
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:title", content: "Sobre Nós | Entre Nós Fotografia em Boituva" },
+      { property: "og:url", content: "https://entrenosphotos.com.br/about" },
       {
         property: "og:description",
         content:
           "Conheça Gustavo e Beatriz, o casal por trás da Entre Nós Fotografia, em Boituva e região.",
       },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Sobre Nós | Entre Nós Fotografia em Boituva" },
+      {
+        name: "twitter:description",
+        content:
+          "Conheça Gustavo e Beatriz, o casal por trás da Entre Nós Fotografia, em Boituva e região.",
+      },
+      { name: "twitter:url", content: "https://entrenosphotos.com.br/about" },
     ],
-    links: [{ rel: "canonical", href: "https://henricofotografia.com.br/about" }],
+    links: [{ rel: "canonical", href: "https://entrenosphotos.com.br/about" }],
   }),
 });
 
