@@ -35,7 +35,7 @@ export function Gallery() {
               Ensaios<span className="italic text-muted-foreground/60 font-light">.</span>
             </h2>
             <p className="text-sm text-muted-foreground mt-1">
-              Apenas algumas amostras dos meus cliques
+              Apenas algumas amostras dos nossos cliques
             </p>
             <div className="flex items-center gap-4 mt-1 md:mt-2">
               <span className="text-[10px] md:text-xs font-medium uppercase tracking-[0.4em] text-muted-foreground">
