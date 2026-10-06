@@ -4,10 +4,12 @@ import { Lightbox } from "./Lightbox";
 
 const FILTERS: ("Todas" | Category)[] = [
   "Todas",
-  "Ensaio Externo - Haras",
-  "Ensaio Externo - Itália & Suíça",
-  "Ensaio Externo - Bailarina",
-  "Ensaio Externo - Campo aberto",
+  "Ensaio Feminino - Haras",
+  "Ensaio de Viagem - Itália & Suíça",
+  "Ensaio Bailarina - Fazenda Ipanema",
+  "Ensaio Feminino - campo aberto",
+  "Pré Wedding - Campo aberto",
+  "Ensaio Familia - Holambra",
 ];
 
 export function Gallery() {
@@ -83,7 +85,16 @@ export function Gallery() {
         </div>
       </div>
 
-      <EditorialGrid list={list} onOpen={(i) => setActiveIndex(i)} />
+      {list.length > 0 ? (
+        <EditorialGrid list={list} onOpen={(i) => setActiveIndex(i)} />
+      ) : (
+        <div className="py-16 text-center" role="status">
+          <p className="font-serif text-2xl italic text-foreground">{filter}</p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            As fotos deste ensaio serão adicionadas em breve.
+          </p>
+        </div>
+      )}
 
       <Lightbox
         photos={list}

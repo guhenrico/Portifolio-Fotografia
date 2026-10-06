@@ -71,12 +71,61 @@ import campo13 from "@/assets/portfolio/Campo 13.JPEG";
 import campo14 from "@/assets/portfolio/Campo 14.JPEG";
 import campo15 from "@/assets/portfolio/Campo 15.JPEG";
 import campo16 from "@/assets/portfolio/Campo 16.JPEG";
+import preWedding1 from "@/assets/portfolio/2026-09-27 19-55-26 573167.jpeg";
+import preWedding2 from "@/assets/portfolio/2026-09-27 19-56-36 157761.jpeg";
+import preWedding3 from "@/assets/portfolio/2026-09-27 19-57-43 388437.jpeg";
+import preWedding4 from "@/assets/portfolio/2026-09-27 20-01-21 337321.jpeg";
+import preWedding5 from "@/assets/portfolio/2026-09-27 20-01-27 067448.jpeg";
+import preWedding6 from "@/assets/portfolio/2026-09-27 20-05-43 337406.jpeg";
+import preWedding7 from "@/assets/portfolio/2026-09-27 20-09-19 874038.jpeg";
+import preWedding8 from "@/assets/portfolio/2026-09-27 20-13-04 584893.jpeg";
+import preWedding9 from "@/assets/portfolio/2026-09-27 20-13-11 352084.jpeg";
+import preWedding10 from "@/assets/portfolio/2026-09-27 20-17-51 597797.jpeg";
+import preWedding11 from "@/assets/portfolio/2026-09-27 20-20-56 331642.jpeg";
+import preWedding12 from "@/assets/portfolio/2026-09-27 20-22-18 394077.jpeg";
+import preWedding13 from "@/assets/portfolio/2026-09-27 20-22-33 953031.jpeg";
+import preWedding14 from "@/assets/portfolio/2026-09-27 20-24-32 541541.jpeg";
+import preWedding15 from "@/assets/portfolio/2026-09-27 20-29-41 138695.jpeg";
+import preWedding16 from "@/assets/portfolio/2026-09-27 20-29-48 276759.jpeg";
+import preWedding17 from "@/assets/portfolio/2026-09-27 20-29-49 954932.jpeg";
+import preWedding18 from "@/assets/portfolio/2026-09-27 20-31-06 109392.jpeg";
+import preWedding19 from "@/assets/portfolio/2026-09-27 20-32-20 501977.jpeg";
+import preWedding20 from "@/assets/portfolio/2026-09-27 20-36-42 581102.jpeg";
+import preWedding21 from "@/assets/portfolio/2026-09-27 20-39-13 465336.jpeg";
+import preWedding22 from "@/assets/portfolio/2026-09-27 20-40-51 243894.jpeg";
+import preWedding23 from "@/assets/portfolio/2026-09-27 20-41-27 260289.jpeg";
+import preWedding24 from "@/assets/portfolio/2026-09-27 20-44-30 248984.jpeg";
+import preWedding25 from "@/assets/portfolio/2026-09-27 20-59-17 666902.jpeg";
+import holambra1 from "@/assets/portfolio/2026-09-29 12-59-36 590315.jpeg";
+import holambra2 from "@/assets/portfolio/2026-09-29 13-00-42 113368.jpeg";
+import holambra3 from "@/assets/portfolio/2026-09-29 13-01-31 501336.jpeg";
+import holambra4 from "@/assets/portfolio/2026-09-29 13-01-32 431305.jpeg";
+import holambra5 from "@/assets/portfolio/2026-09-29 13-01-39 776110.jpeg";
+import holambra6 from "@/assets/portfolio/2026-09-29 13-05-31 474037.jpeg";
+import holambra7 from "@/assets/portfolio/2026-09-29 13-15-58 337864.jpeg";
+import holambra8 from "@/assets/portfolio/2026-09-29 13-20-03 069554.jpeg";
+import holambra9 from "@/assets/portfolio/2026-09-29 13-21-22 928838.jpeg";
+import holambra10 from "@/assets/portfolio/2026-09-29 13-21-23 607587.jpeg";
+import holambra11 from "@/assets/portfolio/2026-09-29 13-22-17 122556.jpeg";
+import holambra12 from "@/assets/portfolio/2026-09-29 13-22-29 019435.jpeg";
+import holambra13 from "@/assets/portfolio/2026-09-29 14-15-40 778362.jpeg";
+import holambra14 from "@/assets/portfolio/2026-09-29 14-16-47 858434.jpeg";
+import holambra15 from "@/assets/portfolio/2026-09-29 14-20-27 787808.jpeg";
+import holambra16 from "@/assets/portfolio/2026-09-29 14-20-52 806347.jpeg";
+import holambra17 from "@/assets/portfolio/2026-09-29 14-21-55 667359.jpeg";
+import holambra18 from "@/assets/portfolio/2026-09-29 14-22-28 428657.jpeg";
+import holambra19 from "@/assets/portfolio/2026-09-29 14-24-40 470810.jpeg";
+import holambra20 from "@/assets/portfolio/2026-09-29 14-26-09 993629.jpeg";
+import holambra21 from "@/assets/portfolio/2026-09-29 14-26-38 757733.jpeg";
+import holambra22 from "@/assets/portfolio/2026-09-29 14-27-03 885840.jpeg";
 
 export type Category =
-  | "Ensaio Externo - Haras"
-  | "Ensaio Externo - Itália & Suíça"
-  | "Ensaio Externo - Bailarina"
-  | "Ensaio Externo - Campo aberto";
+  | "Ensaio Feminino - Haras"
+  | "Ensaio de Viagem - Itália & Suíça"
+  | "Ensaio Bailarina - Fazenda Ipanema"
+  | "Ensaio Feminino - campo aberto"
+  | "Pré Wedding - Campo aberto"
+  | "Ensaio Familia - Holambra";
 
 export interface Photo {
   id: string;
@@ -91,10 +140,12 @@ export interface Photo {
 const BR = { code: "br", label: "Brasil" };
 const CH = { code: "ch", label: "Suíça" };
 const IT = { code: "it", label: "Itália" };
-const HARAS_CHAPTER: Category = "Ensaio Externo - Haras";
-const ITALY_CHAPTER: Category = "Ensaio Externo - Itália & Suíça";
-const BALLERINA_CHAPTER: Category = "Ensaio Externo - Bailarina";
-const FIELD_CHAPTER: Category = "Ensaio Externo - Campo aberto";
+const HARAS_CHAPTER: Category = "Ensaio Feminino - Haras";
+const ITALY_CHAPTER: Category = "Ensaio de Viagem - Itália & Suíça";
+const BALLERINA_CHAPTER: Category = "Ensaio Bailarina - Fazenda Ipanema";
+const FIELD_CHAPTER: Category = "Ensaio Feminino - campo aberto";
+const PRE_WEDDING_CHAPTER: Category = "Pré Wedding - Campo aberto";
+const HOLAMBRA_CHAPTER: Category = "Ensaio Familia - Holambra";
 
 const campoPhotos: Photo[] = [
   campo1,
@@ -121,6 +172,75 @@ const campoPhotos: Photo[] = [
   orientation: "portrait",
   country: BR,
   alt: `Foto ${index + 1} do ensaio externo em campo aberto`,
+}));
+
+const preWeddingPhotos: Photo[] = [
+  preWedding1,
+  preWedding2,
+  preWedding3,
+  preWedding4,
+  preWedding5,
+  preWedding6,
+  preWedding7,
+  preWedding8,
+  preWedding9,
+  preWedding10,
+  preWedding11,
+  preWedding12,
+  preWedding13,
+  preWedding14,
+  preWedding15,
+  preWedding16,
+  preWedding17,
+  preWedding18,
+  preWedding19,
+  preWedding20,
+  preWedding21,
+  preWedding22,
+  preWedding23,
+  preWedding24,
+  preWedding25,
+].map((src, index) => ({
+  id: `pre-wedding-campo-${index + 1}`,
+  title: PRE_WEDDING_CHAPTER,
+  category: PRE_WEDDING_CHAPTER,
+  src,
+  orientation: src === preWedding7 || src === preWedding21 ? "landscape" : "portrait",
+  country: BR,
+  alt: `Foto ${index + 1} do ensaio pré wedding em campo aberto`,
+}));
+
+const holambraPhotos: Photo[] = [
+  holambra1,
+  holambra2,
+  holambra3,
+  holambra4,
+  holambra5,
+  holambra6,
+  holambra7,
+  holambra8,
+  holambra9,
+  holambra10,
+  holambra11,
+  holambra12,
+  holambra15,
+  holambra16,
+  holambra17,
+  holambra18,
+  holambra13,
+  holambra14,
+  holambra19,
+  holambra20,
+  holambra21,
+  holambra22,
+].map((src, index) => ({
+  id: `familia-holambra-${index + 1}`,
+  title: HOLAMBRA_CHAPTER,
+  category: HOLAMBRA_CHAPTER,
+  src,
+  orientation: "portrait",
+  country: BR,
+  alt: `Foto ${index + 1} do ensaio de família em Holambra`,
 }));
 
 export const photos: Photo[] = [
@@ -510,7 +630,7 @@ export const photos: Photo[] = [
     alt: "Cúpula histórica de Florença enquadrada por árvores",
   },
 
-  // --- Ensaio Externo - Bailarina ---
+  // --- Ensaio Bailarina - Fazenda Ipanema ---
   {
     id: "ana-1",
     title: "Ana",
@@ -602,4 +722,6 @@ export const photos: Photo[] = [
     alt: "Ana em ensaio externo de bailarina",
   },
   ...campoPhotos,
+  ...preWeddingPhotos,
+  ...holambraPhotos,
 ];
