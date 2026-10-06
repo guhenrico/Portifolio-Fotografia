@@ -1,0 +1,4 @@
+Tool: built-in image_gen (transparent_background=true)
+Edit target: user-provided circle with handwritten E.
+
+Use case: background-extraction. Asset type: website favicon. Input image 1 is the edit target: a near-black solid circle with a white handwritten capital E, on a gray-and-white checkerboard. Remove only the entire checkerboard outside the circle and replace it with true alpha transparency. Preserve the exact handwritten white E shape, size, placement, and solid near-black circular badge from the input. Do not redraw or redesign the E. Crop tightly to the circular badge in a square canvas, leaving a tiny transparent margin of 2% around the circle so it fills the favicon. The interior of the circle must remain opaque near-black and the E must remain opaque white. No checkerboard pixels, shadow, background color, extra text or additional elements. Output a high quality square transparent PNG.
