@@ -1,98 +1,155 @@
-import { useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { photos, type Category, type Photo } from "@/lib/photos";
 import { Lightbox } from "./Lightbox";
 
-const FILTERS: ("Todas" | Category)[] = [
-  "Todas",
-  "Ensaio Feminino - Haras",
-  "Ensaio de Viagem - Itália & Suíça",
-  "Ensaio Bailarina - Fazenda Ipanema",
-  "Ensaio Feminino - campo aberto",
-  "Pré Wedding - Campo aberto",
-  "Ensaio Familia - Holambra",
+const ALBUM_DETAILS: { category: Category; location: string; kind: string }[] = [
+  { category: "Ensaio Feminino - Haras", location: "Haras", kind: "Ensaio Feminino" },
+  {
+    category: "Ensaio de Viagem - Itália & Suíça",
+    location: "Itália & Suíça",
+    kind: "Ensaio de Viagem",
+  },
+  {
+    category: "Ensaio Bailarina - Fazenda Ipanema",
+    location: "Fazenda Ipanema",
+    kind: "Ensaio Bailarina",
+  },
+  { category: "Ensaio Feminino - campo aberto", location: "Campo aberto", kind: "Ensaio Feminino" },
+  { category: "Pré Wedding - Campo aberto", location: "Campo aberto", kind: "Pré Wedding" },
+  { category: "Ensaio Familia - Holambra", location: "Holambra", kind: "Ensaio de Família" },
 ];
 
+const albums = ALBUM_DETAILS.map((album, index) => ({
+  ...album,
+  id: `album-${index + 1}`,
+  photos: photos.filter((photo) => photo.category === album.category),
+})).filter((album) => album.photos.length > 0);
+
+type Album = (typeof albums)[number];
+
 export function Gallery() {
-  const [filter, setFilter] = useState<(typeof FILTERS)[number]>("Todas");
+  const [selectedAlbum, setSelectedAlbum] = useState<Album | null>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const lastAlbumId = useRef<string | null>(null);
+  const list = selectedAlbum?.photos ?? [];
 
-  const counts = useMemo(() => {
-    const map: Record<string, number> = { Todas: photos.length };
-    for (const p of photos) map[p.category] = (map[p.category] ?? 0) + 1;
-    return map;
-  }, []);
-
-  const list = useMemo(
-    () => (filter === "Todas" ? photos : photos.filter((p) => p.category === filter)),
-    [filter],
-  );
+  useEffect(() => {
+    if (selectedAlbum) {
+      lastAlbumId.current = selectedAlbum.id;
+      headingRef.current?.focus({ preventScroll: true });
+      sectionRef.current?.scrollIntoView({ block: "start" });
+    } else if (lastAlbumId.current) {
+      const cover = document.getElementById(lastAlbumId.current);
+      cover?.focus({ preventScroll: true });
+      cover?.scrollIntoView({ block: "nearest" });
+    }
+  }, [selectedAlbum]);
 
   return (
-    <section id="works" className="mx-auto max-w-[1600px] px-5 md:px-12 scroll-mt-24">
-      {/* Header — editorial control bar */}
-      <div className="mb-10 border-b border-border/60 pb-5 md:mb-16 md:pb-7">
-        <div>
-          <div className="flex flex-col gap-1.5 md:gap-2">
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground tracking-tight">
-              Ensaios<span className="italic text-muted-foreground/60 font-light">.</span>
-            </h2>
-            <p className="text-sm text-muted-foreground mt-1">
-              Apenas algumas amostras dos nossos cliques
-            </p>
-            <div className="flex items-center gap-4 mt-1 md:mt-2">
-              <span className="text-[10px] md:text-xs font-medium uppercase tracking-[0.4em] text-muted-foreground">
-                Pics
-              </span>
-              <span className="hidden md:inline-block h-[1px] w-12 bg-foreground/20" />
-              <p className="font-serif text-sm md:text-base italic text-foreground tabular-nums">
-                <span key={list.length} className="inline-block animate-fade-in">
-                  {String(list.length).padStart(2, "0")}
-                </span>
-                <span className="text-muted-foreground/50">
-                  {" "}
-                  / {String(photos.length).padStart(2, "0")}
-                </span>
+    <section
+      ref={sectionRef}
+      id="works"
+      aria-labelledby="works-heading"
+      className="mx-auto max-w-[1600px] px-5 md:px-12 scroll-mt-24"
+    >
+      <div className="mb-8 border-b border-border/60 pb-6 md:mb-10 md:pb-8">
+        {selectedAlbum && (
+          <button
+            type="button"
+            onClick={() => {
+              setActiveIndex(null);
+              setSelectedAlbum(null);
+            }}
+            className="group mb-6 inline-flex min-h-11 items-center gap-3 text-[11px] uppercase tracking-lux-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <ArrowLeft
+              className="h-4 w-4 transition-transform group-hover:-translate-x-1"
+              aria-hidden="true"
+            />
+            Voltar aos álbuns
+          </button>
+        )}
+        <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+          <div>
+            {selectedAlbum && (
+              <p className="mb-3 text-[10px] uppercase tracking-lux-sm text-muted-foreground">
+                {selectedAlbum.location}
               </p>
-            </div>
-            <div className="mt-5 flex flex-wrap items-center gap-2 md:mt-6 md:gap-3">
-              {FILTERS.map((f) => {
-                const isActive = filter === f;
-                return (
-                  <button
-                    type="button"
-                    key={f}
-                    onClick={() => setFilter(f)}
-                    aria-pressed={isActive}
-                    className={`group inline-flex items-baseline gap-1.5 border px-3 py-2 text-[10px] uppercase tracking-[0.18em] transition-all duration-300 md:px-4 md:py-2.5 md:text-[11px] md:tracking-lux ${
-                      isActive
-                        ? "border-foreground bg-foreground text-background"
-                        : "border-border/70 text-muted-foreground hover:border-foreground hover:text-foreground"
-                    }`}
-                  >
-                    <span>{f}</span>
-                    <sup
-                      className={`text-[9px] tracking-normal tabular-nums ${
-                        isActive ? "text-background/70" : "text-muted-foreground/70"
-                      }`}
-                    >
-                      {String(counts[f] ?? 0).padStart(2, "0")}
-                    </sup>
-                  </button>
-                );
-              })}
-            </div>
+            )}
+            <h2
+              ref={headingRef}
+              id="works-heading"
+              tabIndex={-1}
+              className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground tracking-tight outline-none"
+            >
+              {selectedAlbum?.kind ?? "Ensaios"}
+              <span className="italic text-muted-foreground/60 font-light">.</span>
+            </h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              {selectedAlbum
+                ? "Um pouco dessa história, foto por foto."
+                : "Histórias em imagens. Escolha um álbum para explorar."}
+            </p>
           </div>
+          <p className="flex shrink-0 items-center gap-3 text-[10px] uppercase tracking-lux-sm text-muted-foreground">
+            <span className="h-px w-8 bg-foreground/20" aria-hidden="true" />
+            {selectedAlbum
+              ? `${String(list.length).padStart(2, "0")} fotos`
+              : `${String(albums.length).padStart(2, "0")} álbuns`}
+          </p>
         </div>
       </div>
 
-      {list.length > 0 ? (
-        <EditorialGrid list={list} onOpen={(i) => setActiveIndex(i)} />
+      {selectedAlbum ? (
+        <EditorialGrid key={selectedAlbum.id} list={list} onOpen={setActiveIndex} />
       ) : (
-        <div className="py-16 text-center" role="status">
-          <p className="font-serif text-2xl italic text-foreground">{filter}</p>
-          <p className="mt-3 text-sm text-muted-foreground">
-            As fotos deste ensaio serão adicionadas em breve.
-          </p>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
+          {albums.map((album, index) => (
+            <button
+              key={album.id}
+              id={album.id}
+              type="button"
+              onClick={() => setSelectedAlbum(album)}
+              aria-label={`Abrir álbum: ${album.category}, ${album.photos.length} fotos`}
+              className="group relative isolate block aspect-[4/5] w-full bg-muted text-left text-white shadow-md transition-shadow duration-500 hover:shadow-xl focus-visible:outline-foreground"
+            >
+              <span className="absolute inset-0 overflow-hidden">
+                <img
+                  src={album.photos[0].src}
+                  alt={album.photos[0].alt}
+                  loading={index < 3 ? "eager" : "lazy"}
+                  decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 group-focus-visible:scale-105"
+                />
+                <span className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/20" />
+              </span>
+              <span className="pointer-events-none absolute inset-3 border border-white/25 transition-colors duration-500 group-hover:border-white/50 group-focus-visible:border-white/50 md:inset-4" />
+              <span className="absolute left-7 right-7 top-7 flex items-center justify-between text-[10px] uppercase tracking-[0.2em] md:left-9 md:right-9 md:top-9">
+                <span className="tabular-nums">Álbum {String(index + 1).padStart(2, "0")}</span>
+                <span className="bg-black/25 px-2.5 py-1.5 tabular-nums backdrop-blur-sm">
+                  {String(album.photos.length).padStart(2, "0")} fotos
+                </span>
+              </span>
+              <span className="absolute inset-x-7 bottom-7 md:inset-x-9 md:bottom-9">
+                <span className="mb-3 block text-[10px] uppercase tracking-[0.24em] text-white/80">
+                  {album.location}
+                </span>
+                <span className="block font-serif text-4xl leading-[1.05] tracking-tight xl:text-5xl">
+                  {album.kind}
+                </span>
+                <span className="mt-6 flex items-center justify-between border-t border-white/30 pt-4">
+                  <span className="text-[10px] uppercase tracking-[0.2em]">Explorar álbum</span>
+                  <ArrowUpRight
+                    className="h-5 w-5 transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </span>
+              </span>
+            </button>
+          ))}
         </div>
       )}
 
