@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Columns2, Grid2X2, Maximize2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Columns2, Grid2X2, Maximize2 } from "lucide-react";
 import { albums, type Album } from "@/lib/albums";
 import type { Photo } from "@/lib/photos";
 import { AlbumCover } from "./AlbumCover";
@@ -14,9 +14,6 @@ export function Gallery() {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const lastAlbumId = useRef<string | null>(null);
   const list = selectedAlbum?.photos ?? [];
-  const nextAlbum = selectedAlbum
-    ? albums[(albums.indexOf(selectedAlbum) + 1) % albums.length]
-    : null;
 
   const openAlbum = (album: Album) => {
     setActiveIndex(null);
@@ -135,41 +132,6 @@ export function Gallery() {
               </div>
             </div>
             <PhotoGrid list={list} view={view} onOpen={setActiveIndex} />
-            {nextAlbum && (
-              <button
-                type="button"
-                className="album-next group"
-                onClick={() => openAlbum(nextAlbum)}
-                aria-label={`Próximo álbum: ${nextAlbum.kind}, ${nextAlbum.location}`}
-              >
-                <img
-                  src={nextAlbum.cover}
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                  style={{ objectPosition: nextAlbum.position }}
-                />
-                <span
-                  className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/15"
-                  aria-hidden="true"
-                />
-                <span className="relative z-10">
-                  <span className="mb-4 block text-[10px] uppercase tracking-lux-sm text-white/70">
-                    A próxima história
-                  </span>
-                  <span className="block font-serif text-3xl leading-tight sm:text-4xl md:text-5xl">
-                    {nextAlbum.kind}
-                  </span>
-                  <span className="mt-3 block text-xs text-white/75">{nextAlbum.location}</span>
-                </span>
-                <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/40 transition-colors group-hover:bg-white group-hover:text-black sm:h-16 sm:w-16">
-                  <ArrowRight
-                    className="h-5 w-5 transition-transform group-hover:translate-x-1"
-                    aria-hidden="true"
-                  />
-                </span>
-              </button>
-            )}
           </div>
         </>
       ) : (
