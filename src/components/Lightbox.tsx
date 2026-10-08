@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { createPortal } from "react-dom";
+import { useEffect, useRef } from "react";
+import * as Dialog from "@radix-ui/react-dialog";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { Photo } from "@/lib/photos";
 
@@ -11,108 +11,141 @@ interface LightboxProps {
 }
 
 export function Lightbox({ photos, index, onClose, onNavigate }: LightboxProps) {
+  const returnFocus = useRef<HTMLElement | null>(null);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
   const photo = index !== null ? photos[index] : null;
 
   useEffect(() => {
-    if (index === null) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-      if (e.key === "ArrowRight") onNavigate((index + 1) % photos.length);
-      if (e.key === "ArrowLeft") onNavigate((index - 1 + photos.length) % photos.length);
-    };
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", onKey);
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("keydown", onKey);
-    };
-  }, [index, photos.length, onClose, onNavigate]);
+    if (index === null || photos.length < 2) return;
+    const next = new Image();
+    next.src = photos[(index + 1) % photos.length].src;
+    const previous = new Image();
+    previous.src = photos[(index - 1 + photos.length) % photos.length].src;
+  }, [index, photos]);
 
   if (!photo || index === null) return null;
-  if (typeof document === "undefined") return null;
 
-  const prev = () => onNavigate((index - 1 + photos.length) % photos.length);
+  const previous = () => onNavigate((index - 1 + photos.length) % photos.length);
   const next = () => onNavigate((index + 1) % photos.length);
 
-  return createPortal(
-    <div
-      onClick={onClose}
-      role="dialog"
-      aria-modal="true"
-      style={{
-        position: "fixed",
-        inset: 0,
-        zIndex: 2147483000,
-        background: "var(--background)",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "4rem 1rem",
+  return (
+    <Dialog.Root
+      open
+      onOpenChange={(open) => {
+        if (!open) onClose();
       }}
     >
-      <img
-        key={photo.id}
-        src={photo.src}
-        alt={photo.alt}
-        onClick={(e) => e.stopPropagation()}
-        style={{
-          maxHeight: "calc(100vh - 10rem)",
-          maxWidth: "min(1400px, 100%)",
-          width: "auto",
-          height: "auto",
-          objectFit: "contain",
-          display: "block",
-        }}
-      />
-
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className="mt-4 flex w-full max-w-[1400px] flex-wrap items-end justify-between gap-x-4 gap-y-2 px-1 text-xs sm:mt-5 sm:px-2"
-      >
-        <div className="flex items-baseline gap-3">
-          <p className="font-serif text-lg italic text-foreground">{photo.title}</p>
-          {photo.country && (
-            <span className="inline-flex items-center gap-2 text-[11px] text-muted-foreground">
-              <img
-                src={`https://flagcdn.com/20x15/${photo.country.code}.png`}
-                width={16}
-                height={12}
-                alt={photo.country.label}
-                className="inline-block rounded-[1px]"
-                loading="lazy"
-              />
-              {photo.country.label}
+      <Dialog.Portal>
+        <Dialog.Overlay className="cinema-overlay" />
+        <Dialog.Content
+          className="cinema-viewer"
+          onOpenAutoFocus={() => {
+            returnFocus.current =
+              document.activeElement instanceof HTMLElement ? document.activeElement : null;
+          }}
+          onCloseAutoFocus={(event) => {
+            event.preventDefault();
+            returnFocus.current?.focus({ preventScroll: true });
+          }}
+          onKeyDown={(event) => {
+            if (event.key === "ArrowRight") {
+              event.preventDefault();
+              next();
+            }
+            if (event.key === "ArrowLeft") {
+              event.preventDefault();
+              previous();
+            }
+          }}
+        >
+          <div className="cinema-toolbar">
+            <div className="cinema-brand">
+              Entre Nós <span>/</span> Fotografia
+            </div>
+            <div className="cinema-controls">
+              <span className="cinema-counter" aria-hidden="true">
+                {String(index + 1).padStart(2, "0")} <span>/</span>{" "}
+                {String(photos.length).padStart(2, "0")}
+              </span>
+              <Dialog.Close className="cinema-close" aria-label="Fechar">
+                <X className="h-5 w-5" aria-hidden="true" />
+              </Dialog.Close>
+            </div>
+          </div>
+          <Dialog.Description className="sr-only">
+            Use as setas para navegar pelas fotos e Escape para fechar. No celular, deslize a foto
+            para os lados.
+          </Dialog.Description>
+          <div
+            className="cinema-stage"
+            onClick={(event) => {
+              if (event.target === event.currentTarget) onClose();
+            }}
+            onPointerDown={(event) => {
+              if (event.pointerType === "touch")
+                touchStart.current = { x: event.clientX, y: event.clientY };
+            }}
+            onPointerUp={(event) => {
+              const start = touchStart.current;
+              touchStart.current = null;
+              if (!start || event.pointerType !== "touch") return;
+              const dx = event.clientX - start.x;
+              const dy = event.clientY - start.y;
+              if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+                if (dx < 0) next();
+                else previous();
+              }
+            }}
+            onPointerCancel={() => {
+              touchStart.current = null;
+            }}
+          >
+            <img
+              key={photo.id}
+              src={photo.src}
+              alt={photo.alt}
+              decoding="async"
+              draggable={false}
+              className="cinema-photo"
+            />
+            {photos.length > 1 && (
+              <>
+                <button
+                  type="button"
+                  onClick={previous}
+                  aria-label="Foto anterior"
+                  className="cinema-nav cinema-nav-previous"
+                >
+                  <ChevronLeft aria-hidden="true" />
+                </button>
+                <button
+                  type="button"
+                  onClick={next}
+                  aria-label="Próxima foto"
+                  className="cinema-nav cinema-nav-next"
+                >
+                  <ChevronRight aria-hidden="true" />
+                </button>
+              </>
+            )}
+          </div>
+          <div className="cinema-caption" aria-live="polite" aria-atomic="true">
+            <div>
+              <Dialog.Title className="cinema-photo-title">{photo.title}</Dialog.Title>
+              <p>
+                {photo.category}
+                {photo.country ? ` · ${photo.country.label}` : ""}
+              </p>
+            </div>
+            <span className="cinema-progress-label">
+              Foto {index + 1} de {photos.length}
             </span>
-          )}
-        </div>
-        <p className="max-w-[18rem] text-right text-[9px] leading-relaxed tracking-[0.16em] text-muted-foreground uppercase tabular-nums sm:max-w-none sm:text-xs sm:tracking-lux-sm">
-          {String(index + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")} · {photo.category}
-        </p>
-      </div>
-
-      <button
-        onClick={(e) => { e.stopPropagation(); onClose(); }}
-        aria-label="Fechar"
-        className="absolute top-5 right-5 inline-flex h-10 w-10 items-center justify-center text-foreground/80 transition-colors hover:text-foreground"
-      >
-        <X className="h-5 w-5" />
-      </button>
-      <button
-        onClick={(e) => { e.stopPropagation(); prev(); }}
-        aria-label="Foto anterior"
-        className="absolute left-3 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full bg-black/10 text-foreground/70 transition-colors hover:bg-black/20 hover:text-foreground md:left-6 md:bg-transparent md:hover:bg-transparent"
-      >
-        <ChevronLeft className="h-7 w-7" />
-      </button>
-      <button
-        onClick={(e) => { e.stopPropagation(); next(); }}
-        aria-label="Próxima foto"
-        className="absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-12 w-12 items-center justify-center rounded-full bg-black/10 text-foreground/70 transition-colors hover:bg-black/20 hover:text-foreground md:right-6 md:bg-transparent md:hover:bg-transparent"
-      >
-        <ChevronRight className="h-7 w-7" />
-      </button>
-    </div>,
-    document.body
+          </div>
+          <div className="cinema-progress" aria-hidden="true">
+            <span style={{ width: `${((index + 1) / photos.length) * 100}%` }} />
+          </div>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
   );
 }
